@@ -12,6 +12,11 @@ Currently, this project is in Alpha, **PLEASE EXPECT SAVES TO POSSIBLY BECOME BR
 
 We hope that you have fun learning Japanese vocabulary with our program!
 
+### Check it out here!: https://a-random-username-4m3.github.io/Inkstone-Web-Japanese/
+
+| ![](demo-computer.gif) | ![](demo-phoon.gif) |
+|------------------------|---------------------|	
+
 ## Try it out yourself
 
 ```bash
