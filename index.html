@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="theme-color" content="#0b4f8f">
+	<title>Inkstone Japanese</title>
+	<link rel="manifest" href="manifest.webmanifest">
+	<link rel="icon" href="icons/icon-192.png" type="image/png">
+	<link rel="apple-touch-icon" href="icons/icon-192.png">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="app-window">
+		<header class="topbar">
+			<div class="title-cluster">
+				<img class="brand-mark" src="icons/brand-mark.png" alt="" 
+				  aria-hidden="true" decoding="async">
+				<div>
+					<h1>Inkstone Japanese</h1>
+					<p class="subtitle">
+						Japanese handwriting and grammar practice 
+					</p>
+				</div>
+			</div>
+			<div class="top-actions">
+				<span id="sessionTimeLeft" class="session-pill">12:00:00 left</span>
+				<button id="btnInstallApp" hidden>Install</button>
+				<button id="btnNext" class="primary">Next card</button>
+			</div>
+		</header>
+
+		<nav class="tabs" aria-label="Main sections">
+			<button data-tab="study" class="active">Study</button>
+			<button data-tab="browse">Browse</button>
+			<button data-tab="lists">Lists</button>
+			<button data-tab="progress">Progress</button>
+			<button data-tab="settings">Settings</button>
+		</nav>
+
+		<main>
+			<section id="tab-study" class="tab-panel active">
+				<div class="study-layout">
+					<article class="card prompt-card">
+						<div class="deckline"><span id="deckName">Loading…</span>
+							<span id="dueSummary"></span>
+						</div>
+						<div id="promptReading" class="prompt-reading">—</div>
+						<div id="charProgress" class="char-progress"></div>
+						<div id="promptDefinition" class="prompt-definition">
+							Loading data...
+						</div>
+						<div id="promptExamples" class="character-examples hidden"></div>
+						<div id="targetWord" class="target-word hidden"></div>
+						<div class="feedback-console" aria-label="Practice feedback">
+							<div class="feedback-caption">Feedback status</div>
+							<p id="feedback" class="feedback" role="status" 
+							  aria-live="polite"></p>
+						</div>
+						<div id="addExtraCardsPanel" class="add-extra-panel hidden">
+							<strong>Extra cards</strong>
+							<p class="feedback">
+								Extend this 12-hour session with additional due 
+								or new cards.
+							</p>
+							<div class="inline-form">
+								<input id="extraCardCount" type="number" min="1"
+								  value="20" aria-label="Extra card count">
+								<button id="btnAddExtraCards" class="primary">
+									Add extra cards
+								</button>
+							</div>
+						</div>
+
+						<div class="button-row">
+							<button id="btnHint">Hint</button>
+							<button id="btnReveal">Reveal</button>
+							<button id="btnUndo">Undo</button>
+							<button id="btnBlacklistCard" class="danger">
+								Blacklist
+							</button>
+						</div>
+
+						<div id="manualGradePanel" class="grade-panel" aria-label="Manual grading">
+							<p class="grade-caption">Manual grade / regrade</p>
+							<div class="grade-grid">
+								<button id="btnGradeExcellent" class="grade-excellent">
+									Excellent
+								</button>
+								<button id="btnGradeGood" class="grade-good">
+									Good
+								</button>
+								<button id="btnGradeFair" class="grade-fair">
+									Fair
+								</button>
+								<button id="btnGradeAgain" class="grade-again">
+									Again
+								</button>
+							</div>
+						</div>
+					</article>
+					<article class="card canvas-card">
+						<canvas id="practiceCanvas" width="512" height="512" 
+						  aria-label="Handwriting practice canvas"></canvas>
+						<p class="canvas-help">Draw with mouse, pen, or touch. 
+							Tap Hint if you get stuck.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<section id="tab-browse" class="tab-panel">
+				<article class="card">
+					<h2>Browse Japanese dictionary</h2>
+					<p>
+						Search an exact kanji, Japanese spelling, or kana reading.
+						Kanji details come from KANJIDIC2 and stroke data from KanjiVG;
+						vocabulary comes from JMdict.
+					</p>
+					<div class="inline-form">
+						<input id="lookupInput" maxlength="32" autocomplete="off"
+						  placeholder="Enter 今, 今日, きょう…">
+						<button id="btnLookup">Look up</button>
+					</div>
+					<div id="lookupResult" class="lookup-result"></div>
+					<div id="lookupExamples" class="character-examples lookup-examples hidden"></div>
+					<canvas id="lookupCanvas" width="384" height="384" 
+					  class="lookup-canvas"></canvas>
+				</article>
+			</section>
+
+			<section id="tab-lists" class="tab-panel">
+				<article class="card">
+					<h2>Word lists</h2>
+					<p>
+						Select a list row to inspect every word and edit its
+						learning status, due time, blacklist state, or progress.
+					</p>
+					<div id="listContainer" class="list-container"></div>
+				</article>
+				<article id="listWordEditorCard" class="card hidden">
+					<h2>Words in selected list</h2>
+					<div id="listWordEditor" class="word-list-editor">
+						<p class="feedback">
+							Select a word list to inspect and edit individual word progress.
+						</p>
+					</div>
+				</article>
+				<article class="card">
+					<h2>Import a static TSV list</h2>
+					<p>
+						Format: written form, kana reading, definition; one tab-separated row per word.
+					</p>
+					<div class="inline-form">
+						<input id="customListId" placeholder="list-id, e.g. my-japanese">
+						<input id="customListName" placeholder="Display name">
+					</div>
+					<textarea id="customListText" rows="8" spellcheck="false" 
+					  placeholder="今&#9;いま&#9;now"></textarea>
+					<div class="button-row">
+						<button id="btnImportList" class="primary">
+							Import list
+						</button>
+						<button id="btnPasteDemo">Paste demo rows</button>
+					</div>
+					<p id="listImportStatus" class="feedback"></p>
+				</article>
+				<article class="card">
+					<h2>Manage blacklist</h2>
+					<p>
+						Blacklisted words stay in your progress data, but are 
+						removed from active study until restored.
+					</p>
+					<div class="inline-form">
+						<input id="blacklistWordInput" 
+						  placeholder="Exact vocabulary spelling to blacklist">
+						<button id="btnBlacklistAdd" class="danger">
+							Add to blacklist
+						</button>
+						<button id="btnBlacklistClear">Clear blacklist</button>
+					</div>
+					<p id="blacklistStatus" class="feedback"></p>
+					<div id="blacklistContainer" class="list-container"></div>
+				</article>
+			</section>
+
+			<section id="tab-progress" class="tab-panel">
+				<article class="card">
+					<h2>Progress</h2>
+					<div id="progressStats" class="stats-grid"></div>
+					<div class="button-row">
+						<button id="btnResetSession">Reset session counts</button>
+						<button id="btnClearProgress" class="danger">
+							Clear progress
+						</button>
+					</div>
+				</article>
+			</section>
+
+			<section id="tab-settings" class="tab-panel">
+				<article class="card">
+					<h2>Study settings</h2>
+					<label class="setting">
+						<span>Automatically show one next-stroke hint after repeated mistakes</span>
+						<input type="checkbox" id="settingRevealOrder">
+					</label>
+					<label class="setting">
+						<span>Snap accepted strokes into printed form</span>
+						<input type="checkbox" id="settingSnapStrokes">
+					</label>
+					<label class="setting">
+						<span>Stage 2 keeps handwritten strokes</span>
+						<input type="checkbox" id="settingStage2KeepUserStrokes">
+					</label>
+					<label class="setting">
+						<span>Stage 3 keeps handwritten strokes</span>
+						<input type="checkbox" id="settingStage3KeepUserStrokes">
+					</label>
+					<label class="setting">
+						<span>New cards/session</span>
+						<input type="number" min="0" id="settingMaxAdds">
+					</label>
+					<label class="setting">
+						<span>Review cards/session</span>
+						<input type="number" min="0" id="settingMaxReviews">
+					</label>
+					<label class="setting">
+						<span>Study examples/card</span>
+						<input type="number" min="1" step="1" id="settingStudyExampleLimit">
+					</label>
+					<label class="setting">
+						<span>Only use active lists for examples</span>
+						<input type="checkbox" id="settingExamplesActiveListsOnly">
+					</label>
+					<label class="setting">
+						<span>New-card order</span>
+						<select id="settingNewCardOrder">
+							<option value="sequential">List order</option>
+							<option value="random">Random</option>
+						</select>
+					</label>
+					<label class="setting">
+						<span>Review order</span>
+						<select id="settingReviewOrder">
+							<option value="retrievability">Lowest retrievability first</option>
+							<option value="due">Due date first</option>
+						</select>
+					</label>
+					<label class="setting">
+						<span>New cards ignore review limit</span>
+						<input type="checkbox" id="settingNewCardsIgnoreReviewLimit">
+					</label>
+					<label class="setting">
+						<span>Show Undo / Blacklist buttons on Study tab</span>
+						<input type="checkbox" id="settingShowUndoBlacklistButtons">
+					</label>
+					<label class="setting">
+						<span>Show Next card button on Study tab</span>
+						<input type="checkbox" id="settingShowNextCardButton">
+					</label>
+					<label class="setting">
+						<span>Show manual grading buttons</span>
+						<input type="checkbox" id="settingShowManualGrading">
+					</label>
+					<div class="setting setting-block parent-lock-setting">
+						<strong>Teacher / parent lock</strong>
+						<p id="parentLockStatus" class="feedback"></p>
+						<div class="inline-form">
+							<input id="parentLockPin" type="password" inputmode="numeric"
+							  autocomplete="off" maxlength="8"
+							  placeholder="4–8 digit PIN" aria-label="Parent or teacher PIN">
+							<button id="btnParentLockPrimary" type="button">Set PIN</button>
+							<button id="btnParentLockNow" type="button" class="hidden">Lock now</button>
+							<button id="btnParentLockRemove" type="button" class="danger hidden">Remove PIN</button>
+						</div>
+					</div>
+				</article>
+				<article class="card">
+					<h2>FSRS scheduler</h2>
+					<p>
+						Inkstone uses FSRSv6 to schedule the next long-term review.
+						We do not include an in-house optimizer at the moment 
+						because of how complex it would be to implement.
+					</p>
+					<p>
+						Curious what this is? Check out this 
+						<a href="https://expertium.github.io/Algorithm.html">
+							paper</a> to learn more. It is really interesting
+						and was crazy to me how much thought was put into simply
+						having a specific time when people should study their
+						flashcards.
+					</p>
+					<label class="setting">
+						<span>Session length (hours)</span>
+						<input type="number" min="0.02" step="0.25" id="settingSessionHours">
+					</label>
+					<label class="setting">
+						<span>Desired retention</span>
+						<input type="number" min="0.7" max="0.97" step="0.01" id="settingDesiredRetention">
+					</label>
+					<label class="setting">
+						<span>Maximum interval (days)</span>
+						<input type="number" min="1" step="1" id="settingMaximumIntervalDays">
+					</label>
+					<label class="setting">
+						<span>Learning step (minutes)</span>
+						<input type="number" min="1" step="1" id="settingLearningStepMinutes">
+					</label>
+					<label class="setting">
+						<span>Relearning step (minutes)</span>
+						<input type="number" min="1" step="1" id="settingRelearningStepMinutes">
+					</label>
+					<label class="setting setting-block">
+						<span>Advanced FSRS parameters</span>
+						<textarea id="settingFsrsParameters" rows="4" spellcheck="false"></textarea>
+					</label>
+				</article>
+				<article class="card">
+					<h2>Developer debug</h2>
+					<p>
+						Override Inkstone's app time for scheduler testing. This affects
+						due queues, FSRS retrievability, list timers, and session expiry,
+						but it does not change browser animation/tap timing.
+					</p>
+					<label class="setting">
+						<span>Debug current time</span>
+						<input type="datetime-local" id="settingDebugNow">
+					</label>
+					<div class="button-row">
+						<button type="button" id="btnDebugNowBrowser">Set to browser time</button>
+						<button type="button" id="btnDebugNowClear">Use real time</button>
+					</div>
+					<p id="debugTimeStatus" class="feedback"></p>
+				</article>
+				<article class="card">
+					<h2>Backup and restore</h2>
+					<p>
+						Exports settings, enabled lists, imported lists, blacklist, 
+						scheduling, and progress to a JSON file. Review logs can
+						also be exported as optimizer-friendly CSV.
+					</p>
+					<div class="backup-actions">
+						<div class="button-row">
+							<button id="btnExport" class="primary">Export backup</button>
+							<button id="btnExportReviewLogs">Export review logs</button>
+							<label class="file-button">
+								Import backup 
+								<input type="file" id="importBackup" accept="application/json,.json">
+							</label>
+						</div>
+						<div class="button-row backup-danger">
+							<button id="btnDeleteAllData" class="danger">Delete all data</button>
+						</div>
+					</div>
+
+					<div class="fsrs-optimizer-help">
+						<h3>FSRS review-log optimization</h3>
+						<p>
+							Review logs are for external FSRS parameter optimization.
+							Export the CSV, run it through a compatible FSRS
+							optimizer, then paste the optimized parameter array into
+							Advanced FSRS parameters above. <b>Don't forget to 
+							make a normal backup before changing parameters!</b>
+						</p>
+						<p>
+							Inkstone reminds you after 400 review-log rows, then
+							again after your stored logs double from the count
+							you last marked optimized.
+						</p>
+						<p id="fsrsOptimizationStatus" class="feedback"></p>
+						<p id="fsrsLastOptimized" class="feedback"></p>
+						<div id="fsrsOptimizationReminder" class="optimizer-reminder hidden">
+							<strong>FSRS optimization reminder</strong>
+							<p class="feedback">
+								Export your review logs, optimize them externally,
+								then update Advanced FSRS parameters. After you finish,
+								mark this count as optimized.
+							</p>
+						</div>
+						<div class="button-row">
+							<button id="btnMarkFsrsOptimized">Mark optimized</button>
+							<button id="btnSnoozeFsrsOptimization">Remind me in 30 days</button>
+						</div>
+					</div>
+					<p id="backupStatus" class="feedback"></p>
+				</article>
+				<article class="card">
+					<h2>Credits</h2>
+					<p>
+						Original <a href="https://github.com/skishore/inkstone">
+							Inkstone</a> 
+						project by <a href="https://github.com/skishore/">
+							Shaunak Kishore</a>. 
+					</p>
+					<p>
+						Icons made using generative tools. If any artists wish 
+						to add a new icon (and have their credits listed here),
+						please submit a pull request on the 
+						<a href="https://github.com/A-Random-Username-4m3/Inkstone-Web">
+							Github repository</a>.
+					</p>
+					<p>
+						Japanese kanji stroke data derived from
+						<a href="https://kanjivg.tagaini.net/">KanjiVG</a>,
+						licensed under CC BY-SA 3.0.
+					</p>
+					<p>
+						Japanese vocabulary and kanji dictionary metadata derived from
+						<a href="https://www.edrdg.org/">JMdict and KANJIDIC2</a>
+						by the Electronic Dictionary Research and Development Group (EDRDG),
+						used under the EDRDG licence.
+					</p>
+					<p>
+						JLPT vocabulary level data comes from
+						<a href="https://github.com/stephenmk/yomitan-jlpt-vocab">
+							stephenmk/yomitan-jlpt-vocab</a>, based on Jonathan
+						Waller's JLPT Resources. The levels are community estimates.
+					</p>
+					<p>
+						FSRSv6 scheduler algorithm based on 
+						<a href="https://github.com/open-spaced-repetition/fsrs4anki">
+							https://github.com/open-spaced-repetition/fsrs4anki</a>
+					</p>
+					<p>
+						Other inspiration for creating this webapp:
+						<a href="https://www.ringotan.com/">Ringotan</a> by 
+						<a href="https://www.blueraja.com/blog/">
+							Danny Pflughoeft</a>.
+					</p>
+					<p>
+						Sound effects from <a href="https://lelegofrog.github.io/winwavvista.html">
+							Windows Vista</a>.
+					</p>
+
+				</article>
+			</section>
+		</main>
+
+		<div class="status-strip" aria-hidden="true">
+			<span>Progress saved offline in localStorage and IndexedDB.</span>
+			<span id="sessionRemainder">Available now: 0 new · 0 review · 0 extra · 0 step</span>
+			<span id="penaltyStatus" class="penalty-status">Penalty points: 0</span>
+			<span>Application works completely offline.</span>
+		</div>
+	</div>
+
+	<template id="statTemplate">
+		<div class="stat"><strong></strong><span></span></div>
+	</template>
+
+	<script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "jlpt-n5": {
+    "category": "JLPT",
+    "name": "JLPT N5",
+    "path": "data/lists/jlpt-n5.tsv"
+  },
+  "jlpt-n4": {
+    "category": "JLPT",
+    "name": "JLPT N4",
+    "path": "data/lists/jlpt-n4.tsv"
+  },
+  "jlpt-n3": {
+    "category": "JLPT",
+    "name": "JLPT N3",
+    "path": "data/lists/jlpt-n3.tsv"
+  },
+  "jlpt-n2": {
+    "category": "JLPT",
+    "name": "JLPT N2",
+    "path": "data/lists/jlpt-n2.tsv"
+  },
+  "jlpt-n1": {
+    "category": "JLPT",
+    "name": "JLPT N1",
+    "path": "data/lists/jlpt-n1.tsv"
+  },
+  "common-japanese": {
+    "category": "General",
+    "name": "JMdict Common Japanese (10,000)",
+    "path": "data/lists/common-japanese.tsv"
+  }
+}

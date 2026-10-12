@@ -1,0 +1,640 @@
+jmdict:1221520:%E6%B0%97:%E3%81%8D	気	き	spirit; mind; heart; nature; disposition; intention; will; motivation; mood; feelings; consciousness; care; attention; consideration; worry; interest; (the) air; atmosphere; ambience; atmosphere (of); air (of); fragrance; aroma; flavour; taste; qi (in traditional Chinese philosophy and medicine); chi; ki
+jmdict:1226630:%E5%AE%A2:%E3%81%8D%E3%82%83%E3%81%8F	客	きゃく	guest; visitor; customer; client; shopper; spectator; audience; tourist; sightseer; passenger; counter for containers used to entertain guests
+jmdict:1250220:%E5%BD%A2:%E3%81%8B%E3%81%9F%E3%81%A1	形	かたち	(physical) form; shape; figure; visage; (facial) features; appearance (of a person); looks; form (as opposed to substance); manner (of action); style; (outward) appearance; (resultant) state; situation; condition; form; behaviour (towards others); attitude; demeanor; manners; shape (positional qualities of a group of stones)
+jmdict:1272780:%E5%85%89:%E3%81%B2%E3%81%8B%E3%82%8A	光	ひかり	light; illumination; ray; beam; gleam; glow; happiness; hope; influence; power; vision; eyesight; optical fiber; optical fibre
+jmdict:1294330:%E5%A6%BB:%E3%81%A4%E3%81%BE	妻	つま	wife; garnish (esp. one served with sashimi); trimmings; accompaniment; side (remark)
+jmdict:1307770:%E5%AD%90:%E3%81%93	子	こ	child; kid; teenager; youngster; young (non-adult) person; (one's) child; offspring; young woman; young (animal); offshoot; interest; new share; player who is not a dealer; young geisha; young prostitute; bird egg; -er (often of young women)
+jmdict:1496480:%E5%A4%AB:%E3%81%8A%E3%81%A3%E3%81%A8	夫	おっと	husband
+jmdict:1153930:%E5%AE%89%E5%85%A8:%E3%81%82%E3%82%93%E3%81%9C%E3%82%93	安全	あんぜん	safety; security
+jmdict:1156530:%E6%84%8F%E8%A6%8B:%E3%81%84%E3%81%91%E3%82%93	意見	いけん	opinion; view; comment; scolding; reprimand; rebuke; admonition; cautioning; warning
+jmdict:1172910:%E9%81%8B%E5%8B%95:%E3%81%86%E3%82%93%E3%81%A9%E3%81%86	運動	うんどう	exercise; physical training; workout; sports; athletics; appeal; campaign; drive; crusade; movement; lobbying; motion
+jmdict:1198360:%E4%BC%9A%E8%AD%B0:%E3%81%8B%E3%81%84%E3%81%8E	会議	かいぎ	meeting; conference; session; assembly; council; convention; congress
+jmdict:1215810:%E9%96%A2%E4%BF%82:%E3%81%8B%E3%82%93%E3%81%91%E3%81%84	関係	かんけい	relation; relationship; connection; participation; involvement; concern; influence; effect; sexual relations; sexual relationship; related to; connected to
+jmdict:1225130:%E6%8A%80%E8%A1%93:%E3%81%8E%E3%81%98%E3%82%85%E3%81%A4	技術	ぎじゅつ	technology; engineering; technique; skill; art; craft
+jmdict:1236950:%E6%95%99%E8%82%B2:%E3%81%8D%E3%82%87%E3%81%86%E3%81%84%E3%81%8F	教育	きょういく	education; schooling; training; instruction; teaching; upbringing; culture; cultivation
+jmdict:1245570:%E7%A9%BA%E6%B8%AF:%E3%81%8F%E3%81%86%E3%81%93%E3%81%86	空港	くうこう	airport
+jmdict:1251320:%E7%B5%8C%E6%B8%88:%E3%81%91%E3%81%84%E3%81%96%E3%81%84	経済	けいざい	economy; economics; finance; (one's) finances; financial circumstances; being economical; thrift
+jmdict:1252090:%E8%A8%88%E7%94%BB:%E3%81%91%E3%81%84%E3%81%8B%E3%81%8F	計画	けいかく	plan; project; schedule; scheme; program; programme
+jmdict:1252390:%E8%AD%A6%E5%AF%9F:%E3%81%91%E3%81%84%E3%81%95%E3%81%A4	警察	けいさつ	police; police officer; police station; self-appointed enforcer (of a rule, standard, etc.); busybody; vigilante; gatekeeper
+jmdict:1258520:%E7%A0%94%E7%A9%B6:%E3%81%91%E3%82%93%E3%81%8D%E3%82%85%E3%81%86	研究	けんきゅう	research; study; investigation
+jmdict:1261190:%E5%8E%9F%E5%9B%A0:%E3%81%92%E3%82%93%E3%81%84%E3%82%93	原因	げんいん	cause; origin; source
+jmdict:1283500:%E9%AB%98%E6%A0%A1:%E3%81%93%E3%81%86%E3%81%93%E3%81%86	高校	こうこう	senior high school; high school
+jmdict:1286400:%E5%9B%BD%E9%9A%9B:%E3%81%93%E3%81%8F%E3%81%95%E3%81%84	国際	こくさい	international; diplomatic intercourse
+jmdict:1293700:%E6%9C%80%E3%82%82:%E3%82%82%E3%81%A3%E3%81%A8%E3%82%82	最も	もっとも	most; extremely
+jmdict:1293780:%E6%9C%80%E8%BF%91:%E3%81%95%E3%81%84%E3%81%8D%E3%82%93	最近	さいきん	recently; lately; these days; nowadays; right now; nearest; closest
+jmdict:1293810:%E6%9C%80%E5%BE%8C:%E3%81%95%E3%81%84%E3%81%94	最後	さいご	end; conclusion; last; final; latest; most recent; no sooner than; once; right after (often having negative consequences); one's final moments
+jmdict:1293990:%E6%9C%80%E5%88%9D:%E3%81%95%E3%81%84%E3%81%97%E3%82%87	最初	さいしょ	beginning; outset; first; onset
+jmdict:1303770:%E7%94%A3%E6%A5%AD:%E3%81%95%E3%82%93%E3%81%8E%E3%82%87%E3%81%86	産業	さんぎょう	industry; livelihood; occupation
+jmdict:1308690:%E5%B8%82%E6%B0%91:%E3%81%97%E3%81%BF%E3%82%93	市民	しみん	citizen (of a country); citizenry; citizen (of a city); resident; inhabitant; townspeople; bourgeoisie; middle class
+jmdict:1312420:%E8%A9%A6%E5%90%88:%E3%81%97%E3%81%82%E3%81%84	試合	しあい	match; game; bout; contest
+jmdict:1313850:%E4%BA%8B%E6%95%85:%E3%81%98%E3%81%93	事故	じこ	accident; incident; trouble; circumstances; reasons
+jmdict:1316300:%E6%99%82%E4%BB%A3:%E3%81%98%E3%81%A0%E3%81%84	時代	じだい	period; epoch; era; age; the times; those days; oldness; ancientness; antiquity; antique; period piece
+jmdict:1318720:%E8%87%AA%E7%94%B1:%E3%81%98%E3%82%86%E3%81%86	自由	じゆう	freedom; liberty
+jmdict:1322700:%E7%A4%BE%E4%BC%9A:%E3%81%97%E3%82%83%E3%81%8B%E3%81%84	社会	しゃかい	society; public; community; the world; social studies
+jmdict:1322920:%E7%A4%BE%E9%95%B7:%E3%81%97%E3%82%83%E3%81%A1%E3%82%87%E3%81%86	社長	しゃちょう	company president; manager; director
+jmdict:1345250:%E5%A5%B3%E6%80%A7:%E3%81%98%E3%82%87%E3%81%9B%E3%81%84	女性	じょせい	woman; female; feminine gender
+jmdict:1347710:%E5%B0%86%E6%9D%A5:%E3%81%97%E3%82%87%E3%81%86%E3%82%89%E3%81%84	将来	しょうらい	future; (future) prospects; bringing (from abroad, another region, etc.); bringing about; giving rise to; causing; incurring
+jmdict:1355850:%E5%A0%B4%E6%89%80:%E3%81%B0%E3%81%97%E3%82%87	場所	ばしょ	place; location; spot; position; area; room; space; sumo tournament
+jmdict:1367300:%E4%BA%BA%E5%8F%A3:%E3%81%98%E3%82%93%E3%81%93%E3%81%86	人口	じんこう	population; common talk
+jmdict:1373860:%E4%B8%96%E7%95%8C:%E3%81%9B%E3%81%8B%E3%81%84	世界	せかい	the world; society; the universe; sphere; circle; world; world-renowned; world-famous; realm governed by one Buddha; space
+jmdict:1375970:%E6%94%BF%E6%B2%BB:%E3%81%9B%E3%81%84%E3%81%98	政治	せいじ	politics; government
+jmdict:1378860:%E7%94%9F%E6%B4%BB:%E3%81%9B%E3%81%84%E3%81%8B%E3%81%A4	生活	せいかつ	life; living; livelihood; (one's) living
+jmdict:1378990:%E7%94%9F%E7%94%A3:%E3%81%9B%E3%81%84%E3%81%95%E3%82%93	生産	せいさん	production; manufacture
+jmdict:1390360:%E6%88%A6%E4%BA%89:%E3%81%9B%E3%82%93%E3%81%9D%E3%81%86	戦争	せんそう	war; fighting; fierce competition
+jmdict:1420160:%E7%94%B7%E6%80%A7:%E3%81%A0%E3%82%93%E3%81%9B%E3%81%84	男性	だんせい	man; male; masculine gender
+jmdict:1454670:%E7%89%B9%E3%81%AB:%E3%81%A8%E3%81%8F%E3%81%AB	特に	とくに	particularly; especially; in particular; expressly
+jmdict:1455280:%E7%89%B9%E5%88%A5:%E3%81%A8%E3%81%8F%E3%81%B9%E3%81%A4	特別	とくべつ	special; particular; extraordinary; exceptional; especial
+jmdict:1480670:%E5%8F%8D%E5%AF%BE:%E3%81%AF%E3%82%93%E3%81%9F%E3%81%84	反対	はんたい	opposition; resistance; antagonism; hostility; objection; dissent; reverse; opposite; inverse; contrary
+jmdict:1482340:%E7%95%AA%E7%B5%84:%E3%81%B0%E3%82%93%E3%81%90%E3%81%BF	番組	ばんぐみ	program (e.g. TV); programme
+jmdict:1487660:%E5%BF%85%E8%A6%81:%E3%81%B2%E3%81%A4%E3%82%88%E3%81%86	必要	ひつよう	necessary; needed; essential; indispensable; necessity; need; requirement
+jmdict:1499460:%E9%83%A8%E9%95%B7:%E3%81%B6%E3%81%A1%E3%82%87%E3%81%86	部長	ぶちょう	head (chief, director) of a section or department; head of a (school) club; head of a (school) team
+jmdict:1505120:%E6%96%87%E5%8C%96:%E3%81%B6%E3%82%93%E3%81%8B	文化	ぶんか	culture; civilization; civilisation; Bunka era (1804.2.11-1818.4.22)
+jmdict:1516750:%E6%94%BE%E9%80%81:%E3%81%BB%E3%81%86%E3%81%9D%E3%81%86	放送	ほうそう	broadcasting; broadcast; program; announcement
+jmdict:1520120:%E8%B2%BF%E6%98%93:%E3%81%BC%E3%81%86%E3%81%88%E3%81%8D	貿易	ぼうえき	(foreign) trade; (international) commerce; importing and exporting
+jmdict:1538820:%E8%BC%B8%E5%87%BA:%E3%82%86%E3%81%97%E3%82%85%E3%81%A4	輸出	ゆしゅつ	export; exportation; efferent
+jmdict:1538870:%E8%BC%B8%E5%85%A5:%E3%82%86%E3%81%AB%E3%82%85%E3%81%86	輸入	ゆにゅう	import; importation; introduction; afferent
+jmdict:1543240:%E4%BA%88%E5%AE%9A:%E3%82%88%E3%81%A6%E3%81%84	予定	よてい	plans; arrangement; schedule; program; programme; expectation; estimate
+jmdict:1550140:%E7%90%86%E7%94%B1:%E3%82%8A%E3%82%86%E3%81%86	理由	りゆう	reason; grounds; pretext; excuse; motive
+jmdict:1558050:%E6%AD%B4%E5%8F%B2:%E3%82%8C%E3%81%8D%E3%81%97	歴史	れきし	history
+jmdict:1578700:%E5%B7%A5%E5%A0%B4:%E3%81%93%E3%81%86%E3%81%98%E3%82%87%E3%81%86	工場	こうじょう	factory; plant; mill; workshop
+jmdict:1589060:%E8%A1%8C%E3%81%86:%E3%81%8A%E3%81%93%E3%81%AA%E3%81%86	行う	おこなう	to perform; to do; to conduct oneself; to carry out
+jmdict:1314400:%E4%BA%8B%E5%8B%99%E6%89%80:%E3%81%98%E3%82%80%E3%81%97%E3%82%87	事務所	じむしょ	office
+jmdict:1591430:%E6%B0%97%E6%8C%81%E3%81%A1:%E3%81%8D%E3%82%82%E3%81%A1	気持ち	きもち	feeling; sensation; mood; state of mind; preparedness; readiness; attitude; thought; sentiment; consideration; solicitude; gratitude; slightly; a bit; a little
+jmdict:1193610:%E7%81%AB:%E3%81%B2	火	ひ	fire; flame; blaze
+jmdict:1315240:%E5%AF%BA:%E3%81%A6%E3%82%89	寺	てら	temple (Buddhist)
+jmdict:1362490:%E6%A3%AE:%E3%82%82%E3%82%8A	森	もり	forest; shrine grove
+jmdict:1365040:%E8%A6%AA:%E3%81%8A%E3%82%84	親	おや	parent; parents; mother and father; dealer; banker; founder; inventor; (pet) owner; key; parent (organization); main; ancestor; forefather
+jmdict:1382370:%E6%98%94:%E3%82%80%E3%81%8B%E3%81%97	昔	むかし	the old days; the past; former times; a long time ago; the past ten years; the past decade
+jmdict:1446760:%E5%B3%B6:%E3%81%97%E3%81%BE	島	しま	island; one's territory (of a sex worker, organized crime gang, etc.); one's turf
+jmdict:1509290:%E5%A3%81:%E3%81%8B%E3%81%B9	壁	かべ	wall; partition; barrier; obstacle; hindrance; difficulty; wall (of stones)
+jmdict:1529410:%E5%A4%A2:%E3%82%86%E3%82%81	夢	ゆめ	dream; hope; wish; aspiration; ambition; unrealistic aspiration; daydream; pipe dream; delusion; illusion; fleeting thing; something short-lived
+jmdict:1531190:%E5%A8%98:%E3%82%80%E3%81%99%E3%82%81	娘	むすめ	daughter; girl (i.e. a young, unmarried woman)
+jmdict:1555440:%E6%9E%97:%E3%81%AF%E3%82%84%E3%81%97	林	はやし	wood; woods; forest; grove; copse; thicket; bunch (of something); cluster; line; collection
+jmdict:1576900:%E9%9F%B3:%E3%81%8A%E3%81%A8	音	おと	sound; noise; (musical) note; fame
+jmdict:1155180:%E4%BB%A5%E5%86%85:%E3%81%84%E3%81%AA%E3%81%84	以内	いない	within; inside of; less than
+jmdict:1159810:%E5%8C%BB%E5%AD%A6:%E3%81%84%E3%81%8C%E3%81%8F	医学	いがく	medicine; medical science
+jmdict:1172830:%E9%81%8B%E8%BB%A2:%E3%81%86%E3%82%93%E3%81%A6%E3%82%93	運転	うんてん	operation (of a machine); running; working; driving (a vehicle); use (of capital, funds, etc.); management; investment
+jmdict:1192700:%E7%A7%91%E5%AD%A6:%E3%81%8B%E3%81%8C%E3%81%8F	科学	かがく	science; to think about scientifically; to think in terms of science
+jmdict:1195840:%E8%AA%B2%E9%95%B7:%E3%81%8B%E3%81%A1%E3%82%87%E3%81%86	課長	かちょう	section manager; section chief
+jmdict:1198660:%E4%BC%9A%E5%A0%B4:%E3%81%8B%E3%81%84%E3%81%98%E3%82%87%E3%81%86	会場	かいじょう	assembly hall; meeting place; venue; site; grounds
+jmdict:1214330:%E7%B0%A1%E5%8D%98:%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93	簡単	かんたん	simple; easy; uncomplicated; brief; quick; light
+jmdict:1218560:%E5%8D%B1%E9%99%BA:%E3%81%8D%E3%81%91%E3%82%93	危険	きけん	danger; peril; hazard; risk
+jmdict:1220800:%E6%A9%9F%E4%BC%9A:%E3%81%8D%E3%81%8B%E3%81%84	機会	きかい	chance; opportunity; occasion
+jmdict:1234140:%E7%AB%B6%E4%BA%89:%E3%81%8D%E3%82%87%E3%81%86%E3%81%9D%E3%81%86	競争	きょうそう	competition; contest; rivalry; race; competition (between organisms or species)
+jmdict:1251270:%E7%B5%8C%E9%A8%93:%E3%81%91%E3%81%84%E3%81%91%E3%82%93	経験	けいけん	experience
+jmdict:1272280:%E4%BA%A4%E9%80%9A:%E3%81%93%E3%81%86%E3%81%A4%E3%81%86	交通	こうつう	traffic; transportation; communication; exchange (of ideas, etc.); intercourse
+jmdict:1278040:%E5%B7%A5%E6%A5%AD:%E3%81%93%E3%81%86%E3%81%8E%E3%82%87%E3%81%86	工業	こうぎょう	(manufacturing) industry
+jmdict:1289370:%E4%BB%8A%E5%BA%A6:%E3%81%93%E3%82%93%E3%81%A9	今度	こんど	this time; now; next time; another time; shortly; soon; recently; lately; the other day
+jmdict:1312350:%E8%A9%A6%E9%A8%93:%E3%81%97%E3%81%91%E3%82%93	試験	しけん	examination; exam; test; trial; experiment
+jmdict:1335080:%E5%8D%81%E5%88%86:%E3%81%98%E3%82%85%E3%81%86%E3%81%B6%E3%82%93	十分	じゅうぶん	enough; sufficient; plenty; adequate; satisfactory; sufficiently; fully; thoroughly; well; perfectly; division into ten
+jmdict:1341670:%E6%BA%96%E5%82%99:%E3%81%98%E3%82%85%E3%82%93%E3%81%B3	準備	じゅんび	preparation; arrangements; getting ready; provision; setup; reserving
+jmdict:1386460:%E8%AA%AC%E6%98%8E:%E3%81%9B%E3%81%A4%E3%82%81%E3%81%84	説明	せつめい	explanation; exposition; description; account; caption; legend
+jmdict:1401210:%E7%9B%B8%E8%AB%87:%E3%81%9D%E3%81%86%E3%81%A0%E3%82%93	相談	そうだん	consultation; discussion; discussing; asking (someone) for advice
+jmdict:1421210:%E5%9C%B0%E9%9C%87:%E3%81%98%E3%81%97%E3%82%93	地震	じしん	earthquake
+jmdict:1483090:%E5%BD%BC%E3%82%89:%E3%81%8B%E3%82%8C%E3%82%89	彼ら	かれら	they; them
+jmdict:1483150:%E5%BD%BC%E5%A5%B3:%E3%81%8B%E3%81%AE%E3%81%98%E3%82%87	彼女	かのじょ	she; her; girlfriend
+jmdict:1497190:%E6%99%AE%E9%80%9A:%E3%81%B5%E3%81%A4%E3%81%86	普通	ふつう	normal; ordinary; regular; usual; common; average; normally; ordinarily; usually; generally; commonly; local train; train that stops at every station
+jmdict:1505190:%E6%96%87%E5%AD%A6:%E3%81%B6%E3%82%93%E3%81%8C%E3%81%8F	文学	ぶんがく	literature
+jmdict:1517480:%E6%B3%95%E5%BE%8B:%E3%81%BB%E3%81%86%E3%82%8A%E3%81%A4	法律	ほうりつ	law; legislation; act
+jmdict:1549660:%E5%88%A9%E7%94%A8:%E3%82%8A%E3%82%88%E3%81%86	利用	りよう	use; utilization; utilisation; application
+jmdict:1559900:%E9%80%A3%E7%B5%A1:%E3%82%8C%E3%82%93%E3%82%89%E3%81%8F	連絡	れんらく	contacting; (making) contact; getting in touch; communication; correspondence; call; message; connection (with a train, bus, etc.); joining (a railway line, etc.); meeting; connection (between matters, incidents, etc.); relation; link
+jmdict:1582200:%E9%80%94%E4%B8%AD:%E3%81%A8%E3%81%A1%E3%82%85%E3%81%86	途中	とちゅう	on the way; en route; in the middle of; midway; halfway
+jmdict:1588730:%E9%81%B8%E3%81%B6:%E3%81%88%E3%82%89%E3%81%B6	選ぶ	えらぶ	to choose; to select; to pick (out)
+jmdict:1589350:%E6%80%9D%E3%81%86:%E3%81%8A%E3%82%82%E3%81%86	思う	おもう	to think; to consider; to believe; to reckon; to think (of doing); to plan (to do); to judge; to assess; to regard; to imagine; to suppose; to dream; to expect; to look forward to; to feel; to be (in a state of mind); to desire; to want; to care (deeply) for; to yearn for; to worry about; to love; to recall; to remember
+jmdict:1596930:%E7%A2%BA%E3%81%8B:%E3%81%9F%E3%81%97%E3%81%8B	確か	たしか	sure; certain; positive; definite; reliable; trustworthy; safe; sound; firm; accurate; correct; exact; If I'm not mistaken; If I remember correctly; If I remember rightly
+jmdict:1483540:%E6%AF%94%E3%81%B9%E3%82%8B:%E3%81%8F%E3%82%89%E3%81%B9%E3%82%8B	比べる	くらべる	to compare; to make a comparison (between); to compete (on); to measure (one's strength, ability, etc. against another's)
+jmdict:1556370:%E4%BE%8B%E3%81%88%E3%81%B0:%E3%81%9F%E3%81%A8%E3%81%88%E3%81%B0	例えば	たとえば	for example; for instance; e.g.
+jmdict:1228560:%E6%80%A5:%E3%81%8D%E3%82%85%E3%81%86	急	きゅう	sudden; abrupt; unexpected; urgent; pressing; steep; sharp; precipitous; rapid; swift; fast; emergency; crisis; danger; urgency; hurrying; haste; (in gagaku or noh) end of a song
+jmdict:1255060:%E8%A1%80:%E3%81%A1	血	ち	blood; ancestry; lineage; stock; (the) blood; feelings; passions
+jmdict:1463770:%E6%97%A5:%E3%81%B2	日	ひ	day; days; sun; sunshine; sunlight; (the) day; daytime; daylight; date; deadline; (past) days; time (e.g. of one's childhood); case (esp. unfortunate); event
+jmdict:1526960:%E5%91%B3:%E3%81%82%E3%81%98	味	あじ	flavor; flavour; taste; charm; appeal; uniqueness; attractiveness; experience; taste (e.g. of victory); smart; clever; witty; strange; aji; position that has some lingering potential that may be exploited later in the game
+jmdict:1592270:%E9%A6%96:%E3%81%8F%E3%81%B3	首	くび	neck; head; dismissal (from a job); firing; sacking
+jmdict:1222590:%E6%B0%97%E5%88%86:%E3%81%8D%E3%81%B6%E3%82%93	気分	きぶん	feeling; mood
+jmdict:1245470:%E7%A9%BA%E6%B0%97:%E3%81%8F%E3%81%86%E3%81%8D	空気	くうき	air; atmosphere; mood; situation; someone with no presence; someone who doesn't stand out at all
+jmdict:1279590:%E6%A0%A1%E9%95%B7:%E3%81%93%E3%81%86%E3%81%A1%E3%82%87%E3%81%86	校長	こうちょう	principal; head teacher; headmaster; headmistress
+jmdict:1304680:%E6%AE%8B%E5%BF%B5:%E3%81%96%E3%82%93%E3%81%AD%E3%82%93	残念	ざんねん	regrettable; unfortunate; disappointing; vexing
+jmdict:1334080:%E4%BD%8F%E6%89%80:%E3%81%98%E3%82%85%E3%81%86%E3%81%97%E3%82%87	住所	じゅうしょ	address (of a home, business, etc.); residence; domicile
+jmdict:1339460:%E5%87%BA%E5%B8%AD:%E3%81%97%E3%82%85%E3%81%A3%E3%81%9B%E3%81%8D	出席	しゅっせき	attendance; presence; appearance
+jmdict:1348430:%E5%B0%8F%E8%AA%AC:%E3%81%97%E3%82%87%E3%81%86%E3%81%9B%E3%81%A4	小説	しょうせつ	novel; story; (work of) fiction
+jmdict:1358490:%E9%A3%9F%E4%BA%8B:%E3%81%97%E3%82%87%E3%81%8F%E3%81%98	食事	しょくじ	meal (e.g. lunch, dinner); diet
+jmdict:1404390:%E6%81%AF%E5%AD%90:%E3%82%80%E3%81%99%E3%81%93	息子	むすこ	son; penis
+jmdict:1405890:%E5%8D%92%E6%A5%AD:%E3%81%9D%E3%81%A4%E3%81%8E%E3%82%87%E3%81%86	卒業	そつぎょう	graduation; completion (of a course); moving on (from); outgrowing (something); leaving (a group, company, etc.); quitting
+jmdict:1487400:%E5%BF%85%E3%81%9A:%E3%81%8B%E3%81%AA%E3%82%89%E3%81%9A	必ず	かならず	always; without exception; necessarily; certainly; without fail; positively; invariably
+jmdict:1501350:%E8%A4%87%E9%9B%91:%E3%81%B5%E3%81%8F%E3%81%96%E3%81%A4	複雑	ふくざつ	complex; complicated; intricate; mixed (feelings)
+jmdict:1576250:%E4%B8%80%E5%BA%A6:%E3%81%84%E3%81%A1%E3%81%A9	一度	いちど	once; one time; on one occasion; one degree; one tone; one musical interval
+jmdict:1606810:%E5%89%B2%E5%90%88:%E3%82%8F%E3%82%8A%E3%81%82%E3%81%84	割合	わりあい	rate; ratio; percentage; proportion; comparatively; contrary to expectations
+jmdict:1254130:%E6%B1%BA%E3%81%97%E3%81%A6:%E3%81%91%E3%81%A3%E3%81%97%E3%81%A6	決して	けっして	(not) ever; (not) by any means; (not) in the least; (not) in any way; (not) at all
+jmdict:1283510:%E9%AB%98%E6%A0%A1%E7%94%9F:%E3%81%93%E3%81%86%E3%81%93%E3%81%86%E3%81%9B%E3%81%84	高校生	こうこうせい	senior high school student
+jmdict:1347870:%E5%B0%8F%E5%AD%A6%E6%A0%A1:%E3%81%97%E3%82%87%E3%81%86%E3%81%8C%E3%81%A3%E3%81%93%E3%81%86	小学校	しょうがっこう	primary school; elementary school; grade school
+jmdict:1486460:%E7%BE%8E%E8%A1%93%E9%A4%A8:%E3%81%B3%E3%81%98%E3%82%85%E3%81%A4%E3%81%8B%E3%82%93	美術館	びじゅつかん	art museum; art gallery
+jmdict:1510790:%E5%A4%89%E3%82%8F%E3%82%8B:%E3%81%8B%E3%82%8F%E3%82%8B	変わる	かわる	to change; to be transformed; to be altered; to vary; to move to; to be different; to be uncommon; to be unusual
+jmdict:1590770:%E4%BB%A3%E3%82%8F%E3%82%8A:%E3%81%8B%E3%82%8F%E3%82%8A	代わり	かわり	substitute; replacement; substituting; replacing; stand-in; proxy; alternate; deputy; relief; successor; compensation; exchange; return; another helping; second helping; seconds; refill; upcoming program; upcoming programme
+jmdict:1279990:%E6%B8%AF:%E3%81%BF%E3%81%AA%E3%81%A8	港	みなと	harbour; harbor; port
+jmdict:1382250:%E5%B8%AD:%E3%81%9B%E3%81%8D	席	せき	seat; location (of a gathering, etc.); place; position; post
+jmdict:1391780:%E7%B7%9A:%E3%81%9B%E3%82%93	線	せん	line; stripe; stria; line (e.g. telephone line); wire; ray (e.g. X-ray); beam; line (e.g. of a railroad); track; route; lane; outline; contours; form; level; division; line (of action); position; approach; policy; principle; impression one leaves; air one gives off
+jmdict:1449530:%E7%AD%94:%E3%81%93%E3%81%9F%E3%81%88	答	こたえ	answer; reply; response; solution; result
+jmdict:1546550:%E8%91%89:%E3%81%AF	葉	は	leaf; blade (of grass); (pine) needle; frond; foliage
+jmdict:1550190:%E8%A3%8F:%E3%81%86%E3%82%89	裏	うら	opposite side; bottom; other side; side hidden from view; undersurface; reverse side; rear; back; behind; lining; inside; in the shadows; behind the scenes; offstage; behind (someone's) back; more (to something than meets the eye); hidden side (e.g. of one's personality); unknown circumstances; different side; proof; opposite (of a prediction, common sense, etc.); contrary; inverse (of a hypothesis, etc.); bottom (of an inning); last half (of an inning)
+jmdict:1602800:%E8%88%9F:%E3%81%B5%E3%81%AD	舟	ふね	ship; boat; watercraft; vessel; seaplane; tank; tub; vat; trough; counter for boat-shaped containers (e.g. of sashimi)
+jmdict:1155060:%E4%BB%A5%E4%B8%8B:%E3%81%84%E3%81%8B	以下	いか	not exceeding ...; not more than ...; ... and under; ... and below; ... or fewer; below (a standard, level, etc.); under; beneath; less than; the following; the below-mentioned; the rest; followed by ...; including ...; ... and other (employees, officials, etc.)
+jmdict:1198880:%E4%BC%9A%E8%A9%B1:%E3%81%8B%E3%81%84%E3%82%8F	会話	かいわ	conversation; talk; chat
+jmdict:1222840:%E5%AD%A3%E7%AF%80:%E3%81%8D%E3%81%9B%E3%81%A4	季節	きせつ	season; time of year
+jmdict:1238410:%E8%88%88%E5%91%B3:%E3%81%8D%E3%82%87%E3%81%86%E3%81%BF	興味	きょうみ	interest (in something); curiosity (about something); zest (for)
+jmdict:1282490:%E9%83%8A%E5%A4%96:%E3%81%93%E3%81%86%E3%81%8C%E3%81%84	郊外	こうがい	suburb; residential area on the outskirt of a city; commuter belt
+jmdict:1320140:%E5%A4%B1%E6%95%97:%E3%81%97%E3%81%A3%E3%81%B1%E3%81%84	失敗	しっぱい	failure; mistake; blunder
+jmdict:1360930:%E5%BF%83%E9%85%8D:%E3%81%97%E3%82%93%E3%81%B1%E3%81%84	心配	しんぱい	worry; concern; anxiety; uneasiness; fear; care; help; aid; assistance
+jmdict:1426530:%E6%B3%A8%E6%84%8F:%E3%81%A1%E3%82%85%E3%81%86%E3%81%84	注意	ちゅうい	attention; notice; heed; care; caution; precaution; looking out (for); watching out (for); advice; warning; reminder; admonishment; reprimand; telling-off
+jmdict:1465720:%E5%85%A5%E9%99%A2:%E3%81%AB%E3%82%85%E3%81%86%E3%81%84%E3%82%93	入院	にゅういん	hospitalization; hospitalisation
+jmdict:1465850:%E5%85%A5%E5%AD%A6:%E3%81%AB%E3%82%85%E3%81%86%E3%81%8C%E3%81%8F	入学	にゅうがく	admission (to a school or university); entrance; enrolment; enrollment; matriculation
+jmdict:1542070:%E9%81%8A%E3%81%B3:%E3%81%82%E3%81%9D%E3%81%B3	遊び	あそび	play; playing; game; pleasure; amusement; pastime; recreation; diversion; play (in a mechanism, e.g. a steering wheel); flexibility (in a performance, art, etc.); freedom; flyleaf
+jmdict:1590480:%E6%A0%BC%E5%A5%BD:%E3%81%8B%E3%81%A3%E3%81%93%E3%81%86	格好	かっこう	shape; form; figure; posture; pose; appearance; style; state; situation; suitable; fit; reasonable; about
+jmdict:1594110:%E4%BB%95%E6%96%B9:%E3%81%97%E3%81%8B%E3%81%9F	仕方	しかた	way; method; means; resource; course
+jmdict:1596780:%E5%8F%B0%E9%A2%A8:%E3%81%9F%E3%81%84%E3%81%B5%E3%81%86	台風	たいふう	typhoon; hurricane
+jmdict:1600160:%E5%80%A4%E6%AE%B5:%E3%81%AD%E3%81%A0%E3%82%93	値段	ねだん	price; cost
+jmdict:1172870:%E9%81%8B%E8%BB%A2%E6%89%8B:%E3%81%86%E3%82%93%E3%81%A6%E3%82%93%E3%81%97%E3%82%85	運転手	うんてんしゅ	driver; chauffeur
+jmdict:1207250:%E6%A5%BD%E3%81%97%E3%81%BF:%E3%81%9F%E3%81%AE%E3%81%97%E3%81%BF	楽しみ	たのしみ	enjoyment; pleasure; amusement; delight; joy; fun; diversion; hobby; anticipation; looking forward to; something to look forward to
+jmdict:1213870:%E7%9C%8B%E8%AD%B7%E5%A9%A6:%E3%81%8B%E3%82%93%E3%81%94%E3%81%B5	看護婦	かんごふ	(female) nurse
+jmdict:1378520:%E7%94%9F%E3%81%8D%E3%82%8B:%E3%81%84%E3%81%8D%E3%82%8B	生きる	いきる	to live; to exist; to make a living; to subsist; to be in effect; to be in use; to function; to come to life; to be enlivened; to be safe (in baseball, go, etc.)
+jmdict:1423650:%E4%B8%AD%E5%AD%A6%E6%A0%A1:%E3%81%A1%E3%82%85%E3%81%86%E3%81%8C%E3%81%A3%E3%81%93%E3%81%86	中学校	ちゅうがっこう	junior high school; middle school; lower secondary school
+jmdict:1202150:%E7%9A%86:%E3%81%BF%E3%81%AA	皆	みな	everyone; everybody; all; everything
+jmdict:1215230:%E9%96%93:%E3%81%82%E3%81%84%E3%81%A0	間	あいだ	space (between); gap; interval; distance; stretch; period of time (during, while); duration; between (two parties or things); among (a group); relations (between); relationship; midpoint; average; halfway; middle ground; due to; because of
+jmdict:1310530:%E6%9E%9D:%E3%81%88%E3%81%A0	枝	えだ	branch; bough; limb; twig; sprig; spray
+jmdict:1376310:%E6%98%9F:%E3%81%BB%E3%81%97	星	ほし	star (usu. excluding the Sun); planet (usu. excluding Earth); heavenly body; star (glyph, symbol, shape); asterisk; star (actor, player, etc.); dot; spot; fleck; bullseye; perp; perpetrator; culprit; offender; suspect; one's star (that determines one's fate); one's fortune; point; score; star point (intersection marked with a dot); hoshi; (pyrotechnic) star
+jmdict:1441390:%E7%82%B9:%E3%81%A6%E3%82%93	点	てん	dot; spot; point; speck; mark; mark (in an exam, etc.); grade; score; points; point (in a game); goal; run; aspect; matter; detail; part; respect; way; viewpoint; (punctuation) mark (e.g. comma, period, decimal point); "dot" stroke (in a Chinese character); counter for points, marks, goals, etc.; counter for goods, items, articles of clothing, works of art, etc.
+jmdict:1467710:%E7%86%B1:%E3%81%AD%E3%81%A4	熱	ねつ	heat; fever; temperature; zeal; passion; enthusiasm; mania; craze; rage
+jmdict:1562850:%E8%85%95:%E3%81%86%E3%81%A7	腕	うで	arm; ability; skill; talent; competence; (physical) strength
+jmdict:1153890:%E5%AE%89%E5%BF%83:%E3%81%82%E3%82%93%E3%81%97%E3%82%93	安心	あんしん	peace of mind; relief; (sense of) security; safety; assurance; confidence
+jmdict:1201280:%E6%B5%B7%E5%B2%B8:%E3%81%8B%E3%81%84%E3%81%8C%E3%82%93	海岸	かいがん	seashore; coast; seaside; waterfront; beach
+jmdict:1237030:%E6%95%99%E4%BC%9A:%E3%81%8D%E3%82%87%E3%81%86%E3%81%8B%E3%81%84	教会	きょうかい	church; congregation
+jmdict:1267180:%E6%95%85%E9%9A%9C:%E3%81%93%E3%81%97%E3%82%87%E3%81%86	故障	こしょう	fault; trouble; breakdown; failure; being out of order; damage (to a part of the body); injury; hurt; problem; hitch; obstacle; hindrance; objection; protest
+jmdict:1329000:%E8%B6%A3%E5%91%B3:%E3%81%97%E3%82%85%E3%81%BF	趣味	しゅみ	hobby; pastime; tastes; preference; liking
+jmdict:1335440:%E6%9F%94%E9%81%93:%E3%81%98%E3%82%85%E3%81%86%E3%81%A9%E3%81%86	柔道	じゅうどう	judo
+jmdict:1340000:%E5%87%BA%E7%99%BA:%E3%81%97%E3%82%85%E3%81%A3%E3%81%B1%E3%81%A4	出発	しゅっぱつ	departure; leaving; setting off
+jmdict:1349610:%E6%8B%9B%E5%BE%85:%E3%81%97%E3%82%87%E3%81%86%E3%81%9F%E3%81%84	招待	しょうたい	invitation
+jmdict:1351430:%E7%B4%B9%E4%BB%8B:%E3%81%97%E3%82%87%E3%81%86%E3%81%8B%E3%81%84	紹介	しょうかい	introduction; presentation; referral; showcase (of a product)
+jmdict:1364670:%E7%A5%9E%E7%A4%BE:%E3%81%98%E3%82%93%E3%81%98%E3%82%83	神社	じんじゃ	Shinto shrine
+jmdict:1367120:%E4%BA%BA%E5%BD%A2:%E3%81%AB%E3%82%93%E3%81%8E%E3%82%87%E3%81%86	人形	にんぎょう	doll; puppet; marionette; puppet (person under the control of another); straw man; yes-man
+jmdict:1374300:%E4%B8%96%E8%A9%B1:%E3%81%9B%E3%82%8F	世話	せわ	care; looking after; help; assistance; aid; trouble; bother; good offices; recommendation; introduction; everyday life; everyday affairs; everyday language; sewamono (Edo-period drama about contemporary life)
+jmdict:1374530:%E6%98%AF%E5%90%A6:%E3%81%9C%E3%81%B2	是否	ぜひ	certainly; without fail; right and wrong; pros and cons
+jmdict:1379750:%E7%9B%9B%E3%82%93:%E3%81%95%E3%81%8B%E3%82%93	盛ん	さかん	prosperous; flourishing; thriving; successful; popular; widespread; active; lively; energetic; vigorous; brisk; strong; enthusiastic; eager; hearty; frequent; repeated
+jmdict:1388410:%E5%85%88%E8%BC%A9:%E3%81%9B%E3%82%93%E3%81%B1%E3%81%84	先輩	せんぱい	senior (at school, work, etc.); superior; elder; older person; predecessor
+jmdict:1467910:%E7%86%B1%E5%BF%83:%E3%81%AD%E3%81%A3%E3%81%97%E3%82%93	熱心	ねっしん	zealous; enthusiastic; ardent; fervent; keen; eager
+jmdict:1526920:%E6%BC%AB%E7%94%BB:%E3%81%BE%E3%82%93%E3%81%8C	漫画	まんが	cartoon; comic; comic strip; manga
+jmdict:1530970:%E7%84%A1%E7%90%86:%E3%82%80%E3%82%8A	無理	むり	unreasonable; unnatural; unjustifiable; impossible; forcible; forced; compulsory; excessive (work, etc.); immoderate; to work too hard; to try too hard; no way; not a chance; never; dream on; irrational
+jmdict:1538130:%E7%B4%84%E6%9D%9F:%E3%82%84%E3%81%8F%E3%81%9D%E3%81%8F	約束	やくそく	promise; agreement; arrangement; one's word; contract; pact; appointment; engagement; date; convention; rule; destiny; fate
+jmdict:1546220:%E7%94%A8%E6%84%8F:%E3%82%88%E3%81%86%E3%81%84	用意	ようい	preparation; arrangements; provision; getting ready; laying out (e.g. a meal)
+jmdict:1584660:%E6%98%8E%E6%97%A5:%E3%81%82%E3%81%99	明日	あす	tomorrow; near future
+jmdict:1604290:%E5%91%A8%E3%82%8A:%E3%81%BE%E3%82%8F%E3%82%8A	周り	まわり	circumference; girth; surroundings; neighbourhood; neighborhood; vicinity; people surrounding oneself; surrounding circumstances
+jmdict:1274820:%E5%85%AC%E5%8B%99%E5%93%A1:%E3%81%93%E3%81%86%E3%82%80%E3%81%84%E3%82%93	公務員	こうむいん	public employee; government employee; public-sector worker; public servant; civil servant
+jmdict:1362400:%E6%96%B0%E8%81%9E%E7%A4%BE:%E3%81%97%E3%82%93%E3%81%B6%E3%82%93%E3%81%97%E3%82%83	新聞社	しんぶんしゃ	newspaper company
+jmdict:1426920:%E9%A7%90%E8%BB%8A%E5%A0%B4:%E3%81%A1%E3%82%85%E3%81%86%E3%81%97%E3%82%83%E3%81%98%E3%82%87%E3%81%86	駐車場	ちゅうしゃじょう	parking lot; car park; carpark; parking garage
+jmdict:1589590:%E7%B5%82%E3%82%8F%E3%82%8A:%E3%81%8A%E3%82%8F%E3%82%8A	終わり	おわり	end; ending; close; conclusion; end of (one's) life; death
+jmdict:1190860:%E5%8F%AF%E6%80%AA%E3%81%97%E3%81%84:%E3%81%8A%E3%81%8B%E3%81%97%E3%81%84	可怪しい	おかしい	funny; amusing; comical; laughable; ridiculous; strange; odd; peculiar; weird; wrong; unusual; eccentric; unsuitable; improper; inappropriate; unbecoming; suspicious
+jmdict:1173100:%E9%9B%B2:%E3%81%8F%E3%82%82	雲	くも	cloud
+jmdict:1238550:%E9%8F%A1:%E3%81%8B%E3%81%8C%E3%81%BF	鏡	かがみ	mirror; looking-glass; barrel head; page added at the beginning of a document mentioning its purpose, date, author, etc.; mirror-shaped mochi
+jmdict:1291500:%E7%A0%82:%E3%81%99%E3%81%AA	砂	すな	sand; grit; fine gravel
+jmdict:1309650:%E6%8C%87:%E3%82%86%E3%81%B3	指	ゆび	finger; toe; digit
+jmdict:1401910:%E8%8D%89:%E3%81%8F%E3%81%95	草	くさ	grass; weed; herb; thatch; ninja; marijuana; cannabis; not genuine; substandard; LOL; haha
+jmdict:1426680:%E8%99%AB:%E3%82%80%E3%81%97	虫	むし	insect; bug; cricket; moth; worm; roundworm; thing inside one's body believed to influence one's thoughts and feelings; (one's) unconscious; nervousness; fretfulness; person devoted to one thing; single-minded person; valve core; mushi (type of game played with a stripped deck)
+jmdict:1448580:%E6%B9%AF:%E3%82%86	湯	ゆ	hot water; hot bath; hot spring; molten iron
+jmdict:1477950:%E9%AB%AA:%E3%81%8B%E3%81%BF	髪	かみ	hair (on the head)
+jmdict:1489340:%E8%A1%A8:%E3%81%8A%E3%82%82%E3%81%A6	表	おもて	surface; face (i.e. the visible side of an object); front (of a building, etc.); obverse side (i.e. "head") of a coin; outside; exterior; appearance; public; first half (of an inning); top (of an inning); cover (for tatami mats, etc.); foreground; Omotesenke school of tea ceremony
+jmdict:1533820:%E6%AF%9B:%E3%81%91	毛	け	hair; fur; wool; down; plumage; feathers
+jmdict:1172660:%E9%81%8B%E3%81%B6:%E3%81%AF%E3%81%93%E3%81%B6	運ぶ	はこぶ	to carry; to transport; to move; to convey; to come; to go; to use (a brush, chopsticks, etc.); to carry out; to proceed with; to arrange; to go (well, etc.); to proceed; to progress
+jmdict:1223021:%E8%A6%8F%E5%89%87:%E3%81%8D%E3%81%9D%E3%81%8F	規則	きそく	rule; regulation
+jmdict:1242350:%E8%BF%91%E6%89%80:%E3%81%8D%E3%82%93%E3%81%98%E3%82%87	近所	きんじょ	neighbourhood; neighborhood; vicinity
+jmdict:1333090:%E7%BF%92%E6%85%A3:%E3%81%97%E3%82%85%E3%81%86%E3%81%8B%E3%82%93	習慣	しゅうかん	habit; (social) custom; practice; convention; tradition
+jmdict:1371920:%E6%B0%B4%E9%81%93:%E3%81%99%E3%81%84%E3%81%A9%E3%81%86	水道	すいどう	water supply; water service; waterworks; tap water; channel; strait; water course; waterway
+jmdict:1402730:%E9%80%81%E3%82%8B:%E3%81%8A%E3%81%8F%E3%82%8B	送る	おくる	to send; to dispatch; to forward; to transmit; to ship; to remit; to see (someone) off; to escort; to accompany; to take; to bid farewell to (the departed); to say goodbye to; to bury; to spend (time); to pass; to lead (a life); to live; to pass (on, along); to advance (a runner); to affix (okurigana)
+jmdict:1408810:%E6%89%93%E3%81%A4:%E3%81%86%E3%81%A4	打つ	うつ	to hit; to strike; to knock; to beat; to punch; to slap; to tap; to bang; to clap; to pound; to strike (noon, etc.); to sound (cymbals, etc.); to beat (a drum, etc.); to beat (rhythmically, e.g. pulse, waves, etc.); to move; to impress; to touch; to drive in; to hammer in; to put in; to inject; to vaccinate; to type; to send; to transmit; to insert; to write in; to mark; to make (noodles, etc.); to prepare; to till (soil); to sprinkle; to throw; to cast; to do; to carry out; to play; to perform; to engage in (gambling, etc.); to pay (a deposit, etc.); to visit (on a pilgrimage); to line (a coat); to bind (a criminal); to drop (a piece); to play a move; to play a game
+jmdict:1437450:%E9%81%A9%E5%BD%93:%E3%81%A6%E3%81%8D%E3%81%A8%E3%81%86	適当	てきとう	suitable; proper; appropriate; adequate; fit; fair; perfunctory; half-minded; sloppy; lazy; careless; noncommittal; unreliable; irresponsible; haphazard
+jmdict:1523400:%E7%BF%BB%E8%A8%B3:%E3%81%BB%E3%82%93%E3%82%84%E3%81%8F	翻訳	ほんやく	translation; deciphering; decoding
+jmdict:1543750:%E4%BA%88%E7%B4%84:%E3%82%88%E3%82%84%E3%81%8F	予約	よやく	reservation; appointment; booking; advance order; contract; subscription; pledge; programming (e.g. a device); setting (e.g. a timer)
+jmdict:1584060:%E5%8C%85%E3%82%80:%E3%81%A4%E3%81%A4%E3%82%80	包む	つつむ	to wrap up; to pack; to bundle; to do up; to cover; to envelop; to shroud; to engulf; to conceal (a feeling); to hide; to give (money in an envelope; as a wedding gift, funeral offering, etc.)
+jmdict:1518070:%E8%A8%AA%E3%81%AD%E3%82%8B:%E3%81%9F%E3%81%9A%E3%81%AD%E3%82%8B	訪ねる	たずねる	to visit; to call on; to pay a visit to
+jmdict:1588550:%E5%A3%B2%E3%82%8A%E5%A0%B4:%E3%81%86%E3%82%8A%E3%81%B0	売り場	うりば	selling area; counter; section; department; sales floor; favorable time to sell; good time to sell
+jmdict:1164010:%E4%B8%80%E7%94%9F%E6%87%B8%E5%91%BD:%E3%81%84%E3%81%A3%E3%81%97%E3%82%87%E3%81%86%E3%81%91%E3%82%93%E3%82%81%E3%81%84	一生懸命	いっしょうけんめい	very hard; with utmost effort; as hard as one can; with all one's might; for dear life; eagerly; desperately
+jmdict:1383260:%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93:%E3%81%82%E3%81%8B%E3%81%A1%E3%82%83%E3%82%93	赤ちゃん	あかちゃん	baby; infant
+jmdict:1311450:%E7%B3%B8:%E3%81%84%E3%81%A8	糸	いと	thread; yarn; string
+jmdict:1521400:%E5%83%95:%E3%81%BC%E3%81%8F	僕	ぼく	I; me; you; manservant
+jmdict:1154860:%E6%A1%88%E5%86%85:%E3%81%82%E3%82%93%E3%81%AA%E3%81%84	案内	あんない	guidance; leading (the way); showing around; information; notice; notification; announcement (of a visitor's arrival); informing (someone) of a visitor's arrival; invitation; acquaintance; knowledge
+jmdict:1221250:%E5%B8%B0%E3%82%8A:%E3%81%8B%E3%81%88%E3%82%8A	帰り	かえり	return; coming back
+jmdict:1371320:%E6%B0%B4%E6%B3%B3:%E3%81%99%E3%81%84%E3%81%88%E3%81%84	水泳	すいえい	swimming
+jmdict:1440670:%E5%BA%97%E5%93%A1:%E3%81%A6%E3%82%93%E3%81%84%E3%82%93	店員	てんいん	employee (of a store); shop assistant; clerk; salesperson
+jmdict:1444980:%E9%83%BD%E5%90%88:%E3%81%A4%E3%81%94%E3%81%86	都合	つごう	circumstances; condition; convenience; arranging; managing; lending money; raising money; in all; in total; all told
+jmdict:1454180:%E9%81%93%E5%85%B7:%E3%81%A9%E3%81%86%E3%81%90	道具	どうぐ	tool; implement; instrument; utensil; apparatus; device; means; furniture
+jmdict:1463930:%E6%97%A5%E8%A8%98:%E3%81%AB%E3%81%A3%E3%81%8D	日記	にっき	diary; journal
+jmdict:1472800:%E8%83%8C%E4%B8%AD:%E3%81%9B%E3%81%AA%E3%81%8B	背中	せなか	back (of the body)
+jmdict:1554010:%E4%B8%A1%E6%96%B9:%E3%82%8A%E3%82%87%E3%81%86%E3%81%BB%E3%81%86	両方	りょうほう	both; both sides; both parties
+jmdict:1592500:%E5%85%B7%E5%90%88:%E3%81%90%E3%81%82%E3%81%84	具合	ぐあい	condition; state; health; state (of health); way; manner; circumstance; luck; face; dignity; decency; propriety
+jmdict:1184170:%E4%B8%8B%E3%81%92%E3%82%8B:%E3%81%95%E3%81%92%E3%82%8B	下げる	さげる	to hang; to suspend; to wear (e.g. decoration); to lower; to reduce; to bring down; to demote; to move back; to pull back; to clear (plates); to remove (food, etc. from table or altar); to keep on playing after one has formed a scoring combination with captured cards
+jmdict:1333560:%E9%9B%86%E3%82%81%E3%82%8B:%E3%81%82%E3%81%A4%E3%82%81%E3%82%8B	集める	あつめる	to collect; to assemble; to gather
+jmdict:1451490:%E5%8B%95%E7%89%A9%E5%9C%92:%E3%81%A9%E3%81%86%E3%81%B6%E3%81%A4%E3%81%88%E3%82%93	動物園	どうぶつえん	zoo; zoological gardens
+jmdict:1227370:%E4%B9%85%E3%81%97%E3%81%B6%E3%82%8A:%E3%81%B2%E3%81%95%E3%81%97%E3%81%B6%E3%82%8A	久しぶり	ひさしぶり	a long time (since the last time); first in a long time; it's been a long time; long time no see
+jmdict:1599800:%E4%BA%8C%E9%9A%8E%E5%BB%BA%E3%81%A6:%E3%81%AB%E3%81%8B%E3%81%84%E3%81%A0%E3%81%A6	二階建て	にかいだて	two-storied building
+jmdict:1267280:%E6%B9%96:%E3%81%BF%E3%81%9A%E3%81%86%E3%81%BF	湖	みずうみ	lake
+jmdict:1457730:%E5%86%85:%E3%81%86%E3%81%A1	内	うち	inside; within; while (e.g. one is young); during; within (e.g. a day); in the course of; among; amongst; (out) of; between; in (secret, chaos, poverty, etc.); amidst; with (e.g. success); within oneself; one's feelings; inner thoughts; we; our company; our organization; one's home; one's family; my spouse; my husband; my wife; signed on behalf of (husband's name) by his wife; I; me; imperial palace grounds; emperor
+jmdict:1282260:%E8%AC%9B%E7%BE%A9:%E3%81%93%E3%81%86%E3%81%8E	講義	こうぎ	lecture
+jmdict:1284430:%E5%90%88%E3%81%86:%E3%81%82%E3%81%86	合う	あう	to come together; to merge; to unite; to meet; to fit; to match; to suit; to agree with; to be correct; to be profitable; to be equitable; to do ... to each other; to do ... together
+jmdict:1381100:%E8%A5%BF%E6%B4%8B:%E3%81%9B%E3%81%84%E3%82%88%E3%81%86	西洋	せいよう	the West; the Occident; Western countries
+jmdict:1413940:%E5%A4%A7%E4%BA%8B:%E3%81%A0%E3%81%84%E3%81%98	大事	だいじ	important; serious; crucial; valuable; precious; serious matter; major incident; matter of grave concern; crisis; great undertaking; great enterprise; great thing; safe; OK
+jmdict:1512220:%E8%BF%94%E4%BA%8B:%E3%81%B8%E3%82%93%E3%81%98	返事	へんじ	reply; answer; response
+jmdict:1546880:%E8%B8%8A%E3%82%8A:%E3%81%8A%E3%81%A9%E3%82%8A	踊り	おどり	dance
+jmdict:1581710:%E6%98%BC%E9%96%93:%E3%81%B2%E3%82%8B%E3%81%BE	昼間	ひるま	daytime; during the day; time from sunrise until sunset; diurnal period
+jmdict:1198380:%E4%BC%9A%E8%AD%B0%E5%AE%A4:%E3%81%8B%E3%81%84%E3%81%8E%E3%81%97%E3%81%A4	会議室	かいぎしつ	conference room; council room
+jmdict:1258570:%E7%A0%94%E7%A9%B6%E5%AE%A4:%E3%81%91%E3%82%93%E3%81%8D%E3%82%85%E3%81%86%E3%81%97%E3%81%A4	研究室	けんきゅうしつ	laboratory; seminar room; professor's office
+jmdict:1440660:%E5%B1%95%E8%A6%A7%E4%BC%9A:%E3%81%A6%E3%82%93%E3%82%89%E3%82%93%E3%81%8B%E3%81%84	展覧会	てんらんかい	exhibition
+jmdict:1486360:%E7%BE%8E%E3%81%97%E3%81%84:%E3%81%86%E3%81%A4%E3%81%8F%E3%81%97%E3%81%84	美しい	うつくしい	beautiful; pretty; lovely; sweet; pure (heart, friendship, etc.)
+jmdict:1604350:%E7%9C%9F%E3%82%93%E4%B8%AD:%E3%81%BE%E3%82%93%E3%81%AA%E3%81%8B	真ん中	まんなか	middle; centre; center; midpoint; heart
+jmdict:1157080:%E7%82%BA:%E3%81%9F%E3%82%81	為	ため	good; advantage; benefit; welfare; sake; purpose; objective; aim; consequence; result; effect; affecting; regarding; concerning
+jmdict:1246440:%E9%9A%85:%E3%81%99%E3%81%BF	隅	すみ	corner; nook; recess
+jmdict:1297110:%E5%9D%82:%E3%81%95%E3%81%8B	坂	さか	slope; incline; hill; milestone; (age) mark
+jmdict:1473230:%E5%80%8D:%E3%81%B0%E3%81%84	倍	ばい	double; twice (as much); times (as much); -fold; 1-nth; 1 to n; 1 in n
+jmdict:1355810:%E5%A0%B4%E5%90%88:%E3%81%B0%E3%81%82%E3%81%84	場合	ばあい	case; occasion; situation; circumstances
+jmdict:1372980:%E6%95%B0%E5%AD%A6:%E3%81%99%E3%81%86%E3%81%8C%E3%81%8F	数学	すうがく	mathematics
+jmdict:1396840:%E7%A5%96%E7%88%B6:%E3%81%9D%E3%81%B5	祖父	そふ	grandfather
+jmdict:1423240:%E7%9D%80%E7%89%A9:%E3%81%8D%E3%82%82%E3%81%AE	着物	きもの	kimono; Japanese traditional clothing (esp. full-length); clothing; clothes
+jmdict:1426590:%E6%B3%A8%E5%B0%84:%E3%81%A1%E3%82%85%E3%81%86%E3%81%97%E3%82%83	注射	ちゅうしゃ	injection; jab; shot
+jmdict:1427360:%E4%B8%81%E5%AF%A7:%E3%81%A6%E3%81%84%E3%81%AD%E3%81%84	丁寧	ていねい	polite; courteous; civil; careful; close; thorough; conscientious
+jmdict:1442750:%E7%94%B0%E8%88%8E:%E3%81%84%E3%81%AA%E3%81%8B	田舎	いなか	rural area; countryside; the sticks; hometown
+jmdict:1448440:%E7%9B%97%E3%82%80:%E3%81%AC%E3%81%99%E3%82%80	盗む	ぬすむ	to steal; to plagiarize; to steal (a technique, idea, etc.); to watch and learn; to do stealthily; to do during scant time; to steal a base
+jmdict:1553130:%E6%97%85%E9%A4%A8:%E3%82%8A%E3%82%87%E3%81%8B%E3%82%93	旅館	りょかん	ryokan; traditional Japanese inn
+jmdict:1588060:%E5%8F%97%E4%BB%98:%E3%81%86%E3%81%91%E3%81%A4%E3%81%91	受付	うけつけ	reception (desk); information desk; receptionist; information clerk; receipt; acceptance
+jmdict:1242970:%E9%87%91%E6%8C%81%E3%81%A1:%E3%81%8B%E3%81%AD%E3%82%82%E3%81%A1	金持ち	かねもち	rich person; wealthy person
+jmdict:1295530:%E7%B4%B0%E3%81%8B%E3%81%84:%E3%81%93%E3%81%BE%E3%81%8B%E3%81%84	細かい	こまかい	small; fine; minute; minor; trivial; sensitive; attentive; careful; frugal; stingy
+jmdict:1358680:%E9%A3%9F%E6%96%99%E5%93%81:%E3%81%97%E3%82%87%E3%81%8F%E3%82%8A%E3%82%87%E3%81%86%E3%81%B2%E3%82%93	食料品	しょくりょうひん	foodstuff; groceries
+jmdict:1182710:%E5%B1%8B%E4%B8%8A:%E3%81%8A%E3%81%8F%E3%81%98%E3%82%87%E3%81%86	屋上	おくじょう	rooftop
+jmdict:1193950:%E7%81%AB%E4%BA%8B:%E3%81%8B%E3%81%98	火事	かじ	fire; conflagration
+jmdict:1282340:%E8%AC%9B%E5%A0%82:%E3%81%93%E3%81%86%E3%81%A9%E3%81%86	講堂	こうどう	auditorium; lecture hall
+jmdict:1396860:%E7%A5%96%E6%AF%8D:%E3%81%9D%E3%81%BC	祖母	そぼ	grandmother
+jmdict:1421540:%E5%9C%B0%E7%90%86:%E3%81%A1%E3%82%8A	地理	ちり	geography
+jmdict:1454750:%E7%89%B9%E6%80%A5:%E3%81%A8%E3%81%A3%E3%81%8D%E3%82%85%E3%81%86	特急	とっきゅう	limited express (train for which a limited-express ticket is required); limited express (train making a limited no. of stops); great hurry
+jmdict:1496890:%E5%B8%83%E5%9B%A3:%E3%81%B5%E3%81%A8%E3%82%93	布団	ふとん	futon; Japanese bedding consisting of a mattress and a duvet; round cushion used for Zen meditation (traditionally made of woven bulrush leaves)
+jmdict:1548550:%E8%90%BD%E3%82%8B:%E3%81%8A%E3%81%A1%E3%82%8B	落る	おちる	to fall; to drop; to come down; to crash; to collapse; to cave in; to give way; to set (of the sun or moon); to sink; to dip; to go down; to decrease (of popularity, quality, speed, sales, etc.); to decline; to deteriorate; to abate (of wind); to be inferior (to); to be not as good (as); to fall short (of); to come off (of dirt, paint, makeup, etc.); to come out (of a stain); to fade (of colour); to be removed (of an illness, possessing spirit, etc.); to disappear (of excess fat); to become thinner; to become leaner; to be left out; to be omitted; to be missing; to fail (an exam); to lose (a contest, election, etc.); to be unsuccessful; to decline (of morals, character, etc.); to become vulgar (e.g. of a conversation); to stoop (to); to sink (so low); to be ruined; to go under; to fall (into hell); to fall (in love, asleep, etc.); to fall (into someone's hands); to be accepted (of a bid); to be won (of a tender); to be honoured (of a bill); to fall into (a trap); to fall for (a trick); to give in; to confess; to own up; to come to (a conclusion, topic, etc.); to arrive at (in the end); to leave (a city, castle, etc.); to (be defeated and) flee; to sink in; to be accepted (in one's heart); to fall (to the enemy); to be defeated; to come in (of money); to fall (upon; of light, a shadow, one's gaze, etc.); to pass out (in judo); to fall unconscious; to go down (of a website, server, etc.); to log out (of an online game, chat room, etc.); to drop out; to leave; to go offline; to move to deeper water (of a fish in cold weather); to die (of an animal); to strike (of lightning)
+jmdict:1595270:%E8%BE%9E%E5%85%B8:%E3%81%98%E3%81%A6%E3%82%93	辞典	じてん	dictionary; lexicon
+jmdict:1281020:%E8%80%83%E3%81%88%E3%82%8B:%E3%81%8B%E3%82%93%E3%81%8C%E3%81%88%E3%82%8B	考える	かんがえる	to think (about, of); to think over; to ponder; to contemplate; to reflect (on); to meditate (on); to consider; to bear in mind; to allow for; to take into consideration; to think (that); to believe; to hold (a view); to judge; to conclude; to suspect; to intend (to do); to think of (doing); to plan; to predict; to anticipate; to expect; to imagine; to come up with; to think up; to contrive; to devise; to consider (as); to regard (as); to look on (as); to take; to view
+jmdict:1445790:%E5%80%92%E3%82%8C%E3%82%8B:%E3%81%9F%E3%81%8A%E3%82%8C%E3%82%8B	倒れる	たおれる	to fall (over, down); to collapse; to take a fall; to topple; to be destroyed (in a collapse); to cave in; to crumble; to give away; to be confined to bed (with an illness); to come down with; to break down (e.g. from overwork); to die; to be killed; to go bankrupt (of a company, bank, etc.); to fail; to go under; to be defeated (in a game); to lose; to fall (of a government, dictator, etc.); to be overthrown
+jmdict:1589500:%E4%B8%8B%E3%82%8A%E3%82%8B:%E3%81%8A%E3%82%8A%E3%82%8B	下りる	おりる	to descend (e.g. a mountain); to go down; to come down; to alight (e.g. from bus); to get off; to disembark; to dismount; to step down; to retire; to give up; to quit; to fold; to be granted; to be issued; to be given; to form (of frost, dew, mist, etc.); to be passed (from the body; e.g. of a roundworm)
+jmdict:1416700:%E6%A3%9A:%E3%81%9F%E3%81%AA	棚	たな	shelf; ledge; rack; trellis
+jmdict:1185930:%E4%B8%8B%E7%9D%80:%E3%81%97%E3%81%9F%E3%81%8E	下着	したぎ	underwear; undergarment; underclothes; lingerie
+jmdict:1244310:%E8%8B%A6%E3%81%84:%E3%81%AB%E3%81%8C%E3%81%84	苦い	にがい	bitter (taste); sour (expression, look); bitter; displeased; unpleasant; bitter (e.g. experience); painful; distressing; hard; trying
+jmdict:1349480:%E6%89%BF%E7%9F%A5:%E3%81%97%E3%82%87%E3%81%86%E3%81%A1	承知	しょうち	knowledge; awareness; acceptance; consent; assent; agreement; compliance; acknowledgment; acknowledgement; forgiving; pardoning; excusing
+jmdict:1414920:%E5%A4%A7%E5%88%86:%E3%81%A0%E3%81%84%E3%81%B6	大分	だいぶ	considerably; greatly; a lot
+jmdict:1552760:%E7%95%99%E5%AE%88:%E3%82%8B%E3%81%99	留守	るす	absence; being away from home; house-sitting; house-sitter; neglecting (e.g. one's studies); leaving unattended
+jmdict:1601650:%E5%BC%95%E3%81%8D%E5%87%BA%E3%81%97:%E3%81%B2%E3%81%8D%E3%81%A0%E3%81%97	引き出し	ひきだし	drawer; withdrawal (of money from an account); variety of knowledge and experience useful for handling things impromptu
+jmdict:1604550:%E8%A6%8B%E3%81%A4%E3%81%8B%E3%82%8B:%E3%81%BF%E3%81%A4%E3%81%8B%E3%82%8B	見つかる	みつかる	to be found; to be discovered
+jmdict:1258710:%E7%B5%B9:%E3%81%8D%E3%81%AC	絹	きぬ	silk
+jmdict:1356750:%E7%95%B3:%E3%81%9F%E3%81%9F%E3%81%BF	畳	たたみ	tatami mat; Japanese straw floor coverings
+jmdict:1155120:%E4%BB%A5%E4%B8%8A:%E3%81%84%E3%81%98%E3%82%87%E3%81%86	以上	いじょう	not less than ...; ... and over; ... and above; ... and upwards; ... or more; beyond (e.g. one's expectations); above; more than; further than; the above; the above-mentioned; the aforementioned; the foregoing; since ...; seeing that ...; now that ...; once ...; that's all; that is the end; the end
+jmdict:1194660:%E8%8A%B1%E8%A6%8B:%E3%81%AF%E3%81%AA%E3%81%BF	花見	はなみ	cherry blossom viewing; flower viewing
+jmdict:1357210:%E9%A3%BE%E3%82%8B:%E3%81%8B%E3%81%96%E3%82%8B	飾る	かざる	to decorate; to ornament; to adorn; to display; to exhibit; to put on show; to arrange; to mark (e.g. the day with a victory); to adorn (e.g. the front page); to grace (e.g. the cover); to affect (a manner); to keep up (appearances); to embellish; to dress up; to be showy; to be pretentious
+jmdict:1411300:%E9%80%80%E9%99%A2:%E3%81%9F%E3%81%84%E3%81%84%E3%82%93	退院	たいいん	leaving hospital; discharge from hospital
+jmdict:1557290:%E5%86%B7%E6%88%BF:%E3%82%8C%E3%81%84%E3%81%BC%E3%81%86	冷房	れいぼう	air conditioning; air cooling
+jmdict:1514960:%E6%9A%AE%E3%82%8C%E3%82%8B:%E3%81%8F%E3%82%8C%E3%82%8B	暮れる	くれる	to get dark; to grow dark; to end (of a day, year, season, etc.); to come to an end; to close; to be sunk in (e.g. despair); to be lost in (e.g. thought); to be overcome with
+jmdict:1350080:%E6%B6%88%E3%81%97%E3%82%B4%E3%83%A0:%E3%81%91%E3%81%97%E3%82%B4%E3%83%A0	消しゴム	けしゴム	eraser; rubber
+jmdict:1223660:%E8%B5%B7%E3%81%99:%E3%81%8A%E3%81%93%E3%81%99	起す	おこす	to raise; to raise up; to set up; to pick up; to stand (something) up; to wake; to wake up; to waken; to awaken; to cause; to bring about; to lead to; to trigger; to give rise to; to create; to generate (e.g. heat, electricity); to produce; to start; to begin; to launch; to establish; to found; to open; to plough; to plow; to till; to feel (an emotion, desire, etc.); to be moved to; to summon up; to muster; to fall ill with; to transcribe; to write down (what is spoken); to turn over (a card)
+jmdict:1352290:%E4%B8%8A%E3%82%8B:%E3%81%82%E3%81%8C%E3%82%8B	上る	あがる	to rise; to go up; to come up; to ascend; to be raised; to enter (esp. from outdoors); to come in; to go in; to enter (a school); to advance to the next grade; to get out (of water); to come ashore; to be washed ashore; to float atop the water; to surface from the sea (e.g. of a corpse); to rise to the surface; to increase; to be raised (e.g. of a salary); to improve; to make progress; to be promoted; to advance; to be made (of profit, etc.); to occur (esp. of a favourable result); to be adequate (to cover expenses, etc.); to be finished; to be done; to be over; to stop (of rain); to clear up (of weather); to stop (working properly); to cut out; to give out; to die; to win (in a card game, etc.); to be spoken loudly; to be raised loudly (of a voice); to get nervous; to get stage fright; to be offered (to the gods, etc.); to go; to visit; to eat; to drink; to serve (in one's master's home); to enter a red light district; to amuse oneself in a red light district; to visit a brothel; to arise vigorously (e.g. of voices in excitement); to become excited; to be in uproar (e.g. of a crowd); to be complete; to finish; adds the connotation of an action happening strongly or violently; above; north of
+jmdict:1414470:%E5%A4%A7%E4%BD%93:%E3%81%A0%E3%81%84%E3%81%9F%E3%81%84	大体	だいたい	generally; on the whole; mostly; almost; nearly; approximately; roughly; about; general; rough; outline; main points; gist; substance; essence; in the first place; first and foremost; from the start; to begin with
+jmdict:1593570:%E3%81%94%E5%AD%98%E3%81%98:%E3%81%94%E3%81%9E%E3%82%93%E3%81%98	ご存じ	ごぞんじ	knowing; being aware (of); (an) acquaintance
+jmdict:1250870:%E6%99%AF%E8%89%B2:%E3%81%91%E3%81%97%E3%81%8D	景色	けしき	scenery; scene; landscape
+jmdict:1260000:%E8%A6%8B%E7%89%A9:%E3%81%91%E3%82%93%E3%81%B6%E3%81%A4	見物	けんぶつ	sightseeing; watching; viewing; sightseer; spectator; viewer; onlooker
+jmdict:1279680:%E6%A7%8B%E3%81%86:%E3%81%8B%E3%81%BE%E3%81%86	構う	かまう	to mind; to care about; to be concerned about; to have a regard for; to be an issue; to matter; to create inconvenience; to keep company; to care for; to look after; to entertain; to pay attention to; to spend time with; to interfere with; to meddle in; to tease; to banish; to prohibit
+jmdict:1310050:%E6%8C%87%E8%BC%AA:%E3%82%86%E3%81%B3%E3%82%8F	指輪	ゆびわ	(finger) ring
+jmdict:1323500:%E9%82%AA%E9%AD%94:%E3%81%98%E3%82%83%E3%81%BE	邪魔	じゃま	hindrance; obstacle; nuisance; disturbance; interruption; interference; to visit (someone's home); demon who hinders Buddhist training; demon who obstructs sentient beings from maintaining moral behaviour
+jmdict:1403040:%E9%A8%92%E3%81%90:%E3%81%95%E3%82%8F%E3%81%90	騒ぐ	さわぐ	to make noise; to make racket; to be noisy; to rustle; to swoosh; to make merry; to clamor; to clamour; to make a fuss; to kick up a fuss; to lose one's cool; to panic; to act flustered; to feel tense; to be uneasy; to be excited
+jmdict:1433030:%E9%80%9A%E3%82%8B:%E3%81%A8%E3%81%8A%E3%82%8B	通る	とおる	to go by; to go past; to go along; to travel along; to pass through; to use (a road); to take (a route); to go via; to go by way of; to run (between; of a rail service, bus route, etc.); to operate (between); to connect; to go indoors; to go into a room; to be admitted; to be shown in; to be ushered in; to come in; to penetrate; to pierce; to skewer; to go through; to come through; to permeate; to soak into; to spread throughout; to carry (e.g. of a voice); to reach far; to be passed on (e.g. of a customer's order to the kitchen); to be relayed; to be conveyed; to pass (a test, a bill in the House, etc.); to be approved; to be accepted; to go by (a name); to be known as; to be accepted as; to have a reputation for; to be coherent; to be logical; to be reasonable; to be comprehensible; to be understandable; to make sense; to get across (e.g. of one's point); to be understood; to pass for; to come across as; to seem like; to be straight (e.g. wood grain); to be well-informed; to be wise; to do ... completely; to do ... thoroughly
+jmdict:1443760:%E9%9B%BB%E5%A0%B1:%E3%81%A7%E3%82%93%E3%81%BD%E3%81%86	電報	でんぽう	telegram
+jmdict:1490670:%E5%93%81%E7%89%A9:%E3%81%97%E3%81%AA%E3%82%82%E3%81%AE	品物	しなもの	article; item; thing; goods; wares
+jmdict:1591420:%E6%B1%BA%E3%82%8B:%E3%81%8D%E3%81%BE%E3%82%8B	決る	きまる	to be decided; to be settled; to be fixed; to be arranged; to be unchanging; to be the same (as always); to be set; to be a fixed rule; to be destined; to be a convention; to be a custom; to be common knowledge; to be well executed (of a manoeuvre in a sport, game, etc.); to go well; to succeed; to connect (of a punch); to look good (of clothing); to look sharp; to be stylish; to suit one; to be held in place (of a hairdo); to be struck and held (of a pose in kabuki); to get high (on drugs)
+jmdict:1383310:%E8%B5%A4%E3%82%93%E5%9D%8A:%E3%81%82%E3%81%8B%E3%82%93%E3%81%BC%E3%81%86	赤ん坊	あかんぼう	baby; infant
+jmdict:1433680:%E6%BC%AC%E3%81%91%E3%82%8B:%E3%81%A4%E3%81%91%E3%82%8B	漬ける	つける	to soak (in); to steep; to dip; to dunk; to pickle; to preserve (in salt, vinegar, etc.)
+jmdict:1485520:%E9%A3%9B%E8%A1%8C%E5%A0%B4:%E3%81%B2%E3%81%93%E3%81%86%E3%81%98%E3%82%87%E3%81%86	飛行場	ひこうじょう	airfield; airport; aerodrome
+jmdict:1539040:%E5%84%AA%E3%81%97%E3%81%84:%E3%82%84%E3%81%95%E3%81%97%E3%81%84	優しい	やさしい	tender; kind; gentle; graceful; affectionate; amiable
+jmdict:1589030:%E8%B4%88%E3%82%8A%E7%89%A9:%E3%81%8A%E3%81%8F%E3%82%8A%E3%82%82%E3%81%AE	贈り物	おくりもの	present; gift
+jmdict:1510640:%E5%A4%89:%E3%81%B8%E3%82%93	変	へん	strange; odd; peculiar; weird; curious; eccentric; funny; suspicious; fishy; unexpected; change; incident; disturbance; disaster; accident; emergency; flat
+jmdict:1165670:%E4%B8%80%E6%9D%AF:%E3%81%84%E3%81%A3%E3%81%B1%E3%81%84	一杯	いっぱい	one cup (of); one glass (of); one bowl (of); cupful; glassful; bowlful; spoonful; one drink (of alcohol); full; filled (with); brimming (with); crowded; packed; fully; to capacity; to the maximum; as much as possible; a lot; much; many; all of ...; the entire ...; one (squid, octopus, crab, etc.); one (boat)
+jmdict:1218760:%E5%96%9C%E3%81%B6:%E3%82%88%E3%82%8D%E3%81%93%E3%81%B6	喜ぶ	よろこぶ	to be delighted; to be glad; to be pleased; to rejoice; to congratulate; to welcome (a proposal, advice, etc.); to take kindly to; to do with pleasure; to do gladly; to be happy (to do)
+jmdict:1310260:%E6%94%AF%E5%BA%A6:%E3%81%97%E3%81%9F%E3%81%8F	支度	したく	preparation; arrangements
+jmdict:1365250:%E8%A6%AA%E5%88%87:%E3%81%97%E3%82%93%E3%81%9B%E3%81%A4	親切	しんせつ	kind; gentle; considerate; generous; friendly; nice
+jmdict:1419860:%E6%9A%96%E6%88%BF:%E3%81%A0%E3%82%93%E3%81%BC%E3%81%86	暖房	だんぼう	(indoor) heating
+jmdict:1524990:%E5%8F%88%E3%81%AF:%E3%81%BE%E3%81%9F%E3%81%AF	又は	または	or; either ... or ...
+jmdict:1599340:%E6%B3%A5%E6%A3%92:%E3%81%A9%E3%82%8D%E3%81%BC%E3%81%86	泥棒	どろぼう	thief; burglar; robber; theft; burglary; robbery
+jmdict:1450330:%E9%80%83%E3%81%92%E3%82%8B:%E3%81%AB%E3%81%92%E3%82%8B	逃げる	にげる	to run away; to flee; to get away (e.g. from danger); to escape; to break out; to leave (e.g. one's spouse); to take cover; to avoid (a question, responsibility, etc.); to evade; to dodge; to shirk; to back away; to win without being overtaken; to hold off the other contenders (until the finish); to keep the lead (and win); to escape (of heat, a gas, etc.); to leak out (e.g. of a scent); to be lost (e.g. of flavor); to fail to hold an ideal posture
+jmdict:1283860:%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1:%E3%81%93%E3%81%86%E3%81%A8%E3%81%86%E3%81%8C%E3%81%A3%E3%81%93%E3%81%86	高等学校	こうとうがっこう	senior high school; high school
+jmdict:1309260:%E6%80%9D%E3%81%84%E5%87%BA%E3%81%99:%E3%81%8A%E3%82%82%E3%81%84%E3%81%A0%E3%81%99	思い出す	おもいだす	to recall; to remember; to recollect
+jmdict:1207270:%E6%A5%BD%E3%82%80:%E3%81%9F%E3%81%AE%E3%81%97%E3%82%80	楽む	たのしむ	to enjoy; to take pleasure in; to have a good time; to have fun; to amuse oneself; to look forward to
+jmdict:1395620:%E5%85%A8%E7%84%B6:%E3%81%9C%E3%82%93%E3%81%9C%E3%82%93	全然	ぜんぜん	(not) at all; (not) in the slightest; wholly; entirely; completely; totally; extremely; very
+jmdict:1593670:%E6%8E%A2%E3%81%99:%E3%81%95%E3%81%8C%E3%81%99	探す	さがす	to search for; to look for; to hunt for; to seek; to search (a house, pocket, etc.); to search through; to rummage in (e.g. a drawer); to fish around
+jmdict:1259140:%E8%A6%8B%E3%81%88%E3%82%8B:%E3%81%BF%E3%81%88%E3%82%8B	見える	みえる	to be seen; to be visible; to be in sight; to look; to seem; to appear; to come
+jmdict:1329590:%E5%8F%97%E3%81%91%E3%82%8B:%E3%81%86%E3%81%91%E3%82%8B	受ける	うける	to receive; to get; to catch (e.g. a ball); to be struck by (wind, waves, sunlight, etc.); to sustain (damage); to incur (a loss); to suffer (an injury); to feel (influence); to undergo (e.g. surgery); to take (a test); to accept (a challenge); to be given (e.g. life, talent); to find funny; to find humorous; to be amused (by); to follow; to succeed; to be descended from; to face (south, etc.); to be modified by; to obtain (a pawned item, etc.) by paying a fee; to be well-received; to become popular; to go down well; to answer (to an opponent's move); to respond; to react
+jmdict:1559290:%E9%80%A3%E3%82%8C%E3%82%8B:%E3%81%A4%E3%82%8C%E3%82%8B	連れる	つれる	to take (someone) with one; to bring along; to go with; to be accompanied by
+jmdict:1397300:%E7%B4%A0%E6%99%B4%E3%81%97%E3%81%84:%E3%81%99%E3%81%B0%E3%82%89%E3%81%97%E3%81%84	素晴しい	すばらしい	wonderful; splendid; magnificent; amazing; superb; exceeding; incredible; remarkable; striking; immense
+jmdict:1185290:%E4%B8%8B%E5%AE%BF:%E3%81%92%E3%81%97%E3%82%85%E3%81%8F	下宿	げしゅく	boarding; lodging; board and lodging; room and board; boarding house; lodging house; lodgings
+jmdict:1328090:%E6%89%8B%E8%A2%8B:%E3%81%A6%E3%81%B6%E3%81%8F%E3%82%8D	手袋	てぶくろ	glove; mitten; mitt
+jmdict:1477170:%E7%99%BA%E9%9F%B3:%E3%81%AF%E3%81%A4%E3%81%8A%E3%82%93	発音	はつおん	pronunciation; production of sound
+jmdict:1589260:%E8%90%BD%E3%81%99:%E3%81%8A%E3%81%A8%E3%81%99	落す	おとす	to drop; to lose; to let fall; to shed (light); to cast (one's gaze); to pour in (liquid); to leave behind; to clean off (dirt, makeup, paint, etc.); to remove (e.g. stains or facial hair); to spend money at a certain place; to omit; to leave out; to secretly let escape; to lose (a match); to reject (an applicant); to fail (a course); to defeat (in an election); to lower (e.g. shoulders or voice); to lessen (e.g. production or body weight); to worsen (quality); to reduce (e.g. rank or popularity); to speak badly of; to make light of; to fall into straitened circumstances; to fall into (e.g. a dilemma or sin); to make one's own; to have one's bid accepted; to force surrender; to take (e.g. an enemy camp or castle); to forcefully convince; to press for a confession; to deal with; to download; to copy from a computer to another medium; to make someone swoon (judo); to finish a story (e.g. with the punch line); to finish (a period, e.g. of fasting); to win over; to seduce; to conquer (unwillingness)
+jmdict:1307550:%E5%A7%8B%E3%82%81%E3%82%8B:%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B	始める	はじめる	to start; to begin; to commence; to initiate; to originate; to start up (a business, society, etc.); to open (e.g. a store); to establish; to start ...; to begin to ...
+jmdict:1362950:%E7%94%B3%E3%81%97%E4%B8%8A%E3%81%92%E3%82%8B:%E3%82%82%E3%81%86%E3%81%97%E3%81%82%E3%81%92%E3%82%8B	申し上げる	もうしあげる	to say; to tell; to state; to express; to offer; to extend (greetings, congratulations, etc.); to do
+jmdict:1289520:%E4%BB%8A%E5%A4%9C:%E3%81%93%E3%82%93%E3%82%84	今夜	こんや	this evening; tonight
+jmdict:1304510:%E6%AE%8B%E3%82%8B:%E3%81%AE%E3%81%93%E3%82%8B	残る	のこる	to remain; to be left
+jmdict:1348530:%E5%B0%8F%E9%B3%A5:%E3%81%93%E3%81%A8%E3%82%8A	小鳥	ことり	small bird; little bird
+jmdict:1184280:%E4%B8%8B%E3%81%95%E3%82%8B:%E3%81%8F%E3%81%A0%E3%81%95%E3%82%8B	下さる	くださる	to give; to confer; to bestow; to kindly do for one; to oblige; to favour; to favor
+jmdict:1262530:%E5%8E%B3%E3%81%97%E3%81%84:%E3%81%8D%E3%81%B3%E3%81%97%E3%81%84	厳しい	きびしい	severe; strict; rigid; unsparing; relentless; hard (to do); difficult; tricky; intense (e.g. cold); harsh (weather); inclement
+jmdict:1426290:%E6%98%BC%E4%BC%91%E3%81%BF:%E3%81%B2%E3%82%8B%E3%82%84%E3%81%99%E3%81%BF	昼休み	ひるやすみ	lunch break; noon recess; noon rest period
+jmdict:1169340:%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%99:%E3%81%B2%E3%81%A3%E3%81%93%E3%81%99	引っ越す	ひっこす	to move (house); to change residence
+jmdict:1340460:%E5%87%BA%E6%9D%A5%E3%82%8B%E4%B8%88:%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%A0%E3%81%91	出来る丈	できるだけ	as much as one can; as much as possible; if at all possible
+jmdict:1178450:%E9%81%A0%E6%85%AE:%E3%81%88%E3%82%93%E3%82%8A%E3%82%87	遠慮	えんりょ	reserve; constraint; restraint; modesty; diffidence; hesitation; holding back; discretion; tact; thoughtfulness; declining; refraining; forethought; foresight
+jmdict:1199890:%E5%A3%8A%E3%81%99:%E3%81%93%E3%82%8F%E3%81%99	壊す	こわす	to break; to destroy; to demolish; to wreck; to ruin; to spoil; to damage; to break (a bill, etc.)
+jmdict:1222700:%E6%B1%BD%E8%BB%8A:%E3%81%8D%E3%81%97%E3%82%83	汽車	きしゃ	steam locomotive; steam train; (long-distance) train; non-electric train; diesel train
+jmdict:1450270:%E8%B8%8F%E3%82%80:%E3%81%B5%E3%82%80	踏む	ふむ	to step on; to tread on; to trample on; to set foot on (e.g. foreign soil); to stand on; to visit; to experience; to undergo; to follow (rules, principles, etc.); to go through (e.g. formalities); to complete; to estimate; to guess; to judge; to value; to appraise; to rhyme; to succeed to (e.g. the throne)
+jmdict:1593480:%E6%80%96%E3%81%84:%E3%81%93%E3%82%8F%E3%81%84	怖い	こわい	scary; frightening; eerie; dreadful
+jmdict:1600530:%E4%B9%97%E3%82%8A%E7%89%A9:%E3%81%AE%E3%82%8A%E3%82%82%E3%81%AE	乗り物	のりもの	vehicle; conveyance; (means of) transport; ride (at a fair, amusement park, etc.); attraction
+jmdict:1192420:%E5%AE%B6%E5%86%85:%E3%81%8B%E3%81%AA%E3%81%84	家内	かない	(my) wife; inside the home; one's family
+jmdict:1228690:%E6%80%A5%E8%A1%8C:%E3%81%8D%E3%82%85%E3%81%86%E3%81%93%E3%81%86	急行	きゅうこう	hurrying (to somewhere); rushing; hastening; express (train)
+jmdict:1333550:%E9%9B%86%E3%82%8B:%E3%81%82%E3%81%A4%E3%81%BE%E3%82%8B	集る	あつまる	to gather; to collect; to assemble
+jmdict:1432850:%E9%80%9A%E3%81%86:%E3%81%8B%E3%82%88%E3%81%86	通う	かよう	to go to and from (a place); to go back and forth between; to run between (e.g. bus, train, etc.); to ply between; to go to (school, work, etc.); to attend; to commute; to frequent; to circulate (e.g. blood, electricity); to be communicated (e.g. thought); to resemble
+jmdict:1445690:%E6%80%92%E3%82%8B:%E3%81%8A%E3%81%93%E3%82%8B	怒る	おこる	to get angry; to get mad; to lose one's temper; to scold; to tell (someone) off
+jmdict:1215260:%E9%96%93%E3%81%AB%E5%90%88%E3%81%86:%E3%81%BE%E3%81%AB%E3%81%82%E3%81%86	間に合う	まにあう	to be in time (for); to serve (suit, meet) the purpose; to be good enough; to be enough; to manage; to make do
+jmdict:1605630:%E6%9F%94%E3%82%89%E3%81%8B%E3%81%84:%E3%82%84%E3%82%8F%E3%82%89%E3%81%8B%E3%81%84	柔らかい	やわらかい	soft; tender; supple; flexible; limber; limp; gentle; mild; mellow; light (topic, book, etc.); informal; flexible (thinking, mind, etc.); malleable; adaptable
+jmdict:1363090:%E7%94%B3%E3%81%99:%E3%82%82%E3%81%86%E3%81%99	申す	もうす	to say; to be called; to do
+jmdict:1501620:%E6%89%95%E3%81%86:%E3%81%AF%E3%82%89%E3%81%86	払う	はらう	to pay (e.g. money, bill); to brush off; to wipe away; to clear away; to dust off; to cut off (e.g. branches); to drive away (e.g. one's competitors); to sell off (something unneeded); to dispose of; to pay (e.g. attention); to show (e.g. respect, concern); to make (e.g. effort, sacrifice); to expend; to exert; to move out (of one's own place); to vacate; to sweep (e.g. one's legs); to knock aside; to make a sweeping stroke (in Japanese calligraphy); to reset (an abacus)
+jmdict:1199900:%E5%A3%8A%E3%82%8C%E3%82%8B:%E3%81%93%E3%82%8F%E3%82%8C%E3%82%8B	壊れる	こわれる	to be broken; to break; to fall apart; to collapse; to be destroyed; to be damaged; to break (down); to stop working; to fall through (of a plan, deal, etc.); to break down (of a relationship, negotiations, etc.); to be broken off; to be ruined (of an atmosphere, one's image, etc.)
+jmdict:1602440:%E5%A2%97%E3%81%88%E3%82%8B:%E3%81%B5%E3%81%88%E3%82%8B	増える	ふえる	to increase; to multiply
+jmdict:1002170:%E3%81%8A%E5%AC%A2%E3%81%95%E3%82%93:%E3%81%8A%E3%81%98%E3%82%87%E3%81%86%E3%81%95%E3%82%93	お嬢さん	おじょうさん	(another's) daughter; young lady
+jmdict:1172400:%E5%98%98:%E3%81%86%E3%81%9D	嘘	うそ	lie; fib; falsehood; untruth; mistake; error; unwise move; bad decision; no way!; unbelievable!; really?!
+jmdict:1538330:%E8%A8%B3:%E3%82%8F%E3%81%91	訳	わけ	reason; cause; grounds; meaning; sense; (good) sense; circumstances; case; (romantic) relationship; love affair
+jmdict:1217070:%E7%8E%A9%E5%85%B7:%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83	玩具	おもちゃ	toy; (person or thing treated as a) plaything
+jmdict:1228650:%E6%80%A5%E3%81%90:%E3%81%84%E3%81%9D%E3%81%90	急ぐ	いそぐ	to hurry; to rush; to hasten; to make something happen sooner
+jmdict:1351360:%E7%AC%91%E3%81%86:%E3%82%8F%E3%82%89%E3%81%86	笑う	わらう	to laugh; to smile; to sneer; to ridicule; to be dumbfounded; to be flabbergasted
+jmdict:1494860:%E4%B8%8D%E4%BE%BF:%E3%81%B5%E3%81%B9%E3%82%93	不便	ふべん	inconvenience; inexpediency; unhandiness
+jmdict:1505600:%E6%96%87%E6%B3%95:%E3%81%B6%E3%82%93%E3%81%BD%E3%81%86	文法	ぶんぽう	grammar
+jmdict:1534870:%E6%9C%A8%E7%B6%BF:%E3%82%82%E3%82%81%E3%82%93	木綿	もめん	cotton (material)
+jmdict:1254180:%E6%B1%BA%E3%82%81%E3%82%8B:%E3%81%8D%E3%82%81%E3%82%8B	決める	きめる	to decide; to choose; to determine; to make up one's mind; to resolve; to set one's heart on; to settle; to arrange; to set; to appoint; to fix; to clinch (a victory); to decide (the outcome of a match); to persist in doing; to go through with; to always do; to have made a habit of; to take for granted; to assume; to dress up; to dress to kill; to dress to the nines; to carry out successfully (a move in sports, a pose in dance, etc.); to succeed in doing; to immobilize with a double-arm lock (in sumo, judo, etc.); to eat or drink something; to take illegal drugs
+jmdict:1362640:%E6%B7%B1%E3%81%84:%E3%81%B5%E3%81%8B%E3%81%84	深い	ふかい	deep; profound; dense; thick; close (relationship); intense; strong; late
+jmdict:1501660:%E6%B2%B8%E3%81%8B%E3%81%99:%E3%82%8F%E3%81%8B%E3%81%99	沸かす	わかす	to boil; to heat (a liquid); to prepare (a bath, hot drink); to excite; to rouse; to stir
+jmdict:1604800:%E5%90%91%E3%81%8B%E3%81%86:%E3%82%80%E3%81%8B%E3%81%86	向かう	むかう	to face; to go towards; to head towards
+jmdict:1606590:%E5%88%A5%E3%82%8C%E3%82%8B:%E3%82%8F%E3%81%8B%E3%82%8C%E3%82%8B	別れる	わかれる	to part (usu. of people); to part from; to part with; to be apart from; to separate (of a couple); to break up; to divorce; to lose (e.g. one's mother); to be bereaved
+jmdict:1537980:%E5%BD%B9%E3%81%AB%E7%AB%8B%E3%81%A4:%E3%82%84%E3%81%8F%E3%81%AB%E3%81%9F%E3%81%A4	役に立つ	やくにたつ	to be helpful; to be useful
+jmdict:1601660:%E5%BC%95%E3%81%8D%E5%87%BA%E3%81%99:%E3%81%B2%E3%81%8D%E3%81%A0%E3%81%99	引き出す	ひきだす	to pull out; to take out; to draw out; to lead out (e.g. a horse from a stable); to summon (e.g. to court); to bring (e.g. someone to the negotiating table); to drag; to withdraw (money); to draw; to bring out (talent, potential, beauty, flavour, etc.); to extract (information, the truth, etc.); to get (e.g. an answer out of someone); to obtain (e.g. a result); to elicit; to draw (a conclusion); to derive (e.g. pleasure); to get (money) out of someone; to coax out of someone; to get someone to pay; to make someone produce (funds)
+jmdict:1600470:%E4%B9%97%E3%82%8A%E6%8F%9B%E3%81%88%E3%82%8B:%E3%81%AE%E3%82%8A%E3%81%8B%E3%81%88%E3%82%8B	乗り換える	のりかえる	to transfer (trains); to change (bus, train); to change (to another ideology, party, company, etc.); to switch (to a different system, method, etc.); to move on to (e.g. a new love interest)
+jmdict:1151120:%E6%8C%A8%E6%8B%B6:%E3%81%82%E3%81%84%E3%81%95%E3%81%A4	挨拶	あいさつ	greeting; greetings; salutation; salute; polite set phrase used when meeting or parting from someone; speech (congratulatory or appreciative); address; reply; response; courtesy visit (to offer condolences, say congratulations, pay respect, introduce oneself, etc.); revenge; retaliation; a fine thing to say; dialoging (with another Zen practitioner to ascertain their level of enlightenment); relationship (between people); connection; intervention; mediation; mediator
+jmdict:1184160:%E4%B8%8B%E3%82%8B:%E3%81%95%E3%81%8C%E3%82%8B	下る	さがる	to come down; to go down; to fall; to drop; to sink; to get lower; to hang; to dangle; to move back; to step back; to withdraw; to retire; to deteriorate; to fall off; to be downgraded; to get closer to the present day; to play a sagari; to extend downwards
+jmdict:1365980:%E9%80%B2%E3%82%80:%E3%81%99%E3%81%99%E3%82%80	進む	すすむ	to advance (spatially); to go forward; to move forward; to precede; to go ahead (of); to be ahead (e.g. of the times); to advance (to the next stage); to move on (e.g. to the next grade); to enter (e.g. university); to make progress; to move ahead (e.g. of work); to continue; to progress; to advance; to get on (with); to intensify; to heighten; to grow; to deepen; to worsen (e.g. of an illness); to advance (e.g. of a condition); to do of one's own free will; to be willing (to); to become enthusiastic; to be fast (of a clock); to gain (time); to be ahead; to grow (of appetite); to become hungry (for)
+jmdict:1409110:%E9%A7%84%E7%9B%AE:%E3%81%A0%E3%82%81	駄目	だめ	no good; not serving its purpose; useless; broken; hopeless; wasted; in vain; purposeless; cannot; must not; not allowed; neutral point; intersection owned by neither player at the end of a game; no!; stop!
+jmdict:1414580:%E5%A4%A7%E6%8A%B5:%E3%81%9F%E3%81%84%E3%81%A6%E3%81%84	大抵	たいてい	mostly; ordinarily; usually; generally; probably; most; almost all; ordinary; proper; appropriate; moderate
+jmdict:1421900:%E8%87%B4%E3%81%99:%E3%81%84%E3%81%9F%E3%81%99	致す	いたす	to do
+jmdict:1443660:%E9%9B%BB%E7%81%AF:%E3%81%A7%E3%82%93%E3%81%A8%E3%81%86	電灯	でんとう	electric light
+jmdict:1588320:%E5%86%99%E3%81%99:%E3%81%86%E3%81%A4%E3%81%99	写す	うつす	to copy; to duplicate; to reproduce; to trace; to transcribe; to describe; to depict; to portray; to express; to imitate; to model after; to take (a photo); to photograph; to film; to shoot
+jmdict:1253190:%E8%BF%8E%E3%81%88%E3%82%8B:%E3%82%80%E3%81%8B%E3%81%88%E3%82%8B	迎える	むかえる	to go out to meet; to receive; to welcome; to greet; to salute; to hail; to call for; to summon; to invite; to accept (e.g. as a member of a group or family); to take (e.g. a wife); to reach (a certain time, a point in one's life, etc.); to enter (a new phase, new era, etc.); to approach (e.g. death)
+jmdict:1376600:%E6%AD%A3%E3%81%97%E3%81%84:%E3%81%9F%E3%81%A0%E3%81%97%E3%81%84	正しい	ただしい	right; correct; proper; righteous; just; honest; truthful; lawful
+jmdict:1556630:%E5%86%B7%E3%81%88%E3%82%8B:%E3%81%B2%E3%81%88%E3%82%8B	冷える	ひえる	to grow cold; to get chilly; to cool down
+jmdict:1546300:%E7%94%A8%E4%BA%8B:%E3%82%88%E3%81%86%E3%81%98	用事	ようじ	business; things to do; engagement; errand; affairs
+jmdict:1591150:%E8%81%9E%E3%81%93%E3%81%88%E3%82%8B:%E3%81%8D%E3%81%93%E3%81%88%E3%82%8B	聞こえる	きこえる	to be heard; to be audible; to reach one's ears; to sound (like); to come across (as); to be well known; to be famous; to accept (someone's words); to agree; to understand
+jmdict:1326830:%E5%8F%96%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B:%E3%81%A8%E3%82%8A%E3%81%8B%E3%81%88%E3%82%8B	取り替える	とりかえる	to exchange; to swap; to barter; to trade; to replace; to substitute
+jmdict:1155090:%E4%BB%A5%E5%A4%96:%E3%81%84%E3%81%8C%E3%81%84	以外	いがい	excluding; except (for); apart from; other than; besides; in addition to; outside (a boundary, scope, etc.)
+jmdict:1599400:%E6%B2%BB%E3%82%8B:%E3%81%AA%E3%81%8A%E3%82%8B	治る	なおる	to get better; to get well; to recover (from an illness); to be cured; to be restored; to heal
+jmdict:1436510:%E7%A8%8B:%E3%81%BB%E3%81%A9	程	ほど	extent; degree; measure; limit; bounds; (span of) time; (a) distance; the state of; the status of; the condition of; about; around; approximately; or so; as much as ...; to the extent of ...; like ...; the more ... the more ...
+jmdict:1444270:%E5%A1%97%E3%82%8B:%E3%81%AC%E3%82%8B	塗る	ぬる	to paint; to spread; to plaster; to apply (cream, lotion); to smear; to lacquer; to varnish; to put up (wallpaper)
+jmdict:1179005:%E6%B1%9A%E3%82%8C%E3%82%8B:%E3%82%88%E3%81%94%E3%82%8C%E3%82%8B	汚れる	よごれる	to get dirty; to become dirty; to become sullied; to become corrupted; to lose one's chastity
+jmdict:1369940:%E5%B0%8B%E3%81%AD%E3%82%8B:%E3%81%9F%E3%81%9A%E3%81%AD%E3%82%8B	尋ねる	たずねる	to ask; to enquire; to inquire; to search; to look for; to look into; to investigate
+jmdict:1272820:%E5%85%89%E3%82%8B:%E3%81%B2%E3%81%8B%E3%82%8B	光る	ひかる	to shine; to glitter; to be bright
+jmdict:1346150:%E5%8B%9D%E3%81%A4:%E3%81%8B%E3%81%A4	勝つ	かつ	to win; to gain victory
+jmdict:1421630:%E6%81%A5%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84:%E3%81%AF%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84	恥ずかしい	はずかしい	embarrassing; embarrassed; ashamed; humiliated; shy; disgraceful; shameful
+jmdict:1599760:%E5%8C%82:%E3%81%AB%E3%81%8A%E3%81%84	匂	におい	smell; scent; odour; odor; stench; aura; whiff; smack; flavour; flavor; mood; faint, mist-like pattern along the temper line of a Japanese sword
+jmdict:1208640:%E6%BB%91%E3%82%8B:%E3%81%99%E3%81%B9%E3%82%8B	滑る	すべる	to slide; to glide; to skate; to ski; to slip; to skid; to be slippery; to fail (an examination); to lose (a position); to be demoted; to bomb (when telling a joke); to fall flat; to slide (move)
+jmdict:1257110:%E5%9B%BA%E3%81%84:%E3%81%8B%E3%81%9F%E3%81%84	固い	かたい	hard; solid; tough; stiff; tight; wooden; unpolished (e.g. writing); strong; firm (not viscous or easily moved); safe; steady; honest; steadfast; obstinate; stubborn; bookish; formal; stuffy
+jmdict:1257110:%E5%A0%85%E3%81%84:%E3%81%8B%E3%81%9F%E3%81%84	堅い	かたい	hard; solid; tough; stiff; tight; wooden; unpolished (e.g. writing); strong; firm (not viscous or easily moved); safe; steady; honest; steadfast; obstinate; stubborn; bookish; formal; stuffy; solid (shape or stones)
+jmdict:1257110:%E7%A1%AC%E3%81%84:%E3%81%8B%E3%81%9F%E3%81%84	硬い	かたい	hard; solid; tough; stiff; tight; wooden; unpolished (e.g. writing); strong; firm (not viscous or easily moved); safe; steady; honest; steadfast; obstinate; stubborn; bookish; formal; stuffy
+jmdict:1314600:%E4%BC%BC%E3%82%8B:%E3%81%AB%E3%82%8B	似る	にる	to resemble; to look like; to be like; to be alike; to be similar; to take after
+jmdict:1474850:%E6%B3%8A%E3%81%BE%E3%82%8B:%E3%81%A8%E3%81%BE%E3%82%8B	泊まる	とまる	to stay at (e.g. hotel); to be docked; to be berthed; to be moored
+jmdict:1497980:%E8%B2%A0%E3%81%91%E3%82%8B:%E3%81%BE%E3%81%91%E3%82%8B	負ける	まける	to lose; to be defeated; to be beaten; to give in (to); to yield; to succumb; to give way; to surrender; to be overcome (with); to be inferior (to); to be second (to); to be outdone (by); to get a rash (from); to come out in a rash; to reduce the price; to give a discount; to throw in (something extra) for free
+jmdict:1372800:%E9%9A%8F%E5%88%86:%E3%81%9A%E3%81%84%E3%81%B6%E3%82%93	随分	ずいぶん	very; extremely; surprisingly; fairly; quite; considerably; awfully; terribly; terrible; horrid; contemptible; reprehensible; remarkable; extraordinary
+jmdict:1529330:%E7%9C%A0%E3%81%84:%E3%81%AD%E3%82%80%E3%81%84	眠い	ねむい	sleepy; drowsy; somnolent
+jmdict:1472270:%E6%8B%9D%E8%A6%8B:%E3%81%AF%E3%81%84%E3%81%91%E3%82%93	拝見	はいけん	seeing; looking at
+jmdict:1215330:%E9%96%93%E9%81%95%E3%81%88%E3%82%8B:%E3%81%BE%E3%81%A1%E3%81%8C%E3%81%88%E3%82%8B	間違える	まちがえる	to make a mistake (in); to commit an error; to get wrong; to do incorrectly; to mistake (one thing for another); to confuse
+jmdict:1600280:%E5%96%89:%E3%81%AE%E3%81%A9	喉	のど	throat; singing voice; gutter (inner margins of a book)
+jmdict:1323010:%E8%AC%9D%E3%82%8B:%E3%81%82%E3%82%84%E3%81%BE%E3%82%8B	謝る	あやまる	to apologize (apologise); to refuse; to decline; to be unable to bear; to be defeated (by); to be at a loss; to be stumped (by)
+jmdict:1527040:%E5%91%B3%E5%99%8C:%E3%81%BF%E3%81%9D	味噌	みそ	miso; fermented condiment usu. made from soybeans; innards (from crabs, shrimps, etc.) resembling miso; key point; main point; good part (of something); weakling; weak person; try
+jmdict:1313080:%E6%AD%AF%E5%8C%BB%E8%80%85:%E3%81%AF%E3%81%84%E3%81%97%E3%82%83	歯医者	はいしゃ	dentist
+jmdict:1291270:%E5%B7%AE%E3%81%97%E4%B8%8A%E3%81%92%E3%82%8B:%E3%81%95%E3%81%97%E3%81%82%E3%81%92%E3%82%8B	差し上げる	さしあげる	to lift up; to hold up; to raise; to give; to present; to offer; to do (for someone)
+jmdict:1431850:%E7%8F%8D%E3%81%97%E3%81%84:%E3%82%81%E3%81%9A%E3%82%89%E3%81%97%E3%81%84	珍しい	めずらしい	rare; uncommon; unusual; curious; new; novel; fine; nice; splendid; precious
+jmdict:1519230:%E5%BF%98%E3%82%8C%E7%89%A9:%E3%82%8F%E3%81%99%E3%82%8C%E3%82%82%E3%81%AE	忘れ物	わすれもの	lost article; thing left behind; leaving something behind; forgetting something
+jmdict:1579720:%E5%AF%82%E3%81%97%E3%81%84:%E3%81%95%E3%81%B3%E3%81%97%E3%81%84	寂しい	さびしい	lonely (e.g. person, feeling); lonesome; forlorn; desolate; deserted; lonely (e.g. place); isolated; solitary; sad; lacking; wanting; insufficient
+jmdict:1195970:%E9%81%8E%E3%81%8E%E3%82%8B:%E3%81%99%E3%81%8E%E3%82%8B	過ぎる	すぎる	to pass through; to pass by; to go beyond; to pass (of time); to elapse; to have expired; to have ended; to be over; to exceed; to surpass; to be above; to be no more than ...; to be excessive; to be too much; to be too ...
+jmdict:1510650:%E5%A4%89%E3%81%88%E3%82%8B:%E3%81%8B%E3%81%88%E3%82%8B	変える	かえる	to change; to alter; to transform; to convert; to turn; to vary; to reform; to revise; to amend
+jmdict:1302070:%E5%8F%82%E3%82%8B:%E3%81%BE%E3%81%84%E3%82%8B	参る	まいる	to go; to come; to lose; to be defeated; to give up; to be beaten; to yield; to be stumped (by); to be at a loss; to be nonplussed (by); to be confused; to be bewildered; to visit (a shrine, grave, etc.); to go to worship (at a temple); to give in (of one's body); to be exhausted (by); to weaken; to collapse (e.g. in the heat); to have one's heart stolen (by); to be madly in love (with); to be infatuated (with); to; for the attention of; with respect; presented to; to die; to have a sword fight; to offer up (alcohol); to present (a cup of sake)
+jmdict:1434120:%E9%87%A3%E3%82%8B:%E3%81%A4%E3%82%8B	釣る	つる	to fish; to angle; to catch; to lure in; to tempt; to attract; to entice; to allure
+jmdict:1382980:%E7%A9%8D%E3%82%82%E3%82%8A:%E3%81%A4%E3%82%82%E3%82%8A	積もり	つもり	intention; plan; purpose; expectation; belief; assumption; thought; conviction; estimate; estimation; calculation
+jmdict:1483190:%E6%82%B2%E3%81%97%E3%81%84:%E3%81%8B%E3%81%AA%E3%81%97%E3%81%84	悲しい	かなしい	sad; miserable; unhappy; sorrowful; lamentable; deplorable; grievous
+jmdict:1597780:%E6%8D%95%E3%81%BE%E3%81%88%E3%82%8B:%E3%81%A4%E3%81%8B%E3%81%BE%E3%81%88%E3%82%8B	捕まえる	つかまえる	to catch; to capture; to arrest; to seize; to restrain; to grab; to clutch; to grasp; to hold on to; to catch hold of (someone); to stop (e.g. a stranger in the street); to hail (a taxi, waiter, etc.); to hold (someone) back; to detain; towards (someone); at (someone); in (someone's) face
+jmdict:1369900:%E5%A1%B5:%E3%81%94%E3%81%BF	塵	ごみ	rubbish; trash; garbage; refuse; litter
+jmdict:1357980:%E8%A7%A6%E3%82%8B:%E3%81%95%E3%82%8F%E3%82%8B	触る	さわる	to touch; to feel; to handle; to get involved (with); to approach; to be harmful to; to hinder; to interfere with; to irritate
+jmdict:1543070:%E4%BA%88%E7%BF%92:%E3%82%88%E3%81%97%E3%82%85%E3%81%86	予習	よしゅう	preparation for a lesson
+jmdict:1364360:%E7%9C%9E%E9%9D%A2%E7%9B%AE:%E3%81%BE%E3%81%98%E3%82%81	眞面目	まじめ	serious; earnest; sober; grave; honest; sincere
+jmdict:1257040:%E5%96%A7%E5%98%A9:%E3%81%91%E3%82%93%E3%81%8B	喧嘩	けんか	quarrel; brawl; fight; squabble; scuffle; argument
+jmdict:1270810:%E3%81%8A%E7%A4%BC:%E3%81%8A%E3%82%8C%E3%81%84	お礼	おれい	thanks; gratitude; manners; etiquette; bow; reward; gift; ceremony; ritual
+jmdict:1385910:%E6%8A%98%E3%82%8B:%E3%81%8A%E3%82%8B	折る	おる	to break; to fracture; to break off; to snap off; to pick (e.g. flowers); to fold; to bend; to make (origami); to interrupt; to end
+jmdict:1500800:%E5%BE%A9%E7%BF%92:%E3%81%B5%E3%81%8F%E3%81%97%E3%82%85%E3%81%86	復習	ふくしゅう	review (of learned material); revision
+jmdict:1511790:%E7%89%87%E4%BB%98%E3%81%91%E3%82%8B:%E3%81%8B%E3%81%9F%E3%81%A5%E3%81%91%E3%82%8B	片付ける	かたづける	to put in order; to tidy up; to clean up; to put away; to clear away; to settle (a matter); to solve; to deal with; to dispose of; to finish; to get through; to complete; to get (something) done; to marry off (one's daughter); to do away with (someone); to bump off; to kill; to eliminate
+jmdict:1604570:%E8%A6%8B%E3%81%A4%E3%81%91%E3%82%8B:%E3%81%BF%E3%81%A4%E3%81%91%E3%82%8B	見つける	みつける	to find; to discover; to come across; to spot; to catch (someone doing); to be used to seeing; to be familiar with
+jmdict:1158210:%E7%A7%BB%E3%82%8B:%E3%81%86%E3%81%A4%E3%82%8B	移る	うつる	to move (to another place or state); to change (e.g. of state, affiliation, scenery, etc.); to be transferred; to spread (of a fire, smell, etc.); to catch (an illness); to be infected; to be contagious; to move (e.g. of one's focus); to change (e.g. of one's interest); to be permeated (by a color or scent); to seep into; to pass (of time); to elapse
+jmdict:1295070:%E6%B8%88%E3%82%80:%E3%81%99%E3%82%80	済む	すむ	to finish; to end; to be completed; to be resolved; to have a result less severe than expected; to feel at ease; to feel unease or guilt for troubling someone; to be sorry
+jmdict:1599390:%E7%9B%B4%E3%81%99:%E3%81%AA%E3%81%8A%E3%81%99	直す	なおす	to repair; to mend; to fix; to correct (a mistake, bad habit, etc.); to put right; to restore; to straighten (e.g. a tie); to tidy up (one's hair, make-up, etc.); to revive (one's spirits); to change; to alter; to convert; to translate; to put back; to put away; to cure; to heal; to move up; to promote; to do over again; to redo
+jmdict:1332570:%E6%8B%BE%E3%81%86:%E3%81%B2%E3%82%8D%E3%81%86	拾う	ひろう	to pick up; to gather; to find (and pick up; something someone has dropped); to select; to choose; to pick out; to get (unexpectedly); to hit upon (luck, an opportunity, etc.); to snatch (an unexpected victory); to pull off; to pick up (someone; in a car, etc.); to flag down (a taxi); to hail; to pick up (a signal, sound, interference, etc.); to (just manage to) return (the ball); to return (a difficult shot); to take on (someone in adverse circumstances); to employ; to give a job; to take in; to walk; to go on foot
+jmdict:1529390:%E7%9C%A0%E3%82%8B:%E3%81%AD%E3%82%80%E3%82%8B	眠る	ねむる	to sleep; to die; to rest (in peace); to lie (buried); to sleep (in the grave); to lie idle (e.g. of resources); to lie unused; to lie untapped; to lie untouched; to close one's eyes
+jmdict:1603550:%E7%A7%B0%E3%82%81%E3%82%8B:%E3%81%BB%E3%82%81%E3%82%8B	称める	ほめる	to praise; to commend; to compliment; to speak well of; to speak highly of
+jmdict:1404700:%E8%B6%B3%E3%81%99:%E3%81%9F%E3%81%99	足す	たす	to add (numbers); to add (something); to top up (with something); to take care of (e.g. one's business)
+jmdict:1467620:%E6%BF%A1%E3%82%8B:%E3%81%AC%E3%82%8C%E3%82%8B	濡る	ぬれる	to get wet
+jmdict:1532910:%E9%B3%B4%E3%82%8B:%E3%81%AA%E3%82%8B	鳴る	なる	to sound; to ring; to resound; to echo; to roar; to rumble
+jmdict:1404740:%E8%B6%B3%E3%82%8A%E3%82%8B:%E3%81%9F%E3%82%8A%E3%82%8B	足りる	たりる	to be sufficient; to be enough; to be worth doing; to be worthy of; to deserve; to do (the job); to serve; to answer
+jmdict:1476430:%E7%AD%88:%E3%81%AF%E3%81%9A	筈	はず	should (be); bound (to be); expected (to be); must (be); nock (of a bow); nock (of an arrow); nock-shaped grip (between thumb and forefinger); wooden frame on the tip of the mast of a Japanese ship that prevents the hawser from falling out
+jmdict:1535910:%E8%B2%B0%E3%81%86:%E3%82%82%E3%82%89%E3%81%86	貰う	もらう	to receive; to take; to accept; to get someone to do something; to have in one's pocket (a fight, match); to contract (a disease); to catch; to be affected
+jmdict:1352320:%E4%B8%8A%E3%81%92%E3%82%8B:%E3%81%82%E3%81%92%E3%82%8B	上げる	あげる	to raise; to elevate; to move something (to a higher place); to put onto (e.g. a shelf); to increase (price, quality, status, etc.); to raise (a wage); to show someone (into a room); to let in (e.g. a guest); to give; to enrol (one's child in school); to enroll; to send (one's child; e.g. to college); to develop (talent, skill, etc.); to improve; to earn (something desirable); to achieve (e.g. a good result); to obtain; to promote (someone); to complete; to finish; to make (a loud sound); to raise (one's voice); to raise (one's gaze); to lift up (one's face); to look up; to do up (one's hair); to offer up (incense, a prayer, etc.) to the gods (or Buddha, etc.); to praise; to commend; to flatter; to make do (with less expenses than expected); to cover expenses (with a given amount); to set costs; to finish (one's studies); to complete (a lesson); to pass (e.g. a class); to upload (e.g. an image); to publish (on the internet); to post; to raise someone's spirits; to cheer someone up; to enhance a mood; (of the tide) to come in; to rise; to increase (of market price); to rise (of stock prices); to vomit; to throw up; to do for (the sake of someone else); to complete ...; to humbly do ...
+jmdict:1429060:%E8%AA%BF%E3%81%B9%E3%82%8B:%E3%81%97%E3%82%89%E3%81%B9%E3%82%8B	調べる	しらべる	to examine; to look up; to investigate; to check up; to sense; to study; to inquire; to search
+jmdict:1212670:%E6%85%A3%E3%82%8C%E3%82%8B:%E3%81%AA%E3%82%8C%E3%82%8B	慣れる	なれる	to get used to; to grow accustomed to; to become familiar with; to become skilled in; to become experienced at; to become tame; to become domesticated; to get used to doing
+jmdict:1182620:%E5%84%84:%E3%81%8A%E3%81%8F	億	おく	hundred million; 100,000,000; 10^8
+jmdict:1535880:%E6%88%BB%E3%82%8B:%E3%82%82%E3%81%A9%E3%82%8B	戻る	もどる	to turn back (e.g. half-way); to return; to go back; to recover (e.g. something lost); to be returned; to rebound; to spring back
+jmdict:1447000:%E6%8A%95%E3%81%92%E3%82%8B:%E3%81%AA%E3%81%92%E3%82%8B	投げる	なげる	to throw; to hurl; to fling; to toss; to cast; to give up; to abandon; to throw away; to cast (a glance, shadow, doubt, etc.)
+jmdict:1219680:%E5%AF%84%E3%82%8B:%E3%82%88%E3%82%8B	寄る	よる	to approach; to draw near; to come near; to be close to; to gather (in one place); to come together; to meet; to stop by (while on one's way to another place); to drop by; to make a short visit; to grow old; to grow high (number, etc.); to grow (wrinkly); to lean against; to recline on; to push one's opponent while holding their belt; to decide on a price and come to a deal; to be swayed by (a person); to yield to
+jmdict:1305700:%E4%BC%BA%E3%81%86:%E3%81%86%E3%81%8B%E3%81%8C%E3%81%86	伺う	うかがう	to call on someone; to call at a place; to pay a visit; to wait on someone; to ask; to inquire; to hear; to be told; to implore (a god for an oracle); to seek direction (from your superior); to speak to (a large crowd at a theatre, etc.)
+jmdict:1390800:%E6%B5%85%E3%81%84:%E3%81%82%E3%81%95%E3%81%84	浅い	あさい	shallow; superficial; slight (wound); light (sleep); pale (colour); inadequate (knowledge); short (time); early; young
+jmdict:1408220:%E5%A4%AA%E3%82%8B:%E3%81%B5%E3%81%A8%E3%82%8B	太る	ふとる	to put on weight; to gain weight; to grow fat; to get stout
+jmdict:1357250:%E6%A4%8D%E3%81%88%E3%82%8B:%E3%81%86%E3%81%88%E3%82%8B	植える	うえる	to plant; to grow; to raise; to insert; to transplant; to implant; to set (type); to inoculate (e.g. an infectious agent); to instill (idea, value, etc.); to inculcate
+jmdict:1346370:%E5%8F%AC%E3%81%97%E4%B8%8A%E3%81%8C%E3%82%8B:%E3%82%81%E3%81%97%E3%81%82%E3%81%8C%E3%82%8B	召し上がる	めしあがる	to eat; to drink
+jmdict:1222770:%E7%A5%88%E3%82%8B:%E3%81%84%E3%81%AE%E3%82%8B	祈る	いのる	to pray; to say a prayer; to say grace; to wish; to hope
+jmdict:1499230:%E8%91%A1%E8%90%84:%E3%81%B6%E3%81%A9%E3%81%86	葡萄	ぶどう	grape; grapevine
+jmdict:1593410:%E8%BE%BC%E3%82%80:%E3%81%93%E3%82%80	込む	こむ	to be crowded; to be packed; to be congested; to be thronged (with); to be complex; to be intricate; to go into; to go in; to put into; to become (completely); to do thoroughly; to do sufficiently; to remain (silent, seated, etc.); to stay ...
+jmdict:1604300:%E5%9B%9E%E3%82%8B:%E3%81%BE%E3%82%8F%E3%82%8B	回る	まわる	to turn; to rotate; to revolve; to spin; to go around; to circle; to revolve around; to orbit; to make the rounds (of); to go around (several places); to travel around; to make a tour of; to patrol; to go by way of; to go via; to stop by (on the way); to take a roundabout route; to make a detour; to move around (to another place or position); to come around; to go over (e.g. to the opposing side); to come around (of one's turn); to be passed around (of a cup, circular, etc.); to function; to work well; to spread; to extend (to; e.g. of one's attention); to reach; to take effect (of alcohol, poison, etc.); to pass (a time); to turn (e.g. 5 o'clock); to earn interest; to ... around; to ... about
+jmdict:1322320:%E6%8D%A8%E3%81%A6%E3%82%8B:%E3%81%99%E3%81%A6%E3%82%8B	捨てる	すてる	to throw away; to cast away; to dump; to discard; to abandon; to desert; to leave; to give up; to resign; to sacrifice (stones)
+jmdict:1328190:%E6%89%8B%E4%BC%9D%E3%81%86:%E3%81%A6%E3%81%A4%E3%81%A0%E3%81%86	手伝う	てつだう	to help; to assist; to aid; to contribute to; to be a factor in
+jmdict:1589040:%E9%81%85%E3%82%8C%E3%82%8B:%E3%81%8A%E3%81%8F%E3%82%8C%E3%82%8B	遅れる	おくれる	to be late; to be delayed; to fall behind schedule; to be overdue; to fall behind (in a race, one's studies, etc.); to lag behind; to be behind (the times); to be bereaved of; to be preceded by (someone) in death; to be slow (of a clock or watch)
+jmdict:1005180:%E5%85%88:%E3%81%95%E3%81%A3%E3%81%8D	先	さっき	a short while ago; a moment ago; just now; some time ago
+jmdict:1247250:%E5%90%9B:%E3%81%8D%E3%81%BF	君	きみ	you; buddy; pal; monarch; ruler; sovereign; (one's) master; he; she
+jmdict:1247260:%E5%90%9B:%E3%81%8F%E3%82%93	君	くん	Mr; master; boy; Ms; miss; sir; madam
+jmdict:1255430:%E6%9C%88:%E3%81%A4%E3%81%8D	月	つき	Moon; month; moonlight; (a) moon; natural satellite
+jmdict:1308090:%E5%B8%82:%E3%81%97	市	し	city
+jmdict:1315130:%E5%AD%97:%E3%81%98	字	じ	character (esp. kanji); letter; written text; handwriting; penmanship; the ... word (e.g. "the L word" = "love")
+jmdict:1360480:%E5%BF%83:%E3%81%93%E3%81%93%E3%82%8D	心	こころ	mind; heart; spirit; the meaning of a phrase (riddle, etc.)
+jmdict:1382440:%E7%9F%B3:%E3%81%84%E3%81%97	石	いし	stone; rock; pebble; jewel; precious stone; flint (in a lighter); (round) game piece; stone (in go, etc.); disc (in Othello); stone (in the bladder, kidney etc.); calculus
+jmdict:1483070:%E5%BD%BC:%E3%81%8B%E3%82%8C	彼	かれ	he; him; boyfriend
+jmdict:1508750:%E7%B1%B3:%E3%81%93%E3%82%81	米	こめ	(husked grains of) rice; staple (product, etc.); necessity; (online) comment
+jmdict:1509430:%E5%88%A5:%E3%81%B9%E3%81%A4	別	べつ	distinction; difference; discrimination; separate; different; another; extra; exception; exclusion; classified by; ranked by; according to
+jmdict:1546200:%E7%94%A8:%E3%82%88%E3%81%86	用	よう	business; task; errand; engagement; use; purpose; for the use of ...; used for ...; made for ...; call of nature; excretion
+jmdict:1554820:%E5%8A%9B:%E3%81%A1%E3%81%8B%E3%82%89	力	ちから	force; strength; might; vigour; vigor; energy; capability; ability; proficiency; capacity; faculty; efficacy; effect; effort; endeavours; endeavors; exertions; power; authority; influence; good offices; agency; support; help; aid; assistance; stress; emphasis; means; resources
+jmdict:1601810:%E9%AB%AD:%E3%81%B2%E3%81%92	髭	ひげ	moustache; mustache; beard; whiskers; sideburns; facial hair; whiskers (on a cat, etc.); feelers (on an insect, etc.); (chin) tuft; shadow (on a candlestick chart)
+jmdict:1001090:%E3%81%86%E3%82%93:%E3%81%86%E3%82%93	うん	うん	yes; yeah; uh huh; hum; hmmm; well; erm; huh?; oof
+jmdict:1002400:%E3%81%8A%E5%AE%85:%E3%81%8A%E3%81%9F%E3%81%8F	お宅	おたく	your house; your home; your family; your husband; your organization; you
+jmdict:1003430:%E5%B1%B9%E5%BA%A6:%E3%81%8D%E3%81%A3%E3%81%A8	屹度	きっと	surely; undoubtedly; almost certainly; most likely (e.g. 90 percent); sternly; severely; having no slack; rigid; stiff; tight; suddenly; abruptly; instantly
+jmdict:1004310:%E6%96%AF%E3%81%86:%E3%81%93%E3%81%86	斯う	こう	in this way; like this; so; thus; this (much); uh; er; mm; well
+jmdict:1006610:%E3%81%9D%E3%81%86:%E3%81%9D%E3%81%86	そう	そう	appearing that; seeming that; looking like; having the appearance of
+jmdict:1007060:%E5%85%B6%E7%A8%8B:%E3%81%9D%E3%82%8C%E3%81%BB%E3%81%A9	其程	それほど	to that degree; to that extent; that much
+jmdict:1012800:%E6%BC%B8%E3%81%A8:%E3%82%84%E3%81%A3%E3%81%A8	漸と	やっと	at last; finally; barely; narrowly; just; by the skin of one's teeth
+jmdict:1040060:%E7%93%A6%E6%96%AF:%E3%82%AC%E3%82%B9	瓦斯	ガス	gas (as a fuel); gas (state of matter); poison gas; dense fog; thick fog; gas stove; gas cooker; gas range; gasoline; gas; petrol; flatulence; wind; fart; gassed yarn
+jmdict:1040380:%E7%A1%9D%E5%AD%90:%E3%82%AC%E3%83%A9%E3%82%B9	硝子	ガラス	glass; pane
+jmdict:1106010:%E3%83%93%E3%83%AB:%E3%83%93%E3%83%AB	ビル	ビル	multi-floor building; multi-storey building
+jmdict:1120010:%E3%83%99%E3%83%AB:%E3%83%99%E3%83%AB	ベル	ベル	bell
+jmdict:1145130:%E3%83%AC%E3%82%B8:%E3%83%AC%E3%82%B8	レジ	レジ	(cash) register; checkout (counter); cashier
+jmdict:1177820:%E9%81%A0%E3%81%8F:%E3%81%A8%E3%81%8A%E3%81%8F	遠く	とおく	far away; distant place; a (great) distance; a long way off; afar; long ago; far back; far (into the future); by far
+jmdict:1200220:%E6%80%AA%E6%88%91:%E3%81%91%E3%81%8C	怪我	けが	injury; wound; mistake; accident; loss
+jmdict:1202440:%E9%96%8B%E3%81%8F:%E3%81%B2%E3%82%89%E3%81%8F	開く	ひらく	to open; to undo; to unseal; to unpack; to bloom; to unfold; to spread out; to open (for business, e.g. in the morning); to be wide (gap, etc.); to widen; to hold (meeting, party, etc.); to give; to found (nation, dynasty, sect, etc.); to open (a new business); to set up; to establish; to start; to open (ports, borders, etc.); to open (an account); to open up (new land, path, etc.); to clear; to develop; to open (a file, etc.); to extract (root); to reduce (equation); to cut open (fish); to change (kanji into hiragana); to flare (e.g. skirt); to slacken (into a poor posture); to extend
+jmdict:1209240:%E5%99%9B%E3%82%80:%E3%81%8B%E3%82%80	噛む	かむ	to bite; to chew; to gnaw; to masticate; to fumble one's words (esp. during a play, broadcast, etc.); to falter with one's words; to stutter; to stammer; to crash against (e.g. of waves); to break onto (shore); to engage (of cogs, zippers, etc.); to mesh; to fit together; to be involved in; to convince; to persuade
+jmdict:1209650:%E4%B9%BE%E3%81%8F:%E3%81%8B%E3%82%8F%E3%81%8F	乾く	かわく	to get dry
+jmdict:1226360:%E5%90%83%E9%A9%9A:%E3%81%B3%E3%81%A3%E3%81%8F%E3%82%8A	吃驚	びっくり	to be surprised; to be amazed; to be frightened; to be astonished; to get startled; to jump; surprise (e.g. surprise party)
+jmdict:1229840:%E6%B3%A3%E3%81%8F:%E3%81%AA%E3%81%8F	泣く	なく	to cry; to shed tears; to weep; to sob; to suffer (from); to be troubled (by); to face hardship; to accept (an unreasonable request, loss, etc.); to do reluctantly; to make sacrifices; to be not worth the name; to suffer (of a reputation); to be spoiled; to be put to shame; to lament; to bemoan; to bewail
+jmdict:1238680:%E9%A9%9A%E3%81%8F:%E3%81%8A%E3%81%A9%E3%82%8D%E3%81%8F	驚く	おどろく	to be surprised; to be taken aback; to be amazed; to be astonished; to be shocked; to be frightened; to be startled; to be alarmed
+jmdict:1238840:%E4%BB%B0%E3%82%8B:%E3%81%8A%E3%81%A3%E3%81%97%E3%82%83%E3%82%8B	仰る	おっしゃる	to say; to speak; to tell; to be called
+jmdict:1270550:%E3%81%8A%E9%87%A3:%E3%81%8A%E3%81%A4%E3%82%8A	お釣	おつり	change (for a purchase); toilet splashback
+jmdict:1304420:%E5%A7%91%E3%81%8F:%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F	姑く	しばらく	for a moment; for a minute; for a while; for some time; for the time being; for now; it's been a long time; long time no see
+jmdict:1310640:%E6%AD%A2%E3%82%80:%E3%82%84%E3%82%80	止む	やむ	to cease; to stop; to be over
+jmdict:1349410:%E5%BA%8A%E5%B1%8B:%E3%81%A8%E3%81%93%E3%82%84	床屋	とこや	barbershop; barber shop; barber
+jmdict:1350600:%E7%84%BC%E3%81%8F:%E3%82%84%E3%81%8F	焼く	やく	to burn; to roast; to broil; to grill; to bake; to toast; to barbecue; to heat; to heat up; to make (charcoal, pottery, bricks, etc.); to fire; to tan (i.e. suntan); to print (a photo); to burn (an optical disc); to be jealous of; to be envious of; to envy
+jmdict:1360320:%E5%AF%9D%E5%9D%8A:%E3%81%AD%E3%81%BC%E3%81%86	寝坊	ねぼう	sleeping in late; oversleeping; late riser; sleepyhead
+jmdict:1374550:%E5%87%84%E3%81%84:%E3%81%99%E3%81%94%E3%81%84	凄い	すごい	terrible; dreadful; amazing (e.g. of strength); great (e.g. of skills); wonderful; terrific; to a great extent; vast (in numbers); awfully; very; immensely
+jmdict:1375820:%E6%88%90%E7%A8%8B:%E3%81%AA%E3%82%8B%E3%81%BB%E3%81%A9	成程	なるほど	I see; that's right; indeed
+jmdict:1387240:%E5%85%88%E3%81%9A:%E3%81%BE%E3%81%9A	先ず	まず	first (of all); firstly; to begin with; before anything else; probably; most likely; almost certainly; virtually; more or less (satisfactory); on the whole; reasonably; anyway; at any rate; for now (at least); for the time being
+jmdict:1405790:%E7%B6%9A%E3%81%8F:%E3%81%A4%E3%81%A5%E3%81%8F	続く	つづく	to continue; to last; to go on; to continue (without a break); to be unbroken; to occur again and again; to lead to; to connect to; to adjoin; to come after; to follow; to succeed; to rank next to; to hold out; to keep
+jmdict:1449890:%E5%88%B0%E9%A0%AD:%E3%81%A8%E3%81%86%E3%81%A8%E3%81%86	到頭	とうとう	finally; at last; in the end; ultimately
+jmdict:1451210:%E5%8B%95%E3%81%8F:%E3%81%86%E3%81%94%E3%81%8F	動く	うごく	to move; to stir; to shift; to shake; to swing; to operate; to run; to go; to work; to make a move; to take action; to act; to go into action; to be touched; to be influenced; to change; to vary; to fluctuate; to waver; to be transferred
+jmdict:1495740:%E4%BB%98%E3%81%8F:%E3%81%A4%E3%81%8F	付く	つく	to be attached; to be connected with; to adhere; to stick; to cling; to remain imprinted; to scar; to stain; to dye; to bear (fruit, interest, etc.); to be acquired (of a habit, ability, etc.); to increase (of strength, etc.); to take root; to accompany; to attend; to follow; to study with; to side with; to belong to; to possess; to haunt; to be lit; to catch fire; to ignite; to be turned on (of a light, appliance, etc.); to be settled; to be resolved; to be decided; to be given (of a name, price, etc.); to be sensed; to be perceived; to be lucky; to become (a state, condition, etc.)
+jmdict:1522050:%E5%B9%BE%E3%81%A9:%E3%81%BB%E3%81%A8%E3%82%93%E3%81%A9	幾ど	ほとんど	almost; nearly; mostly; practically; virtually; basically; just about; all but; hardly; barely; scarcely; little; large majority; large proportion; greater part; most (of); almost all (of)
+jmdict:1535780:%E5%8B%BF%E8%AB%96:%E3%82%82%E3%81%A1%E3%82%8D%E3%82%93	勿論	もちろん	of course; certainly; naturally
+jmdict:1538440:%E8%B8%8A%E3%82%8B:%E3%81%8A%E3%81%A9%E3%82%8B	踊る	おどる	to dance (orig. a hopping dance); to be manipulated; to dance to someone's tune
+jmdict:1567450:%E6%8E%8F%E6%91%B8:%E3%81%99%E3%82%8A	掏摸	すり	pickpocket
+jmdict:1586265:%E7%A9%BA%E3%81%8F:%E3%81%99%E3%81%8F	空く	すく	to become less crowded; to thin out; to get empty; to be hungry
+jmdict:1586270:%E7%A9%BA%E3%81%8F:%E3%81%82%E3%81%8F	空く	あく	to open (e.g. doors); to open (e.g. business, etc.); to be empty; to be vacant; to be available; to be free; to be open (e.g. neckline, etc.); to have been opened (of one's eyes, mouth, etc.); to come to an end; to open (one's eyes, mouth, etc.); to have a hole; to form a gap; to have an interval (between events)
+jmdict:1587290:%E6%88%B4%E3%81%8F:%E3%81%84%E3%81%9F%E3%81%A0%E3%81%8F	戴く	いただく	to receive; to get; to accept; to take; to buy; to eat; to drink; to be crowned with; to wear (on one's head); to have (on top); to have (as one's leader); to live under (a ruler); to install (a president); to get someone to do something
+jmdict:1594400:%E7%A2%BA%E3%82%8A:%E3%81%97%E3%81%A3%E3%81%8B%E3%82%8A	確り	しっかり	tightly (holding on); firmly; securely; strongly (built); solidly; sturdily; steadily; properly; well; sufficiently; hard (working, etc.); fully; completely; reliably; dependably; levelheadedly; shrewdly; wisely; cleverly
+jmdict:1599420:%E4%B8%AD%E3%80%85:%E3%81%AA%E3%81%8B%E3%81%AA%E3%81%8B	中々	なかなか	very; considerably; easily; readily; fairly; quite; highly; rather; by no means; not readily; middle; half-way point; excellent; wonderful; very good
+jmdict:1602060:%E9%85%B7%E3%81%84:%E3%81%B2%E3%81%A9%E3%81%84	酷い	ひどい	cruel; heartless; hard; harsh; severe; violent; intense; strong; heavy; extreme; very bad; terrible; awful; excessive; exorbitant; unreasonable; outrageous; unfair; unjust
+jmdict:1606680:%E6%B2%B8%E3%81%8F:%E3%82%8F%E3%81%8F	沸く	わく	to grow hot (e.g. water); to boil; to get excited (at); to erupt (in applause, cheering, etc.); to be in a ferment; to take place energetically; to ferment; to melt (of metal)
+jmdict:1634500:%E5%81%B6%E3%81%AB:%E3%81%9F%E3%81%BE%E3%81%AB	偶に	たまに	occasionally; once in a while; now and then
+jmdict:2085080:%E3%81%82%E3%81%82:%E3%81%82%E3%81%82	ああ	ああ	like that; so
+jmdict:2772770:%E7%9F%A2%E5%BC%B5:%E3%82%84%E3%81%AF%E3%82%8A	矢張	やはり	as expected; sure enough; just as one thought; after all (is said and done); in the end; as one would expect; in any case; too; also; as well; likewise; (not) either; still; as before; all the same; even so; nonetheless
+jmdict:2846390:%E7%9B%B4%E3%82%8B:%E3%81%AA%E3%81%8A%E3%82%8B	直る	なおる	to get mended; to be repaired; to be fixed; to return to normal; to recover (e.g. one's temper); to be restored; to improve; to rally; to come right; to be corrected; to get put right; to be rectified; to cure (itself); to get cured; to sit properly; to be promoted; to rise; to have one's crimes forgiven
+jmdict:1000590:%E3%81%82%E3%82%93%E3%81%AA:%E3%81%82%E3%82%93%E3%81%AA	あんな	あんな	that sort of; that kind of; like that; such; so
+jmdict:1002500:%E3%81%8A%E5%9C%9F%E7%94%A3:%E3%81%8A%E3%81%BF%E3%82%84%E3%81%92	お土産	おみやげ	local specialty or souvenir bought as a gift while traveling (travelling); present brought by a visitor; something unpleasant that one is given (e.g. an illness while on vacation); unwelcome gift; disservice
+jmdict:1004690:%E3%81%93%E3%81%AE%E9%96%93:%E3%81%93%E3%81%AE%E3%81%82%E3%81%84%E3%81%A0	この間	このあいだ	the other day; lately; recently; during this period
+jmdict:1004710:%E3%81%93%E3%81%AE%E9%A0%83:%E3%81%93%E3%81%AE%E3%81%94%E3%82%8D	この頃	このごろ	these days; nowadays; now; at present; recently; lately
+jmdict:1004790:%E6%98%AF%E3%81%8B%E3%82%89:%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89	是から	これから	from now on; after this; in the future; in future; from here; from this point
+jmdict:1006140:%E3%81%99%E3%81%A3%E3%81%A8:%E3%81%99%E3%81%A3%E3%81%A8	すっと	すっと	straight; quickly; directly; all of a sudden; quietly; gently; softly; to feel refreshed; to feel satisfied
+jmdict:1006280:%E3%81%99%E3%82%8B%E3%81%A8:%E3%81%99%E3%82%8B%E3%81%A8	すると	すると	(and) then; and; thereupon; whereupon; in that case; then; so
+jmdict:1007000:%E5%85%B6%E3%82%8C%E3%81%A7:%E3%81%9D%E3%82%8C%E3%81%A7	其れで	それで	so; therefore; and; (and) then
+jmdict:1007040:%E5%85%B6%E3%82%8C%E3%81%AB:%E3%81%9D%E3%82%8C%E3%81%AB	其れに	それに	besides; in addition; also; moreover
+jmdict:1007130:%E3%81%9D%E3%82%93%E3%81%AA:%E3%81%9D%E3%82%93%E3%81%AA	そんな	そんな	such; that sort of; that kind of; like that; no way!; never!
+jmdict:1007310:%E3%81%A0%E3%81%8B%E3%82%89:%E3%81%A0%E3%81%8B%E3%82%89	だから	だから	so; therefore; accordingly; consequently; on those grounds; that is why; for that reason; like I said; I told you already
+jmdict:1007560:%E4%BA%9B%E3%81%A8%E3%82%82:%E3%81%A1%E3%81%A3%E3%81%A8%E3%82%82	些とも	ちっとも	(not) at all; (not) a bit; (not) in the least; (not) in the slightest
+jmdict:1007660:%E3%81%A1%E3%82%83%E3%82%93:%E3%81%A1%E3%82%83%E3%82%93	ちゃん	ちゃん	suffix for familiar person
+jmdict:1015840:%E4%BA%9C%E7%B4%B0%E4%BA%9C:%E3%82%A2%E3%82%B8%E3%82%A2	亜細亜	アジア	Asia
+jmdict:1047860:%E3%82%B1%E3%83%BC%E3%82%AD:%E3%82%B1%E3%83%BC%E3%82%AD	ケーキ	ケーキ	cake
+jmdict:1057850:%E3%82%B5%E3%83%A9%E3%83%80:%E3%82%B5%E3%83%A9%E3%83%80	サラダ	サラダ	salad
+jmdict:1065680:%E3%82%B8%E3%83%A3%E3%83%A0:%E3%82%B8%E3%83%A3%E3%83%A0	ジャム	ジャム	jam
+jmdict:1066680:%E3%82%B9%E3%83%BC%E3%83%84:%E3%82%B9%E3%83%BC%E3%83%84	スーツ	スーツ	suit (clothing); suit
+jmdict:1075500:%E3%82%BD%E3%83%95%E3%83%88:%E3%82%BD%E3%83%95%E3%83%88	ソフト	ソフト	soft; software; soft hat; felt hat; soft serve ice cream; softball
+jmdict:1075940:%E3%82%BF%E3%82%A4%E3%83%97:%E3%82%BF%E3%82%A4%E3%83%97	タイプ	タイプ	type; kind; sort; style; type (of person); (ideal) type; one's type; typewriter; typing (on a typewriter)
+jmdict:1080000:%E3%83%86%E3%83%8B%E3%82%B9:%E3%83%86%E3%83%8B%E3%82%B9	テニス	テニス	tennis
+jmdict:1100810:%E3%83%91%E3%83%BC%E3%83%88:%E3%83%91%E3%83%BC%E3%83%88	パート	パート	part; part-timer; part-time (work)
+jmdict:1106400:%E3%83%94%E3%82%A2%E3%83%8E:%E3%83%94%E3%82%A2%E3%83%8E	ピアノ	ピアノ	piano (instrument); piano (dynamic)
+jmdict:1108180:FAX:%E3%83%95%E3%82%A1%E3%83%83%E3%82%AF%E3%82%B9	ＦＡＸ	ファックス	fax; facsimile; fax machine
+jmdict:1157090:%E7%82%BA%E3%81%95%E3%82%8B:%E3%81%AA%E3%81%95%E3%82%8B	為さる	なさる	to do
+jmdict:1160570:%E8%82%B2%E3%81%A6%E3%82%8B:%E3%81%9D%E3%81%A0%E3%81%A6%E3%82%8B	育てる	そだてる	to raise; to rear; to bring up; to train; to teach; to educate; to promote the growth of; to nurture; to foster; to develop
+jmdict:1195140:%E8%8B%9B%E3%82%81%E3%82%8B:%E3%81%84%E3%81%98%E3%82%81%E3%82%8B	苛める	いじめる	to ill-treat; to bully; to torment; to pick on; to tease; to be cruel to; to persecute; to be tough on (e.g. one's body); to treat harshly
+jmdict:1208020:%E5%89%B2%E3%82%8C%E3%82%8B:%E3%82%8F%E3%82%8C%E3%82%8B	割れる	われる	to break; to be smashed; to split; to crack; to fissure; to be torn; to be divided (opinion, vote, etc.); to split (e.g. of a party); to come to light; to become clear; to be identified; to be revealed; to become distorted (of sound); to clip; to be divisible (without a remainder); to drop below a minimum
+jmdict:1219510:%E5%AC%89%E3%81%97%E3%81%84:%E3%81%86%E3%82%8C%E3%81%97%E3%81%84	嬉しい	うれしい	happy; glad; pleased; delighted; overjoyed; joyful; delightful; gratifying; pleasant
+jmdict:1224880:%E5%AE%9C%E3%81%97%E3%81%84:%E3%82%88%E3%82%8D%E3%81%97%E3%81%84	宜しい	よろしい	good; OK; all right; fine; very well; will do; may; can
+jmdict:1257330:%E5%BB%BA%E3%81%A6%E3%82%8B:%E3%81%9F%E3%81%A6%E3%82%8B	建てる	たてる	to build; to construct
+jmdict:1269130:%E5%91%89%E3%82%8C%E3%82%8B:%E3%81%8F%E3%82%8C%E3%82%8B	呉れる	くれる	to give; to let (one) have; to do for one; to take the trouble to do; to do to someone's disadvantage
+jmdict:1270390:%E5%BE%A1%E4%B8%BB%E4%BA%BA:%E3%81%94%E3%81%97%E3%82%85%E3%81%98%E3%82%93	御主人	ごしゅじん	your husband; her husband
+jmdict:1293640:%E3%81%95%E6%9D%A5%E6%9C%88:%E3%81%95%E3%82%89%E3%81%84%E3%81%92%E3%81%A4	さ来月	さらいげつ	month after next
+jmdict:1293650:%E3%81%95%E6%9D%A5%E9%80%B1:%E3%81%95%E3%82%89%E3%81%84%E3%81%97%E3%82%85%E3%81%86	さ来週	さらいしゅう	week after next
+jmdict:1310460:%E4%B8%8A%E6%89%8B%E3%81%84:%E3%81%86%E3%81%BE%E3%81%84	上手い	うまい	skillful; skilful; skilled; good; expert; clever (expression, trick, etc.); apt; appropriate; delicious; tasty; nice; good (deal, idea, etc.); profitable; promising; lucky; fortunate; successful; satisfactory; splendid
+jmdict:1310670:%E6%AD%A2%E3%82%81%E3%82%8B:%E3%81%A8%E3%82%81%E3%82%8B	止める	とめる	to stop; to turn off; to park; to prevent; to suppress (a cough); to hold back (tears); to hold (one's breath); to relieve (pain); to stop (someone from doing something); to dissuade; to forbid; to prohibit; to notice; to be aware of; to concentrate on; to pay attention to; to remember; to bear in mind; to fix (in place); to fasten; to tack; to pin; to nail; to button; to staple; to detain; to keep in custody
+jmdict:1310680:%E6%AD%A2%E3%82%81%E3%82%8B:%E3%82%84%E3%82%81%E3%82%8B	止める	やめる	to stop (an activity); to cease; to discontinue; to end; to quit; to cancel; to abandon; to give up; to abolish; to abstain; to refrain
+jmdict:1350610:%E7%84%BC%E3%81%91%E3%82%8B:%E3%82%84%E3%81%91%E3%82%8B	焼ける	やける	to burn; to burn down; to go down in flames; to be roasted; to be thoroughly cooked; to be sunburnt; to fade (in the sun); to glow red (i.e. of the sky at sunset); to become hot (from the sun); to be jealous; to be envious
+jmdict:1385920:%E6%8A%98%E3%82%8C%E3%82%8B:%E3%81%8A%E3%82%8C%E3%82%8B	折れる	おれる	to break; to be broken; to snap; to fracture; to be folded; to give in; to back down; to yield; to submit; to turn (a corner)
+jmdict:1405800:%E7%B6%9A%E3%81%91%E3%82%8B:%E3%81%A4%E3%81%A5%E3%81%91%E3%82%8B	続ける	つづける	to continue; to keep up; to keep on; to continue ...; to keep on ...
+jmdict:1413260:%E5%A4%A7%E5%AD%A6%E7%94%9F:%E3%81%A0%E3%81%84%E3%81%8C%E3%81%8F%E3%81%9B%E3%81%84	大学生	だいがくせい	university student; college student
+jmdict:1441870:%E4%BC%9D%E3%81%88%E3%82%8B:%E3%81%A4%E3%81%9F%E3%81%88%E3%82%8B	伝える	つたえる	to convey; to report; to transmit; to communicate; to tell; to impart; to propagate; to teach; to bequeath
+jmdict:1457210:%E5%B1%8A%E3%81%91%E3%82%8B:%E3%81%A8%E3%81%A9%E3%81%91%E3%82%8B	届ける	とどける	to deliver; to forward; to send; to report; to notify; to file notice (to the authorities); to give notice; to register
+jmdict:1484930:%E9%9D%9E%E5%B8%B8%E3%81%AB:%E3%81%B2%E3%81%98%E3%82%87%E3%81%86%E3%81%AB	非常に	ひじょうに	very; extremely; exceedingly
+jmdict:1545710:%E6%8F%BA%E3%82%8C%E3%82%8B:%E3%82%86%E3%82%8C%E3%82%8B	揺れる	ゆれる	to shake; to sway; to rock; to swing; to tremble; to jolt; to pitch; to roll; to flicker; to become unstable; to become unsettled; to be shaken; to waver
+jmdict:1551530:%E7%AB%8B%E3%81%A6%E3%82%8B:%E3%81%9F%E3%81%A6%E3%82%8B	立てる	たてる	to stand (something) up; to put upright; to set up; to erect; to raise; to turn up; to plant; to thrust into; to bury into; to dig into; to make (a noise); to let out; to produce (a sound); to raise (a cloud of dust, smoke, etc.); to kick up; to stir up; to cause (waves, ripples, etc.); to send up (foam); to give off (steam); to make (plans); to formulate (an idea); to lay out; to establish (a goal); to develop (a theory); to draw up; to set; to spread (a rumor); to circulate; to put up (a candidate); to appoint as; to make (someone; leader, king etc.); to have fulfill (a role); to found; to establish (e.g. a firm); to make (a living); to sustain (one's lifestyle); to live off of; to establish (oneself) as; to make a reputation (for oneself); to open (a market, store, etc.); to start (sales); to do logically; to lay out coherently; to sharpen (e.g. a knife); to list (an item); to give; to make (an entry) for; to treat with respect; to give (someone) their due; to speak (a vow); to make (a wish, prayer, etc.); to declare; to stir up (emotions); to work up; to excite; to intensify (a feeling); to lend one's ears (to someone); to listen attentively; to save (someone's) face; to make (someone) look good; to avoid embarassing (someone); to prepare (a bath); to heat (water); to make (tea; esp. matcha); to perform (a tea ceremony); to shut (a sliding door or shutter); to close; to grow out (a moustache); to divide by; to send (a messenger); to make (a divination); to perform (a ritual); to do ... vigorously; to do ... to the utmost; to do ... remarkably
+jmdict:1593590:%E3%81%94%E9%A6%B3%E8%B5%B0:%E3%81%94%E3%81%A1%E3%81%9D%E3%81%86	ご馳走	ごちそう	treat (esp. food and drink); entertainment; treating someone (to a meal); taking someone to dinner; gorgeous dinner; feast; excellent food; special dish; delicacy
+jmdict:1605510:%E7%97%A9%E3%81%9B%E3%82%8B:%E3%82%84%E3%81%9B%E3%82%8B	痩せる	やせる	to become thin; to lose weight; to slim; to become impoverished (of soil); to become sterile; to become infertile; to become barren
+jmdict:1612770:%E3%81%8A%E7%A5%9D%E3%81%84:%E3%81%8A%E3%81%84%E3%82%8F%E3%81%84	お祝い	おいわい	congratulation; congratulations; celebration; festival; congratulatory gift; present
+jmdict:2853889:%E3%81%91%E3%82%8C%E3%81%A9:%E3%81%91%E3%82%8C%E3%81%A9	けれど	けれど	but; however; although
+jmdict:1006110:%E3%81%99%E3%81%A3%E3%81%8B%E3%82%8A:%E3%81%99%E3%81%A3%E3%81%8B%E3%82%8A	すっかり	すっかり	all; completely; totally; entirely; thoroughly
+jmdict:1009320:%E3%81%A9%E3%82%93%E3%81%A9%E3%82%93:%E3%81%A9%E3%82%93%E3%81%A9%E3%82%93	どんどん	どんどん	drumming (noise); beating; pounding; banging; booming; stamping; rapidly; quickly; steadily; continuously; one after the other; in succession
+jmdict:1010150:%E3%81%AF%E3%81%A3%E3%81%8D%E3%82%8A:%E3%81%AF%E3%81%A3%E3%81%8D%E3%82%8A	はっきり	はっきり	clearly; plainly; distinctly; to be clear; to be definite; to be certain; to be exact; to become clear; to clear up
+jmdict:1012810:%E7%9F%A2%E3%81%A3%E5%BC%B5%E3%82%8A:%E3%82%84%E3%81%A3%E3%81%B1%E3%82%8A	矢っ張り	やっぱり	as expected; sure enough; just as one thought; after all (is said and done); in the end; as one would expect; in any case; too; also; as well; likewise; (not) either; still; as before; all the same; even so; nonetheless
+jmdict:1036290:%E3%82%AB%E3%83%BC%E3%83%86%E3%83%B3:%E3%82%AB%E3%83%BC%E3%83%86%E3%83%B3	カーテン	カーテン	curtain; curtains
+jmdict:1040250:%E3%82%AC%E3%82%BD%E3%83%AA%E3%83%B3:%E3%82%AC%E3%82%BD%E3%83%AA%E3%83%B3	ガソリン	ガソリン	gasoline; petrol
+jmdict:1058480:%E3%82%B5%E3%83%B3%E3%83%80%E3%83%AB:%E3%82%B5%E3%83%B3%E3%83%80%E3%83%AB	サンダル	サンダル	sandal
+jmdict:1070280:%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD:%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD	ステーキ	ステーキ	steak
+jmdict:1070650:%E3%82%B9%E3%83%86%E3%83%AC%E3%82%AA:%E3%82%B9%E3%83%86%E3%83%AC%E3%82%AA	ステレオ	ステレオ	stereo (sound); stereo (player, set); stereo; stereophonic; stereoscopic
+jmdict:1077550:%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF:%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF	チェック	チェック	check (pattern); plaid; check; inspection; examination; looking over; scrutinizing; check (mark); tick; marking with a check; checking off; ticking; checking (something) out; following (with interest); keeping one's eye on; keeping a close watch on; check (bill of exchange); cheque; (restaurant) bill; check (in chess)
+jmdict:1079290:%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88:%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88	テキスト	テキスト	text; textbook
+jmdict:1101570:%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3:%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3	パソコン	パソコン	personal computer; PC
+jmdict:1145990:%E3%83%AA%E3%83%9D%E3%83%BC%E3%83%88:%E3%83%AA%E3%83%9D%E3%83%BC%E3%83%88	リポート	リポート	report; paper; reportage
+jmdict:1145990:%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88:%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88	レポート	レポート	report; paper; reportage
+jmdict:1148520:%E3%83%AF%E3%83%BC%E3%83%97%E3%83%AD:%E3%83%AF%E3%83%BC%E3%83%97%E3%83%AD	ワープロ	ワープロ	word processor
+jmdict:1149830:%E4%BA%9C%E5%A2%A8%E5%88%A9%E5%8A%A0:%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB	亜墨利加	アメリカ	(United States of) America; United States; US; USA; America (land mass); the Americas
+jmdict:1345605:%E3%81%9D%E3%82%8D%E3%81%9D%E3%82%8D:%E3%81%9D%E3%82%8D%E3%81%9D%E3%82%8D	そろそろ	そろそろ	soon; before long; any time now; momentarily; slowly; quietly; steadily; gradually; gingerly; already; about time
+jmdict:1375620:%E6%88%90%E3%82%8B%E3%81%B9%E3%81%8F:%E3%81%AA%E3%82%8B%E3%81%B9%E3%81%8F	成るべく	なるべく	as (much) as possible; as (much) as one can; wherever practicable; if possible
+jmdict:1420410:%E7%9F%A5%E3%82%89%E3%81%9B%E3%82%8B:%E3%81%97%E3%82%89%E3%81%9B%E3%82%8B	知らせる	しらせる	to notify; to advise; to inform
+jmdict:1438770:%E5%A4%A9%E6%B0%97%E4%BA%88%E5%A0%B1:%E3%81%A6%E3%82%93%E3%81%8D%E3%82%88%E3%81%BB%E3%81%86	天気予報	てんきよほう	weather forecast; weather report
+jmdict:1518540:%E4%BA%A1%E3%81%8F%E3%81%AA%E3%82%8B:%E3%81%AA%E3%81%8F%E3%81%AA%E3%82%8B	亡くなる	なくなる	to die; to pass away
+jmdict:1529550:%E7%84%A1%E3%81%8F%E3%81%AA%E3%82%8B:%E3%81%AA%E3%81%8F%E3%81%AA%E3%82%8B	無くなる	なくなる	to be lost (e.g. luggage); to be missing; to be used up; to be run out; to be exhausted; to be consumed; to be reduced to zero; to not occur any more; to disappear (e.g. pain); to be lost (e.g. a dream, confidence)
+jmdict:1589110:%E6%8A%BC%E3%81%97%E5%85%A5%E3%82%8C:%E3%81%8A%E3%81%97%E3%81%84%E3%82%8C	押し入れ	おしいれ	closet (built into the wall, usu. with sliding doors); (built-in) wardrobe
+jmdict:1929050:%E4%BA%9C%E5%BC%97%E5%88%A9%E5%8A%A0:%E3%82%A2%E3%83%95%E3%83%AA%E3%82%AB	亜弗利加	アフリカ	Africa
+jmdict:2008740:%E3%81%9D%E3%82%93%E3%81%AA%E3%81%AB:%E3%81%9D%E3%82%93%E3%81%AA%E3%81%AB	そんなに	そんなに	so much; so; like that
+jmdict:2429350:%E3%81%8A%E9%87%91%E6%8C%81%E3%81%A1:%E3%81%8A%E3%81%8B%E3%81%AD%E3%82%82%E3%81%A1	お金持ち	おかねもち	rich person; wealthy person
+jmdict:2853889:%E3%81%91%E3%82%8C%E3%81%A9%E3%82%82:%E3%81%91%E3%82%8C%E3%81%A9%E3%82%82	けれども	けれども	but; however; although
+jmdict:1019280:%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%AB:%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%AB	アルコール	アルコール	alcohol; alcoholic drink; (alcohol-based) hand sanitizer
+jmdict:1019420:%E3%82%A2%E3%83%AB%E3%83%90%E3%82%A4%E3%83%88:%E3%82%A2%E3%83%AB%E3%83%90%E3%82%A4%E3%83%88	アルバイト	アルバイト	part-time job; side job; part-time worker
+jmdict:1032030:%E3%82%AA%E3%83%BC%E3%83%88%E3%83%90%E3%82%A4:%E3%82%AA%E3%83%BC%E3%83%88%E3%83%90%E3%82%A4	オートバイ	オートバイ	motorcycle; motorbike
+jmdict:1051970:%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88:%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88	コンサート	コンサート	concert
+jmdict:1068550:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3	スクリーン	スクリーン	screen; curtain; raster; room divider; partition wall
+jmdict:1116840:%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88:%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88	プレゼント	プレゼント	present; gift
+jmdict:2217040:%E3%81%94%E8%A6%A7%E3%81%AB%E3%81%AA%E3%82%8B:%E3%81%94%E3%82%89%E3%82%93%E3%81%AB%E3%81%AA%E3%82%8B	ご覧になる	ごらんになる	to see; to look; to watch; to try to ...
+jmdict:1000940:%E5%B1%85%E3%82%89%E3%81%A3%E3%81%97%E3%82%83%E3%82%8B:%E3%81%84%E3%82%89%E3%81%A3%E3%81%97%E3%82%83%E3%82%8B	居らっしゃる	いらっしゃる	to come; to go; to be (somewhere); to be (doing)
+jmdict:1015220:%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B5%E3%83%AA%E3%83%BC:%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B5%E3%83%AA%E3%83%BC	アクセサリー	アクセサリー	accessory (fashion); jewelry; accessory (audio, car, camera, etc.)
+jmdict:1017330:%E3%82%A2%E3%83%8A%E3%82%A6%E3%83%B3%E3%82%B5%E3%83%BC:%E3%82%A2%E3%83%8A%E3%82%A6%E3%83%B3%E3%82%B5%E3%83%BC	アナウンサー	アナウンサー	announcer; presenter; broadcaster; reporter; in-house television talent who does on-location fluff pieces for variety shows
+jmdict:1053350:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF	コンピュータ	コンピュータ	computer
+jmdict:1058580:%E3%82%B5%E3%83%B3%E3%83%89%E3%82%A4%E3%83%83%E3%83%81:%E3%82%B5%E3%83%B3%E3%83%89%E3%82%A4%E3%83%83%E3%83%81	サンドイッチ	サンドイッチ	sandwich
+jmdict:1066690:%E3%82%B9%E3%83%BC%E3%83%84%E3%82%B1%E3%83%BC%E3%82%B9:%E3%82%B9%E3%83%BC%E3%83%84%E3%82%B1%E3%83%BC%E3%82%B9	スーツケース	スーツケース	suitcase
+jmdict:1096770:%E3%83%8F%E3%83%B3%E3%83%89%E3%83%90%E3%83%83%E3%82%B0:%E3%83%8F%E3%83%B3%E3%83%89%E3%83%90%E3%83%83%E3%82%B0	ハンドバッグ	ハンドバッグ	handbag; purse
+jmdict:1028580:%E3%82%A8%E3%82%B9%E3%82%AB%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC:%E3%82%A8%E3%82%B9%E3%82%AB%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC	エスカレーター	エスカレーター	escalator
+jmdict:1053350:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC	コンピューター	コンピューター	computer
+jmdict:1040260:%E3%82%AC%E3%82%BD%E3%83%AA%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89:%E3%82%AC%E3%82%BD%E3%83%AA%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89	ガソリンスタンド	ガソリンスタンド	gas station; petrol station; filling station
+jmdict:1282770:%E9%99%8D%E3%82%8A%E5%87%BA%E3%81%99:%E3%81%B5%E3%82%8A%E3%81%A0%E3%81%99	降り出す	ふりだす	to begin to rain; to begin to snow
+jmdict:1621470:%E9%83%BD:%E3%81%A8	都	と	Metropolis (of Tokyo); (Tokyo) Metropolitan District; metropolitan prefecture; counter for cities and towns; capital
+jmdict:2394370:%E3%81%82:%E3%81%82	あ	あ	ah; oh; hey!
+jmdict:1001640:%E3%81%8A%E8%94%AD:%E3%81%8A%E3%81%8B%E3%81%92	お蔭	おかげ	grace (of God); benevolence (of Buddha); blessing; assistance; help; aid; effects; influence
+jmdict:1394730:%E7%84%B6%E3%82%8B:%E3%81%97%E3%81%8B%E3%82%8B	然る	しかる	that kind of; such a
+jmdict:2524270:%E3%81%93%E3%81%A8:%E3%81%93%E3%81%A8	こと	こと	particle indicating a command; particle indicating mild enthusiasm; particle indicating a gentle interrogative; particle used to soften a judgment or conclusion
+jmdict:2607730:%E3%82%82%E3%81%97:%E3%82%82%E3%81%97	もし	もし	excuse me! (when calling out to someone)
+jmdict:1604135:%E3%81%8A%E7%A5%AD%E3%82%8A:%E3%81%8A%E3%81%BE%E3%81%A4%E3%82%8A	お祭り	おまつり	festival; feast; carnival; matsuri
+jmdict:2005990:%E6%B3%B3%E3%81%8E%E6%96%B9:%E3%81%8A%E3%82%88%E3%81%8E%E3%81%8B%E3%81%9F	泳ぎ方	およぎかた	way of swimming
+jmdict:1001870:%E3%81%8A%E8%A6%8B%E8%88%9E%E3%81%84:%E3%81%8A%E3%81%BF%E3%81%BE%E3%81%84	お見舞い	おみまい	visit (to someone affected by illness or misfortune); call; inquiry (about someone's health); expression of sympathy; letter of inquiry; letter of sympathy; get-well letter; gift (in token of one's sympathy); dealing (a hit); striking (a blow); landing (an attack)
+jmdict:2015610:%E3%82%82%E3%81%86%E7%9B%B4%E3%81%90:%E3%82%82%E3%81%86%E3%81%99%E3%81%90	もう直ぐ	もうすぐ	soon; shortly; before long; nearly; almost
+jmdict:1001180:%E3%81%8A%E5%87%BA%E3%81%A7%E3%81%AB%E3%81%AA%E3%82%8B:%E3%81%8A%E3%81%84%E3%81%A7%E3%81%AB%E3%81%AA%E3%82%8B	お出でになる	おいでになる	to be; to come; to go

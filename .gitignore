@@ -1,0 +1,8 @@
+devlogs.md
+__pycache__/
+*.pyc
+/JMdict*
+/kanjidic2.xml*
+kanjivg/*
+/.cache/
+/data/lists/jlpt-unresolved.tsv

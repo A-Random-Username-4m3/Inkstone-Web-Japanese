@@ -1,0 +1,22 @@
+{
+  "jlpt": {
+    "project": "stephenmk/yomitan-jlpt-vocab",
+    "projectUrl": "https://github.com/stephenmk/yomitan-jlpt-vocab",
+    "underlyingSource": "Jonathan Waller JLPT Resources",
+    "official": false,
+    "counts": {
+      "N5": 683,
+      "N4": 640,
+      "N3": 1730,
+      "N2": 1812,
+      "N1": 3413
+    },
+    "unresolvedCount": 15,
+    "unresolvedReport": "data/lists/jlpt-unresolved.tsv"
+  },
+  "commonJapanese": {
+    "source": "JMdict priority/common markers",
+    "count": 10000,
+    "note": "A convenience subset, not an official frequency ranking."
+  }
+}
