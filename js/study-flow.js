@@ -13,6 +13,7 @@ import {
 	applyFsrsResult
 } from './fsrs.js';
 import { PracticeCanvas } from './practice-canvas.js';
+import { nextStageAfterResult, stagedSpacingTurns } from './learning-policy.js';
 import { rowDefinition, rowPromptReading, rowWritten } from './word-data.js';
 
 export function createStudyFlow(ctx) {
@@ -159,13 +160,15 @@ export function createStudyFlow(ctx) {
 	function stageLabel(stage) {
 		if (stage === 1) return 'Stage 1 · Learn';
 		if (stage === 2) return 'Stage 2 · Recall with preview';
-		return 'Stage 3 · Recall';
+		if (stage === 3) return 'Stage 3 · Stroke start points';
+		if (stage === 4) return 'Stage 4 · Next start point';
+		return 'Stage 5 · Unassisted recall';
 	}
 
 
 	function initialStageForEntry(entry, deck) {
 		if (deck === 'adds' || !entry?.attempts) return 1;
-		return 3;
+		return REVIEW_STAGE_MAX;
 	}
 
 
@@ -203,15 +206,6 @@ export function createStudyFlow(ctx) {
 			characters,
 			revealedChars: 0
 		};
-	}
-
-
-	function nextStageAfterResult(stage, result, forceSequential = false) {
-		if (result === 3) return 1;
-		if (result === 2) return stage;
-		if (forceSequential) return stage + 1;
-		if (result === 0) return stage === 1 ? REVIEW_STAGE_MAX : stage + 1;
-		return stage + 1;
 	}
 
 
@@ -281,6 +275,7 @@ export function createStudyFlow(ctx) {
 				queued.forceSequential,
 				queued.sawAgain
 			);
+			ageQueuedStageCards();
 			syncStageQueueToSession();
 			saveState();
 			return ctx.currentCard;
@@ -551,7 +546,8 @@ export function createStudyFlow(ctx) {
 		const nextStage = nextStageAfterResult(
 			ctx.currentCard.stage || 1,
 			result,
-			forceSequential
+			forceSequential,
+			REVIEW_STAGE_MAX
 		);
 
 		if (nextStage <= REVIEW_STAGE_MAX) {
@@ -563,7 +559,7 @@ export function createStudyFlow(ctx) {
 				attemptResult,
 				forceSequential,
 				sawAgain,
-				delay: STAGED_CARD_SPACING_TURNS
+				delay: stagedSpacingTurns(nextStage, result, STAGED_CARD_SPACING_TURNS)
 			});
 			const movement =
 				result === 0
@@ -637,7 +633,7 @@ export function createStudyFlow(ctx) {
 				: '';
 		playResultSound(scheduledResult);
 		setFeedbackMessage(
-			`${displayWord}: ${resultLabel}. Stage 3 passed; next review scheduled.${schedulingNote}`,
+			`${displayWord}: ${resultLabel}. Final stage passed; next review scheduled.${schedulingNote}`,
 			success ? 'complete' : 'warning'
 		);
 		renderProgress();

@@ -6,3 +6,5 @@ __pycache__/
 kanjivg/*
 /.cache/
 /data/lists/jlpt-unresolved.tsv
+docs/
+test/

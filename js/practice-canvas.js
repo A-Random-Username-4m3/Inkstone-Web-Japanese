@@ -1,6 +1,7 @@
 'use strict';
 
-import { RESULT_LABELS } from './constants.js';
+import { RESULT_LABELS, REVIEW_STAGE_MAX } from './constants.js';
+import { gradeCharacterAttempt } from './learning-policy.js';
 import { Matcher, distance, strokeLength } from './stroke-matcher.js';
 
 let environment = {
@@ -31,13 +32,6 @@ function playSound(...args) {
 
 function renderPenaltyStatus(...args) {
 	environment.renderPenaltyStatus?.(...args);
-}
-
-function gradeFromPenaltyCount(penalties) {
-	penalties = Math.max(0, Number(penalties) || 0);
-	if (penalties <= 2) return 1;
-	if (penalties <= 4) return 2;
-	return 3;
 }
 
 const PATH_CACHE_LIMIT = 1200;
@@ -100,6 +94,8 @@ export class PracticeCanvas {
 		this.penalties = 0;
 		this.acceptedResults = [];
 		this.undoSequence = 0;
+		this.failedRecall = false;
+		this.assistedRecall = false;
 		this.resetCharacterState();
 	}
 	clearPreviewTimer() {
@@ -133,6 +129,8 @@ export class PracticeCanvas {
 	}
 	startCharacter() {
 		if (this.disposed) return;
+		this.failedRecall = false;
+		this.assistedRecall = false;
 		this.resetCharacterState();
 		renderCharProgress(this.charIndex, this.card?.revealedChars || 0);
 		this.draw();
@@ -172,7 +170,12 @@ export class PracticeCanvas {
 			this.requestAnimation();
 			this.draw();
 		} else {
-			this.beginDrawing('Stage 3: draw from memory.');
+			const messages = {
+				3: 'Stage 3: use the remaining stroke start points.',
+				4: 'Stage 4: use only the next stroke start point.',
+				5: 'Stage 5: draw from memory without hints.'
+			};
+			this.beginDrawing(messages[this.stage] || 'Draw from memory.');
 		}
 	}
 	beginDrawing(message = 'Draw the character.') {
@@ -301,7 +304,7 @@ export class PracticeCanvas {
 		const currentSettings = settings();
 		return (
 			(this.stage === 2 && !!currentSettings.stage2KeepUserStrokes) ||
-			(this.stage === 3 && !!currentSettings.stage3KeepUserStrokes)
+			(this.stage >= 3 && !!currentSettings.stage3KeepUserStrokes)
 		);
 	}
 	flashNextMissingStroke(fill, duration) {
@@ -332,6 +335,8 @@ export class PracticeCanvas {
 			previousPenalties: this.penalties,
 			previousMistakes: this.mistakes,
 			previousMistakePressure: this.mistakePressure,
+			previousAssistedRecall: this.assistedRecall,
+			previousFailedRecall: this.failedRecall,
 			previousGuidedStrokeIndex: this.guidedStrokeIndex,
 			previousRevealed: this.revealed,
 			previousTargetHidden:
@@ -343,6 +348,8 @@ export class PracticeCanvas {
 		this.penalties = entry.previousPenalties;
 		this.mistakes = entry.previousMistakes;
 		this.mistakePressure = entry.previousMistakePressure;
+		this.assistedRecall = !!entry.previousAssistedRecall;
+		this.failedRecall = !!entry.previousFailedRecall;
 		this.guidedStrokeIndex = entry.previousGuidedStrokeIndex ?? null;
 		this.revealed = !!entry.previousRevealed;
 		this.effects = entry.previousEffects?.slice() || [];
@@ -355,14 +362,6 @@ export class PracticeCanvas {
 		this.setFeedback(`Undid ${entry.label}.`, 'warning');
 		this.draw();
 	}
-	willShowAutomaticMistakeHint(nextPressure) {
-		return (
-			this.stage !== 1 &&
-			!!settings().revealOrder &&
-			nextPressure >= 3 &&
-			this.guidedStrokeIndex !== this.missing[0]
-		);
-	}
 	maybeShowMistakeHint() {
 		if (
 			this.stage === 1 ||
@@ -374,21 +373,36 @@ export class PracticeCanvas {
 		}
 
 		this.penalties += 4;
+		this.assistedRecall = true;
 
 		return this.showNextStrokeGuide(
 			'rgba(0, 160, 220, .38)',
 			850
 		);
 	}
+	// Keep failed-retrieval evidence through a restart of this character.
+	// Undo cannot erase an earlier failed attempt by rolling back the recovery.
+	restartFailedRecall() {
+		this.failedRecall = true;
+		this.assistedRecall = true;
+		this.penalties += 1;
+		this.resetCharacterState();
+		this.beginDrawing('Incorrect stroke. Restart this character; the recall counts as Again.');
+	}
 	gradeStroke(stroke) {
 		const result = this.matcher.match(stroke, this.missing);
 		if (!result.indices.length || result.score === -Infinity) {
-			if (this.willShowAutomaticMistakeHint(this.mistakePressure + 1)) {
-				this.pushPenaltyUndo('automatic hint penalty');
+			this.userStrokes.pop();
+			playSound('wrongStroke');
+			if (this.stage === REVIEW_STAGE_MAX) {
+				this.restartFailedRecall();
+				return;
 			}
+			this.pushPenaltyUndo('unrecognized stroke');
 			this.mistakes += 1;
 			this.mistakePressure += 1;
-			this.userStrokes.pop();
+			this.penalties += 1;
+			if (this.stage > 1) this.assistedRecall = true;
 			this.fadeStroke(stroke, 'rgba(80,0,0,.72)');
 			let message = 'Not recognized.';
 			if (this.mistakePressure >= 3) {
@@ -400,7 +414,6 @@ export class PracticeCanvas {
 						? 'Not recognized. Try again.'
 						: 'Not recognized. Automatic next-stroke hints are disabled in Settings.';
 			}
-			playSound('wrongStroke');
 			this.setFeedback(message, 'danger');
 			return;
 		}
@@ -415,10 +428,16 @@ export class PracticeCanvas {
 
 		// The user's input matches strokes that were already drawn.
 		if (newMissing.length === previousMissing.length) {
+			this.userStrokes.pop();
+			if (this.stage === REVIEW_STAGE_MAX) {
+				playSound('wrongStroke');
+				this.restartFailedRecall();
+				return;
+			}
 			this.pushPenaltyUndo('repeated-stroke penalty');
 			this.penalties += 1;
 			this.mistakePressure += 1;
-			this.userStrokes.pop();
+			if (this.stage > 1) this.assistedRecall = true;
 			this.fadeStroke(stroke, 'rgba(80,0,0,.72)');
 			playSound('wrongStroke');
 			const hinted = this.maybeShowMistakeHint();
@@ -441,6 +460,8 @@ export class PracticeCanvas {
 			previousPenalties: this.penalties,
 			previousMistakes: this.mistakes,
 			previousMistakePressure: this.mistakePressure,
+			previousAssistedRecall: this.assistedRecall,
+			previousFailedRecall: this.failedRecall,
 			previousGuidedStrokeIndex: this.guidedStrokeIndex,
 			previousAcceptedResultsLength: this.acceptedResults.length,
 			previousRevealedChars: this.card?.revealedChars || 0,
@@ -486,7 +507,12 @@ export class PracticeCanvas {
 				0,
 				this.penalties - this.characterStartPenalties
 			);
-			const resultGrade = gradeFromPenaltyCount(charPenalties);
+			const resultGrade = gradeCharacterAttempt({
+				stage: this.stage,
+				penalties: charPenalties,
+				assisted: this.assistedRecall,
+				failed: this.failedRecall
+			});
 			this.acceptedResults.push(resultGrade);
 			this.card.revealedChars = Math.max(
 				this.card.revealedChars || 0,
@@ -555,8 +581,7 @@ export class PracticeCanvas {
 		const nextStrokeIndex = this.missing[0];
 		const isNewHint =
 			this.guidedStrokeIndex !== nextStrokeIndex;
-		const appliesPenalty =
-			isNewHint && (this.stage === 2 || this.stage === 3);
+		const appliesPenalty = isNewHint && this.stage > 1;
 
 		if (appliesPenalty) {
 			this.pushPenaltyUndo('hint penalty');
@@ -569,6 +594,8 @@ export class PracticeCanvas {
 
 		if (appliesPenalty) {
 			this.penalties += 1;
+			this.assistedRecall = true;
+			if (this.stage === REVIEW_STAGE_MAX) this.failedRecall = true;
 		}
 
 		this.setFeedback(
@@ -586,6 +613,7 @@ export class PracticeCanvas {
 		}
 		this.pushPenaltyUndo('reveal penalty');
 		this.revealed = true;
+		if (this.stage > 1) this.failedRecall = true;
 		this.penalties += 4;
 		this.mistakePressure += 4;
 		document.querySelector('#targetWord')?.classList.remove('hidden');
@@ -638,6 +666,8 @@ export class PracticeCanvas {
 		this.penalties = entry.previousPenalties;
 		this.mistakes = entry.previousMistakes;
 		this.mistakePressure = entry.previousMistakePressure;
+		this.assistedRecall = !!entry.previousAssistedRecall;
+		this.failedRecall = !!entry.previousFailedRecall;
 		this.guidedStrokeIndex = entry.previousGuidedStrokeIndex ?? null;
 		this.acceptedResults = this.acceptedResults.slice(
 			0,
@@ -822,6 +852,14 @@ export class PracticeCanvas {
 				1,
 				this.character
 			);
+		}
+		if (!this.previewing && !this.waitingForStart &&
+			!this.waitingForContinue && !this.revealed) {
+			const guidedIndices = this.stage === 3
+				? this.missing : this.stage === 4 ? this.missing.slice(0, 1) : [];
+			for (const index of guidedIndices) {
+				drawStrokeStartDot(this.ctx, this.character.medians?.[index]?.[0]);
+			}
 		}
 		const keepUserStrokes = this.keepUserStrokesForCompletedStage();
 		if (!keepUserStrokes)
@@ -1015,6 +1053,19 @@ function drawUserStrokes(ctx, strokes, color, alpha = 1) {
 			);
 		ctx.stroke();
 	}
+	ctx.restore();
+}
+
+// KanjiVG median coordinates are already normalized to the practice canvas.
+function drawStrokeStartDot(ctx, point) {
+	if (!Array.isArray(point) || point.length !== 2 ||
+		!point.every((coordinate) => Number.isFinite(coordinate) && coordinate >= 0 && coordinate <= 1)) return;
+	ctx.save();
+	ctx.beginPath();
+	ctx.arc(point[0] * ctx.canvas.width, point[1] * ctx.canvas.height,
+		Math.max(4, ctx.canvas.width * 0.014), 0, Math.PI * 2);
+	ctx.fillStyle = 'rgba(0, 145, 210, .75)';
+	ctx.fill();
 	ctx.restore();
 }
 
