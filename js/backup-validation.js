@@ -1,5 +1,6 @@
 import { isValidParentLockRecord } from './parent-lock.js';
 import { isSafeObjectKey } from './list-id.js';
+import { isTrackableKanji } from './kanji-mastery.js';
 
 function isPlainObject(value) {
 	return (
@@ -109,6 +110,28 @@ function validateVocabulary(vocabulary) {
 	}
 }
 
+function validateKanjiMastery(mastery) {
+    requirePlainObject(mastery, 'state.kanjiMastery');
+    for (const [kanji, entry] of Object.entries(mastery)) {
+        if (!isTrackableKanji(kanji)) {
+            throw new Error(`Invalid kanji mastery key: ${kanji}`);
+        }
+        const path = `state.kanjiMastery.${kanji}`;
+        requirePlainObject(entry, path);
+        if (entry.kanji !== undefined && entry.kanji !== kanji) {
+            throw new Error(`${path}.kanji must match its key.`);
+        }
+        for (const field of ['attempts', 'successes', 'last', 'next']) {
+            validateOptionalFiniteNumber(entry[field], `${path}.${field}`, {
+                nullable: field === 'last' || field === 'next'
+            });
+        }
+        if (entry.fsrs !== undefined) {
+            requirePlainObject(entry.fsrs, `${path}.fsrs`);
+        }
+    }
+}
+
 function validateReviewLog(log, index) {
 	const path = `state.reviewLogs[${index}]`;
 	requirePlainObject(log, path);
@@ -150,6 +173,7 @@ export function validateBackupPayload(payload) {
 		'enabledLists',
 		'customLists',
 		'vocabulary',
+		'kanjiMastery',
 		'session',
 		'fsrsOptimization'
 	];
@@ -190,6 +214,9 @@ export function validateBackupPayload(payload) {
 	}
 	if (sourceState.vocabulary !== undefined) {
 		validateVocabulary(sourceState.vocabulary);
+	}
+	if (sourceState.kanjiMastery !== undefined) {
+		validateKanjiMastery(sourceState.kanjiMastery);
 	}
 
 	const hasReviewLogs = Object.prototype.hasOwnProperty.call(

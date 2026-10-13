@@ -1681,3 +1681,18 @@ input[type="checkbox"] {
 		padding-bottom: 0;
 	}
 }
+
+/* Independent kanji recall summary; compact and scrollable on phones. */
+.kanji-mastery-list { display: grid; gap: 3px; max-height: 320px;
+    overflow-y: auto; padding-right: 4px; }
+.kanji-mastery-row { display: grid; grid-template-columns: 48px 95px 90px 1fr;
+    gap: 10px; align-items: center; padding: 7px 10px;
+    border: 1px solid rgba(56, 101, 141, .23);
+    border-radius: 5px; background: rgba(255,255,255,.6); font-size: 12px; }
+.kanji-mastery-row strong { font-size: 25px; font-family: var(--font-japanese); }
+.kanji-mastery-row span { overflow-wrap: anywhere; }
+@media (max-width: 420px) {
+    .kanji-mastery-row { grid-template-columns: 36px 63px 72px 1fr;
+        gap: 5px; padding: 5px 6px; font-size: 11px; }
+    .kanji-mastery-row strong { font-size: 21px; }
+}

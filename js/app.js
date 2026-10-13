@@ -22,6 +22,7 @@ import {
 } from './fsrs.js';
 import { configurePracticeCanvas } from './practice-canvas.js';
 import { KanjiVgStore } from './kanji-data.js';
+import { kanjiMasterySummary } from './kanji-mastery.js';
 import { JmDictStore } from './jmdict-data.js';
 import { createVocabulary } from './vocabulary.js';
 import { createSessionQueue } from './session-queue.js';
@@ -654,11 +655,12 @@ const jmdictStore = new JmDictStore();
 		bind('#btnClearProgress', 'click', async () => {
 			if (
 				!confirm(
-					'Clear vocabulary progress? Imported lists and settings will remain.'
+					'Clear vocabulary and kanji progress? Imported lists and settings will remain.'
 				)
 			)
 				return;
 			state.vocabulary = {};
+            state.kanjiMastery = {};
 			state.history = [];
 			const reviewLogsCleared = await clearAllReviewLogs();
 			state.fsrsOptimization = defaultState().fsrsOptimization;
@@ -908,6 +910,7 @@ const jmdictStore = new JmDictStore();
 		const staged = stagedWorkCounts();
 		if (left.adds) parts.push(`${left.adds} new`);
 		if (left.reviews) parts.push(`${left.reviews} review due now`);
+		if (left.kanji) parts.push(`${left.kanji} kanji reviews due`);
 		if (left.steps)
 			parts.push(`${left.steps} learning steps due`);
 		if (left.extras) parts.push(`${left.extras} extra`);
@@ -916,6 +919,15 @@ const jmdictStore = new JmDictStore();
 				`${staged.total} staged review${staged.total === 1 ? '' : 's'}`
 			);
 
+        const activeCharacters = new Set(sets.active.flatMap((entry) =>
+            Array.from(rowWritten(getEntryRow(entry.word)) || entry.word)));
+        const nextKanji = Object.values(state.kanjiMastery || {})
+            .filter((entry) => activeCharacters.has(entry.kanji) &&
+                Number(entry.next || 0) > now())
+            .sort((a, b) => a.next - b.next)[0];
+        if (nextKanji) {
+            parts.push(`Next kanji: ${nextKanji.kanji} ${formatClockDuration(nextKanji.next - now())} away`);
+        }
 		const next = getNextScheduledReview(sets);
 		if (next) {
 			const wait = Math.max(0, (next.next || 0) - now());
@@ -923,7 +935,7 @@ const jmdictStore = new JmDictStore();
 			parts.push(
 				`Next review: ${displayWord} in ${formatClockDuration(wait)}`
 			);
-		} else if (!left.reviews && !left.steps && !staged.total) {
+		} else if (!left.reviews && !left.steps && !left.kanji && !staged.total) {
 			parts.push(
 				sets.active.length
 					? 'No scheduled reviews waiting'
@@ -948,7 +960,7 @@ const jmdictStore = new JmDictStore();
 		const timeLeft = formatDuration(getSessionTimeLeft(), true);
 		const staged = stagedWorkCounts();
 		const plannedCount =
-			left.adds + left.reviews + left.extras + left.steps + staged.total;
+			left.adds + left.reviews + left.extras + left.steps + left.kanji + staged.total;
 		const stagedText = staged.total
 			? ` · ${staged.total} staged`
 			: '';
@@ -960,7 +972,7 @@ const jmdictStore = new JmDictStore();
 		if ($('#sessionTimeLeft')) $('#sessionTimeLeft').textContent = text;
 		if ($('#sessionRemainder'))
 			$('#sessionRemainder').textContent =
-				`Available now: ${left.adds} new · ${left.reviews} review · ${left.extras} extra · ${left.steps} step`;
+				`Available now: ${left.adds} new · ${left.reviews} review · ${left.kanji} kanji · ${left.extras} extra · ${left.steps} step`;
 		if ($('#dueSummary'))
 			$('#dueSummary').textContent = formatDueSummary(sets, left);
 		
@@ -972,15 +984,52 @@ const jmdictStore = new JmDictStore();
 	}
 
 
+
+    function renderKanjiMasteryList(active) {
+        const container = $('#kanjiMasteryList');
+        if (!container) return;
+        container.replaceChildren();
+        const activeKanji = new Set(active.flatMap((entry) =>
+            Array.from(rowWritten(getEntryRow(entry.word)) || entry.word)));
+        const rows = Object.values(state.kanjiMastery || {})
+            .filter((entry) => activeKanji.has(entry.kanji) && entry.attempts)
+            .sort((a, b) => (a.next || 0) - (b.next || 0))
+            .slice(0, 60);
+        if (!rows.length) {
+            container.textContent = 'No kanji tested yet. Finish an unaided writing stage to start tracking them.';
+            return;
+        }
+        for (const entry of rows) {
+            const row = document.createElement('div');
+            row.className = 'kanji-mastery-row';
+            const kanji = document.createElement('strong');
+            kanji.textContent = entry.kanji;
+            const success = document.createElement('span');
+            success.textContent = `${entry.successes}/${entry.attempts} recalled`;
+            const stability = document.createElement('span');
+            stability.textContent = `${Number(entry.fsrs?.stability || 0).toFixed(1)}d stability`;
+            const due = document.createElement('span');
+            due.textContent = formatRelativeDue((entry.next || 0) - now());
+            row.append(kanji, success, stability, due);
+            container.appendChild(row);
+        }
+    }
+
 	function renderProgress(
 		sets = getDueSets(),
 		left = getRemainder(sets)
 	) {
-		const mastered = sets.active.filter((x) => isMasteredEntry(x)).length;
+        const mastered = sets.active.filter((x) => isMasteredEntry(x)).length;
+        const kanji = kanjiMasterySummary(state.kanjiMastery, sets.active,
+            (entry) => rowWritten(getEntryRow(entry.word)) || entry.word, now());
 		const stats = [
 			[sets.active.length, 'active words'],
 			[left.adds, 'new left'],
 			[left.reviews, 'reviews left'],
+            [left.kanji, 'kanji drills left'],
+            [kanji.studied, 'kanji tested'],
+            [kanji.strong, 'strong kanji recall'],
+            [kanji.due, 'kanji independently due'],
 			[left.extras, 'extra left'],
 			[left.steps, 'learning steps due'],
 			[formatDuration(getSessionTimeLeft(), true), 'session time left'],
@@ -1002,6 +1051,7 @@ const jmdictStore = new JmDictStore();
 				grid.appendChild(node);
 			}
 		}
+		renderKanjiMasteryList(sets.active);
 		renderSessionStatus(sets, left);
 	}
 

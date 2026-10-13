@@ -560,7 +560,7 @@ export class PracticeCanvas {
 			const finalResult = this.acceptedResults.length
 				? this.acceptedResults.reduce((a, b) => Math.max(a, b), 0)
 				: 3;
-			this.onComplete(finalResult);
+			this.onComplete(finalResult, this.acceptedResults.slice());
 		} else {
 			this.startCharacter();
 		}

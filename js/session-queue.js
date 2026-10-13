@@ -1,4 +1,6 @@
 import { REVIEW_STAGE_MAX } from './constants.js';
+import { dueKanjiDrills, isTrackableKanji } from './kanji-mastery.js';
+import { rowWritten } from './word-data.js';
 import {
 	getEntrySchedulerState,
 	isFsrsDue,
@@ -26,13 +28,22 @@ export function createSessionQueue(ctx) {
 			attemptResult: card.attemptResult ?? null,
 			forceSequential: !!card.forceSequential,
 			sawAgain: !!card.sawAgain,
+            kanji: card.deck === 'kanji' ? card.kanji : null,
+            position: card.deck === 'kanji' ? card.position : null,
+            recordedKanji: Array.isArray(card.recordedKanji) ? card.recordedKanji.slice() : [],
 			delay: 0
 		};
 	}
 
 
 	function normalizeStageQueueItem(item) {
-		if (!item?.word || !isActiveStudyWord(item.word)) return null;
+        if (!item?.word || !isActiveStudyWord(item.word)) return null;
+        if (item.deck === 'kanji') {
+            if (!isTrackableKanji(item.kanji) ||
+                !ctx.getKanjiPracticeCharacter(item.kanji) ||
+                !Array.from(rowWritten(ctx.getEntryRow(item.word)) || item.word)
+                    .includes(item.kanji)) return null;
+        }
 		return {
 			word: item.word,
 			deck: item.deck || 'reviews',
@@ -43,6 +54,12 @@ export function createSessionQueue(ctx) {
 					: clamp(Math.floor(item.attemptResult), 0, 3),
 			forceSequential: !!item.forceSequential,
 			sawAgain: !!item.sawAgain,
+            kanji: item.deck === 'kanji' ? item.kanji : null,
+            position: item.deck === 'kanji'
+                ? Array.from(rowWritten(ctx.getEntryRow(item.word)) || item.word)
+                    .indexOf(item.kanji) : null,
+            recordedKanji: Array.isArray(item.recordedKanji)
+                ? [...new Set(item.recordedKanji.filter(isTrackableKanji))] : [],
 			delay: Math.max(0, Math.floor(Number(item.delay) || 0))
 		};
 	}
@@ -113,11 +130,12 @@ export function createSessionQueue(ctx) {
 
 
 	function stagedWorkCounts() {
-		const counts = { adds: 0, reviews: 0, steps: 0, total: 0 };
+		const counts = { adds: 0, reviews: 0, steps: 0, kanji: 0, total: 0 };
 		const countItem = (item) => {
 			if (!item?.word || !isActiveStudyWord(item.word)) return;
 			counts.total += 1;
-			if (item.deck === 'adds') counts.adds += 1;
+			if (item.deck === 'kanji') counts.kanji += 1;
+			else if (item.deck === 'adds') counts.adds += 1;
 			else if (item.deck === 'steps') counts.steps += 1;
 			else counts.reviews += 1;
 		};
@@ -155,12 +173,23 @@ export function createSessionQueue(ctx) {
 			}
 		}
 
+        const blockedWords = new Set([
+            ...ctx.stagedQueue.map((item) => item.word),
+            ctx.currentCard?.word
+        ]);
+        const kanji = dueKanjiDrills(
+            state.kanjiMastery, active,
+            (entry) => rowWritten(ctx.getEntryRow(entry.word)) || entry.word,
+            ctx.getKanjiPracticeCharacter, t, blockedWords,
+            state.session.kanjiReviewed || []
+        );
 		const orderedLearning = orderReviewItems(learning);
 		const orderedRelearning = orderReviewItems(relearning);
 		return {
 			active,
 			available,
 			newItems: orderNewItemsByListPosition(newItems),
+            kanji,
 			learning: orderedLearning,
 			reviews: orderReviewItems(reviews),
 			relearning: orderedRelearning,
@@ -228,7 +257,9 @@ export function createSessionQueue(ctx) {
 				(counts.reviews || 0) -
 				(counts.steps || 0) -
 				staged.reviews -
-				staged.steps
+				staged.steps -
+                (counts.kanji || 0) -
+                staged.kanji
 		);
 		const steps = Math.min(sets.steps.length, reviewCapacity);
 		const reviews = Math.min(
@@ -239,24 +270,26 @@ export function createSessionQueue(ctx) {
 			0,
 			reviewCapacity - steps - reviews
 		);
+        const kanji = Math.min(sets.kanji.length, reviewRoomAfterDue);
 		const effectiveAddsLimit = state.settings.newCardsIgnoreReviewLimit
 			? addsLimit
-			: Math.min(addsLimit, reviewRoomAfterDue);
+			: Math.min(addsLimit, Math.max(0, reviewRoomAfterDue - kanji));
 		const adds = Math.min(sets.newItems.length, effectiveAddsLimit);
 
 		const planned =
 			(counts.adds || 0) +
 			(counts.reviews || 0) +
 			(counts.steps || 0) +
+            (counts.kanji || 0) +
 			staged.total +
 			adds +
 			reviews +
-			steps;
+			steps + kanji;
 		const neededExtras = Math.max(0, (counts.minCards || 0) - planned);
 		const extras = neededExtras > 0
 			? Math.min(sets.extras.length, neededExtras)
 			: 0;
-		return { adds, reviews, extras, steps };
+		return { adds, reviews, extras, steps, kanji };
 	}
 
 
@@ -310,6 +343,7 @@ export function createSessionQueue(ctx) {
 
 
 	function bucketCandidatesForDeck(deck, sets, left) {
+		if (deck === 'kanji') return sets.kanji.slice(0, left.kanji);
 		if (deck === 'adds') return sets.newItems.slice(0, left.adds);
 		if (deck === 'reviews') return orderReviewItems(sets.reviews).slice(0, left.reviews);
 		if (deck === 'steps') return orderReviewItems(sets.steps).slice(0, left.steps);
@@ -328,6 +362,11 @@ export function createSessionQueue(ctx) {
 				word: (candidate) => candidate.item.word
 			});
 		}
+		if (left.kanji > 0) {
+            buckets.push({ deck: 'kanji',
+                candidates: bucketCandidatesForDeck('kanji', sets, left),
+                word: (item) => item.word });
+        }
 		if (left.steps > 0) {
 			buckets.push({
 				deck: 'steps',

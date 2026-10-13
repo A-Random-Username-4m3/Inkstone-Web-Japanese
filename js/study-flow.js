@@ -14,6 +14,7 @@ import {
 } from './fsrs.js';
 import { PracticeCanvas } from './practice-canvas.js';
 import { nextStageAfterResult, stagedSpacingTurns } from './learning-policy.js';
+import { recordKanjiObservations } from './kanji-mastery.js';
 import { rowDefinition, rowPromptReading, rowWritten } from './word-data.js';
 
 export function createStudyFlow(ctx) {
@@ -89,7 +90,10 @@ export function createStudyFlow(ctx) {
 			item.stage,
 			item.attemptResult,
 			item.forceSequential,
-			item.sawAgain
+			item.sawAgain,
+            item.kanji,
+            item.position,
+            item.recordedKanji
 		);
 		return true;
 	}
@@ -150,6 +154,7 @@ export function createStudyFlow(ctx) {
 
 
 	function deckLabel(deck) {
+		if (deck === 'kanji') return 'Kanji recall';
 		if (deck === 'adds') return 'New';
 		if (deck === 'reviews') return 'Review';
 		if (deck === 'steps') return 'Learning step';
@@ -178,19 +183,27 @@ export function createStudyFlow(ctx) {
 		stage = null,
 		attemptResult = null,
 		forceSequential = false,
-		sawAgain = false
+		sawAgain = false,
+        kanji = null,
+        position = null,
+        recordedKanji = []
 	) {
 		const row = getEntryRow(entry.word);
 		const studyWord = rowWritten(row) || entry.word;
-		const characters = Array.from(studyWord).map((ch) =>
-			ctx.getKanjiPracticeCharacter?.(ch)
-		);
+        const practiceWord = deck === 'kanji' && kanji ? kanji : studyWord;
+        const characters = Array.from(practiceWord).map((ch) =>
+            ctx.getKanjiPracticeCharacter?.(ch)
+        );
 		return {
 			deck,
 			entry,
 			row,
 			word: entry.word,
-			studyWord,
+			studyWord: practiceWord,
+            kanji: deck === 'kanji' ? kanji : null,
+            position: deck === 'kanji' ? position : null,
+            wordLength: Array.from(studyWord).length,
+            recordedKanji: Array.isArray(recordedKanji) ? recordedKanji.slice() : [],
 			stage: clamp(
 				Math.floor(stage || initialStageForEntry(entry, deck)),
 				1,
@@ -273,7 +286,10 @@ export function createStudyFlow(ctx) {
 				queued.stage,
 				queued.attemptResult,
 				queued.forceSequential,
-				queued.sawAgain
+				queued.sawAgain,
+                queued.kanji,
+                queued.position,
+                queued.recordedKanji
 			);
 			ageQueuedStageCards();
 			syncStageQueueToSession();
@@ -287,6 +303,11 @@ export function createStudyFlow(ctx) {
 
 	function drawFromBucket(bucket) {
 		if (!bucket) return { entry: null, deck: null, staged: false };
+		if (bucket.deck === 'kanji') {
+            const drill = bucket.candidates[0];
+            return { entry: drill.entry, deck: 'kanji', kanji: drill.kanji,
+                position: drill.position, staged: false };
+        }
 		if (bucket.deck === 'staged') {
 			const card = drawQueuedStageCard({ readyOnly: true, avoidLastWord: true });
 			return { entry: card?.entry || null, deck: 'staged', staged: !!card };
@@ -347,6 +368,9 @@ export function createStudyFlow(ctx) {
 				attemptResult: ctx.currentCard.attemptResult ?? null,
 				forceSequential: !!ctx.currentCard.forceSequential,
 				sawAgain: !!ctx.currentCard.sawAgain,
+                kanji: ctx.currentCard.kanji,
+                position: ctx.currentCard.position,
+                recordedKanji: ctx.currentCard.recordedKanji || [],
 				delay: STAGED_CARD_SPACING_TURNS
 			});
 
@@ -377,7 +401,8 @@ export function createStudyFlow(ctx) {
 
 		if (drawn.entry) {
 			ageQueuedStageCards();
-			ctx.currentCard = makeReviewCard(drawn.entry, drawn.deck);
+			ctx.currentCard = makeReviewCard(drawn.entry, drawn.deck,
+                null, null, false, false, drawn.kanji, drawn.position);
 			renderCurrentCard();
 			return;
 		}
@@ -464,8 +489,11 @@ export function createStudyFlow(ctx) {
 		const left = getRemainder(sets);
 		$('#dueSummary').textContent = formatDueSummary(sets, left);
 		$('#promptReading').textContent = rowPromptReading(row) || '—';
-		$('#promptDefinition').textContent =
-			rowDefinition(row) ||
+        const kanjiDrill = deck === 'kanji';
+		$('#promptDefinition').textContent = kanjiDrill
+            ? `Write character ${(ctx.currentCard.position ?? 0) + 1} of ${ctx.currentCard.wordLength} ` +
+              `for the word meaning: ${rowDefinition(row) || 'unknown'}.`
+            : rowDefinition(row) ||
 			characters
 				.map((character) =>
 					(character?.dictionary?.meanings || []).join(', ') ||
@@ -509,9 +537,10 @@ export function createStudyFlow(ctx) {
 			: -1;
 		const currentVisible =
 			stage === 1 || currentIndex < shownThrough || currentIndex === previewIndex;
-		renderStudyExamples(ctx.currentCard, currentIndex, {
-			showWritten: currentVisible
-		});
+        if (ctx.currentCard.deck === 'kanji') clearStudyExamples();
+        else renderStudyExamples(ctx.currentCard, currentIndex, {
+            showWritten: currentVisible
+        });
 		ctx.currentCard.characters.forEach((ch, i) => {
 			const span = document.createElement('span');
 			const isPreviewed = i === previewIndex;
@@ -529,7 +558,7 @@ export function createStudyFlow(ctx) {
 	}
 
 
-	function completeCurrentCard(result) {
+	function completeCurrentCard(result, characterGrades = null) {
 		if (!ctx.currentCard) return;
 		disposeTrainer();
 		resetExpiredSession();
@@ -543,6 +572,21 @@ export function createStudyFlow(ctx) {
 		);
 		const forceSequential = !!ctx.currentCard.forceSequential || result === 3;
 		const sawAgain = !!ctx.currentCard.sawAgain || result === 3;
+        // Word-level manual grading cannot fabricate handwriting evidence.
+        // Manual grading a standalone kanji drill *is* an explicit character grade.
+        const evidence = ctx.currentCard.deck === 'kanji' &&
+            !Array.isArray(characterGrades) ? [result] : characterGrades;
+        if (ctx.currentCard.stage === REVIEW_STAGE_MAX &&
+            Array.isArray(evidence) &&
+            evidence.length === ctx.currentCard.characters.length) {
+            const observation = recordKanjiObservations(
+                state.kanjiMastery,
+                ctx.currentCard.characters, evidence, t,
+                ctx.currentCard.recordedKanji,
+                state.session.kanjiReviewed
+            );
+            ctx.currentCard.recordedKanji = observation.recorded;
+        }
 		const nextStage = nextStageAfterResult(
 			ctx.currentCard.stage || 1,
 			result,
@@ -559,6 +603,9 @@ export function createStudyFlow(ctx) {
 				attemptResult,
 				forceSequential,
 				sawAgain,
+                kanji: ctx.currentCard.kanji,
+                position: ctx.currentCard.position,
+                recordedKanji: ctx.currentCard.recordedKanji,
 				delay: stagedSpacingTurns(nextStage, result, STAGED_CARD_SPACING_TURNS)
 			});
 			const movement =
@@ -598,6 +645,22 @@ export function createStudyFlow(ctx) {
 		if (ctx.currentCard.deck === 'steps')
 			state.session.steps = (state.session.steps || 0) + 1;
 
+        if (ctx.currentCard.deck === 'kanji') {
+            state.session.kanji = (state.session.kanji || 0) + 1;
+            if (!state.session.kanjiReviewed.includes(ctx.currentCard.kanji)) {
+                state.session.kanjiReviewed.push(ctx.currentCard.kanji);
+            }
+            rememberShownWord(entry.word);
+            ctx.currentCard = null;
+            clearCurrentStageCard();
+            saveState();
+            playResultSound(scheduledResult);
+            setFeedbackMessage(`${displayWord}: character review complete. Vocabulary schedule unchanged.`,
+                success ? 'complete' : 'warning');
+            renderProgress();
+            scheduleNextCard();
+            return;
+        }
 		const previousFsrsState = getEntrySchedulerState(entry);
 		const schedule = applyFsrsResult(entry, scheduledResult, t);
 		entry.attempts = (entry.attempts || 0) + 1;
@@ -652,7 +715,8 @@ export function createStudyFlow(ctx) {
 		const totalCompleted =
 			(state.session.adds || 0) +
 			(state.session.reviews || 0) +
-			(state.session.steps || 0);
+			(state.session.steps || 0) +
+            (state.session.kanji || 0);
 		state.session.minCards = Math.max(
 			state.session.minCards || 0,
 			totalCompleted + count
@@ -695,7 +759,7 @@ export function createStudyFlow(ctx) {
 		const left = getRemainder(sets);
 		if (
 			ctx.stagedQueue.length ||
-			left.adds + left.reviews + left.extras + left.steps > 0
+			left.adds + left.reviews + left.extras + left.steps + left.kanji > 0
 		)
 			nextCard();
 	}
@@ -710,7 +774,7 @@ export function createStudyFlow(ctx) {
 		const left = getRemainder(sets);
 		if (
 			ctx.stagedQueue.length ||
-			left.adds + left.reviews + left.extras + left.steps > 0
+			left.adds + left.reviews + left.extras + left.steps + left.kanji > 0
 		) {
 			nextCard();
 		} else {

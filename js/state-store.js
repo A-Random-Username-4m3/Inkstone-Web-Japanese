@@ -1,6 +1,7 @@
 import { DEFAULT_STUDY_EXAMPLE_LIMIT } from './constants.js';
 import { isValidParentLockRecord } from './parent-lock.js';
 import { isSafeObjectKey } from './list-id.js';
+import { normalizeKanjiMastery } from './kanji-mastery.js';
 
 function isPlainObject(value) {
 	return (
@@ -77,6 +78,8 @@ export function createStateStore({
 			adds: 0,
 			reviews: 0,
 			steps: 0,
+			kanji: 0,
+			kanjiReviewed: [],
 			minCards: 0,
 			stageQueue: [],
 			currentStageCard: null,
@@ -114,6 +117,7 @@ export function createStateStore({
 		enabledLists: {},
 		customLists: {},
 		vocabulary: {},
+		kanjiMastery: {},
 		blacklist: {},
 		session: freshSession(),
 		history: [],
@@ -150,6 +154,7 @@ export function createStateStore({
 		base.enabledLists = normalizeObject(base.enabledLists);
 		base.customLists = normalizeObject(base.customLists);
 		base.vocabulary = normalizeObject(base.vocabulary);
+		base.kanjiMastery = normalizeKanjiMastery(base.kanjiMastery);
 		base.blacklist =
 			Array.isArray(base.blacklist) || isPlainObject(base.blacklist)
 				? base.blacklist
@@ -214,6 +219,10 @@ export function createStateStore({
 				...(base.session || {})
 			};
 			delete base.session.failures;
+            base.session.kanji = Math.max(0, Math.floor(Number(base.session.kanji) || 0));
+            base.session.kanjiReviewed = Array.isArray(base.session.kanjiReviewed)
+                ? [...new Set(base.session.kanjiReviewed.filter((ch) =>
+                    typeof ch === 'string' && ch.length <= 2))] : [];
 		}
 		if ('blacklist' in base) {
 			base.blacklist = normalizeBlacklist(base.blacklist || {});
