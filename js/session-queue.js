@@ -38,7 +38,17 @@ export function createSessionQueue(ctx) {
 
 	function normalizeStageQueueItem(item) {
         if (!item?.word || !isActiveStudyWord(item.word)) return null;
-        if (item.deck === 'kanji') {
+        // Older saves can omit a deck; those were ordinary reviews.
+        const deck = item.deck || 'reviews';
+        if (!['adds', 'reviews', 'steps', 'kanji'].includes(deck)) return null;
+        const savedStage = Number(item.stage);
+        const stage = Number.isFinite(savedStage)
+            ? clamp(Math.floor(savedStage), 1, REVIEW_STAGE_MAX) : 1;
+        const savedResult = item.attemptResult == null
+            ? null : Number(item.attemptResult);
+        if (savedResult !== null && (!Number.isInteger(savedResult) ||
+            savedResult < 0 || savedResult > 3)) return null;
+        if (deck === 'kanji') {
             if (!isTrackableKanji(item.kanji) ||
                 !ctx.getKanjiPracticeCharacter(item.kanji) ||
                 !Array.from(rowWritten(ctx.getEntryRow(item.word)) || item.word)
@@ -46,16 +56,13 @@ export function createSessionQueue(ctx) {
         }
 		return {
 			word: item.word,
-			deck: item.deck || 'reviews',
-			stage: clamp(Math.floor(item.stage || 1), 1, REVIEW_STAGE_MAX),
-			attemptResult:
-				item.attemptResult == null
-					? null
-					: clamp(Math.floor(item.attemptResult), 0, 3),
+			deck,
+			stage,
+			attemptResult: savedResult,
 			forceSequential: !!item.forceSequential,
 			sawAgain: !!item.sawAgain,
-            kanji: item.deck === 'kanji' ? item.kanji : null,
-            position: item.deck === 'kanji'
+            kanji: deck === 'kanji' ? item.kanji : null,
+            position: deck === 'kanji'
                 ? Array.from(rowWritten(ctx.getEntryRow(item.word)) || item.word)
                     .indexOf(item.kanji) : null,
             recordedKanji: Array.isArray(item.recordedKanji)
@@ -71,12 +78,12 @@ export function createSessionQueue(ctx) {
 			.map(normalizeStageQueueItem)
 			.filter(Boolean);
 		state.session.stageQueue = ctx.stagedQueue.slice();
-		if (
-			state.session.currentStageCard &&
-			!isActiveStudyWord(state.session.currentStageCard.word)
-		) {
-			state.session.currentStageCard = null;
-		}
+		// Apply the same validation to the active saved card as queued cards.
+		// Otherwise a stale kanji drill may be restored as an unfinishable
+		// exercise (or accidentally fall back to a whole-word review).
+		state.session.currentStageCard = normalizeStageQueueItem(
+			state.session.currentStageCard
+		);
 		const activeCard = stageItemFromCard(ctx.currentCard);
 		if (activeCard) {
 			state.session.currentStageCard = activeCard;
@@ -413,6 +420,7 @@ export function createSessionQueue(ctx) {
 
 
 	return {
+		normalizeStageQueueItem,
 		syncStageQueueToSession,
 		lastShownWord,
 		rememberShownWord,

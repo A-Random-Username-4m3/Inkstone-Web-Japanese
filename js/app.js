@@ -298,6 +298,7 @@ const jmdictStore = new JmDictStore();
 		orderNewItemsByListPosition: (...args) => vocabularyApi.orderNewItemsByListPosition(...args),
 		firstNewByListPosition: (...args) => vocabularyApi.firstNewByListPosition(...args),
 		isActiveStudyWord: (...args) => vocabularyApi.isActiveStudyWord(...args),
+		normalizeStageQueueItem: (...args) => sessionQueueApi.normalizeStageQueueItem(...args),
 		syncStageQueueToSession: (...args) => sessionQueueApi.syncStageQueueToSession(...args),
 		clearCurrentStageCard: (...args) => sessionQueueApi.clearCurrentStageCard(...args),
 		pruneStagedState: (...args) => sessionQueueApi.pruneStagedState(...args),

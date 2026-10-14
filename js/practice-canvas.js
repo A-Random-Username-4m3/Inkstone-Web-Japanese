@@ -129,6 +129,9 @@ export class PracticeCanvas {
 	}
 	startCharacter() {
 		if (this.disposed) return;
+		// Reveal applies to the current character only. Never expose a later
+		// character's answer after advancing from a revealed earlier one.
+		document.querySelector('#targetWord')?.classList.add('hidden');
 		this.failedRecall = false;
 		this.assistedRecall = false;
 		this.resetCharacterState();
@@ -606,7 +609,9 @@ export class PracticeCanvas {
 		);
 	}
 	reveal() {
-		if (!this.character) return;
+		// The completed character has already been graded. A reveal at this
+		// point would expose the answer without affecting its recorded grade.
+		if (!this.character || this.waitingForContinue || !this.missing.length) return;
 		if (this.revealed) {
 			this.setFeedback('This character is already revealed.', 'info');
 			return;

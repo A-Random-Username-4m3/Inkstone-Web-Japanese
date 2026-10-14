@@ -78,8 +78,8 @@ export function createStudyFlow(ctx) {
 
 
 	function restoreCurrentCardFromSession() {
-		const item = state.session?.currentStageCard;
-		if (!item?.word || !isActiveStudyWord(item.word)) {
+		const item = ctx.normalizeStageQueueItem(state.session?.currentStageCard);
+		if (!item) {
 			clearCurrentStageCard();
 			return false;
 		}
