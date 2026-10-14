@@ -31,6 +31,7 @@ export function createSessionQueue(ctx) {
             kanji: card.deck === 'kanji' ? card.kanji : null,
             position: card.deck === 'kanji' ? card.position : null,
             recordedKanji: Array.isArray(card.recordedKanji) ? card.recordedKanji.slice() : [],
+            failedCharacters: Array.isArray(card.failedCharacters) ? card.failedCharacters.slice() : [],
 			delay: 0
 		};
 	}
@@ -48,12 +49,13 @@ export function createSessionQueue(ctx) {
             ? null : Number(item.attemptResult);
         if (savedResult !== null && (!Number.isInteger(savedResult) ||
             savedResult < 0 || savedResult > 3)) return null;
+        const written = Array.from(rowWritten(ctx.getEntryRow?.(item.word)) || item.word);
         if (deck === 'kanji') {
             if (!isTrackableKanji(item.kanji) ||
                 !ctx.getKanjiPracticeCharacter(item.kanji) ||
-                !Array.from(rowWritten(ctx.getEntryRow(item.word)) || item.word)
-                    .includes(item.kanji)) return null;
+                !written.includes(item.kanji)) return null;
         }
+        const practiced = deck === 'kanji' ? [item.kanji] : written;
 		return {
 			word: item.word,
 			deck,
@@ -62,11 +64,16 @@ export function createSessionQueue(ctx) {
 			forceSequential: !!item.forceSequential,
 			sawAgain: !!item.sawAgain,
             kanji: deck === 'kanji' ? item.kanji : null,
-            position: deck === 'kanji'
-                ? Array.from(rowWritten(ctx.getEntryRow(item.word)) || item.word)
-                    .indexOf(item.kanji) : null,
+            position: deck === 'kanji' ? written.indexOf(item.kanji) : null,
             recordedKanji: Array.isArray(item.recordedKanji)
-                ? [...new Set(item.recordedKanji.filter(isTrackableKanji))] : [],
+                ? [...new Set(item.recordedKanji.filter((kanji) =>
+                    isTrackableKanji(kanji) && practiced.includes(kanji)))] : [],
+            failedCharacters: stage === REVIEW_STAGE_MAX
+                ? [...new Set((Array.isArray(item.failedCharacters)
+                    ? item.failedCharacters : []).filter((index) =>
+                    Number.isInteger(index) && index >= 0 &&
+                    index < practiced.length))]
+                : [],
 			delay: Math.max(0, Math.floor(Number(item.delay) || 0))
 		};
 	}
@@ -84,7 +91,9 @@ export function createSessionQueue(ctx) {
 		state.session.currentStageCard = normalizeStageQueueItem(
 			state.session.currentStageCard
 		);
-		const activeCard = stageItemFromCard(ctx.currentCard);
+		const activeCard = normalizeStageQueueItem(
+            stageItemFromCard(ctx.currentCard)
+        );
 		if (activeCard) {
 			state.session.currentStageCard = activeCard;
 		} else if (ctx.currentCard && !activeCard) {

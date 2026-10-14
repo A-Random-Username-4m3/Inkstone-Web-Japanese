@@ -465,7 +465,8 @@ const jmdictStore = new JmDictStore();
 		renderCharProgress,
 		setFeedbackMessage,
 		playSound,
-		renderPenaltyStatus
+		renderPenaltyStatus,
+        saveAssessmentState: () => saveState()
 	});
 
 

@@ -9,7 +9,8 @@ let environment = {
 	renderCharProgress: () => {},
 	setFeedbackMessage: () => {},
 	playSound: () => {},
-	renderPenaltyStatus: () => {}
+	renderPenaltyStatus: () => {},
+	saveAssessmentState: () => {}
 };
 
 export function configurePracticeCanvas(options = {}) {
@@ -132,8 +133,10 @@ export class PracticeCanvas {
 		// Reveal applies to the current character only. Never expose a later
 		// character's answer after advancing from a revealed earlier one.
 		document.querySelector('#targetWord')?.classList.add('hidden');
-		this.failedRecall = false;
-		this.assistedRecall = false;
+		// A prior failed attempt survives skipping or reloading this stage.
+		// The drawing itself starts over, but its assessment does not.
+		this.failedRecall = this.card?.failedCharacters?.includes(this.charIndex) || false;
+		this.assistedRecall = this.failedRecall;
 		this.resetCharacterState();
 		renderCharProgress(this.charIndex, this.card?.revealedChars || 0);
 		this.draw();
@@ -340,6 +343,7 @@ export class PracticeCanvas {
 			previousMistakePressure: this.mistakePressure,
 			previousAssistedRecall: this.assistedRecall,
 			previousFailedRecall: this.failedRecall,
+			previousFailedCharacters: this.card?.failedCharacters?.slice() || [],
 			previousGuidedStrokeIndex: this.guidedStrokeIndex,
 			previousRevealed: this.revealed,
 			previousTargetHidden:
@@ -353,6 +357,7 @@ export class PracticeCanvas {
 		this.mistakePressure = entry.previousMistakePressure;
 		this.assistedRecall = !!entry.previousAssistedRecall;
 		this.failedRecall = !!entry.previousFailedRecall;
+		this.restoreFailedCharacters(entry.previousFailedCharacters);
 		this.guidedStrokeIndex = entry.previousGuidedStrokeIndex ?? null;
 		this.revealed = !!entry.previousRevealed;
 		this.effects = entry.previousEffects?.slice() || [];
@@ -383,11 +388,34 @@ export class PracticeCanvas {
 			850
 		);
 	}
+	// Save the assessment separately from the in-progress stroke geometry.
+	// Skipping/reloading an incomplete card must not allow a failed Stage 5
+	// character to be graded Good on its next attempt.
+	markUnaidedFailure() {
+		if (this.stage !== REVIEW_STAGE_MAX || !this.card) return;
+		if (!Array.isArray(this.card.failedCharacters)) {
+			this.card.failedCharacters = [];
+		}
+		if (!this.card.failedCharacters.includes(this.charIndex)) {
+			this.card.failedCharacters.push(this.charIndex);
+			environment.saveAssessmentState?.();
+		}
+	}
+	restoreFailedCharacters(previous) {
+		if (!this.card) return;
+		const restored = Array.isArray(previous) ? previous.slice() : [];
+		const current = this.card.failedCharacters || [];
+		if (current.length === restored.length &&
+			current.every((item, i) => item === restored[i])) return;
+		this.card.failedCharacters = restored;
+		environment.saveAssessmentState?.();
+	}
 	// Keep failed-retrieval evidence through a restart of this character.
 	// Undo cannot erase an earlier failed attempt by rolling back the recovery.
 	restartFailedRecall() {
 		this.failedRecall = true;
 		this.assistedRecall = true;
+		this.markUnaidedFailure();
 		this.penalties += 1;
 		this.resetCharacterState();
 		this.beginDrawing('Incorrect stroke. Restart this character; the recall counts as Again.');
@@ -465,6 +493,7 @@ export class PracticeCanvas {
 			previousMistakePressure: this.mistakePressure,
 			previousAssistedRecall: this.assistedRecall,
 			previousFailedRecall: this.failedRecall,
+			previousFailedCharacters: this.card?.failedCharacters?.slice() || [],
 			previousGuidedStrokeIndex: this.guidedStrokeIndex,
 			previousAcceptedResultsLength: this.acceptedResults.length,
 			previousRevealedChars: this.card?.revealedChars || 0,
@@ -514,7 +543,8 @@ export class PracticeCanvas {
 				stage: this.stage,
 				penalties: charPenalties,
 				assisted: this.assistedRecall,
-				failed: this.failedRecall
+				failed: this.failedRecall ||
+					(this.card?.failedCharacters?.includes(this.charIndex) || false)
 			});
 			this.acceptedResults.push(resultGrade);
 			this.card.revealedChars = Math.max(
@@ -598,7 +628,10 @@ export class PracticeCanvas {
 		if (appliesPenalty) {
 			this.penalties += 1;
 			this.assistedRecall = true;
-			if (this.stage === REVIEW_STAGE_MAX) this.failedRecall = true;
+			if (this.stage === REVIEW_STAGE_MAX) {
+				this.failedRecall = true;
+				this.markUnaidedFailure();
+			}
 		}
 
 		this.setFeedback(
@@ -619,6 +652,7 @@ export class PracticeCanvas {
 		this.pushPenaltyUndo('reveal penalty');
 		this.revealed = true;
 		if (this.stage > 1) this.failedRecall = true;
+		this.markUnaidedFailure();
 		this.penalties += 4;
 		this.mistakePressure += 4;
 		document.querySelector('#targetWord')?.classList.remove('hidden');
@@ -673,6 +707,7 @@ export class PracticeCanvas {
 		this.mistakePressure = entry.previousMistakePressure;
 		this.assistedRecall = !!entry.previousAssistedRecall;
 		this.failedRecall = !!entry.previousFailedRecall;
+		this.restoreFailedCharacters(entry.previousFailedCharacters);
 		this.guidedStrokeIndex = entry.previousGuidedStrokeIndex ?? null;
 		this.acceptedResults = this.acceptedResults.slice(
 			0,

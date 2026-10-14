@@ -93,7 +93,8 @@ export function createStudyFlow(ctx) {
 			item.sawAgain,
             item.kanji,
             item.position,
-            item.recordedKanji
+            item.recordedKanji,
+            item.failedCharacters
 		);
 		return true;
 	}
@@ -186,7 +187,8 @@ export function createStudyFlow(ctx) {
 		sawAgain = false,
         kanji = null,
         position = null,
-        recordedKanji = []
+        recordedKanji = [],
+        failedCharacters = []
 	) {
 		const row = getEntryRow(entry.word);
 		const studyWord = rowWritten(row) || entry.word;
@@ -204,6 +206,7 @@ export function createStudyFlow(ctx) {
             position: deck === 'kanji' ? position : null,
             wordLength: Array.from(studyWord).length,
             recordedKanji: Array.isArray(recordedKanji) ? recordedKanji.slice() : [],
+            failedCharacters: Array.isArray(failedCharacters) ? failedCharacters.slice() : [],
 			stage: clamp(
 				Math.floor(stage || initialStageForEntry(entry, deck)),
 				1,
@@ -289,7 +292,8 @@ export function createStudyFlow(ctx) {
 				queued.sawAgain,
                 queued.kanji,
                 queued.position,
-                queued.recordedKanji
+                queued.recordedKanji,
+                queued.failedCharacters
 			);
 			ageQueuedStageCards();
 			syncStageQueueToSession();
@@ -371,6 +375,7 @@ export function createStudyFlow(ctx) {
                 kanji: ctx.currentCard.kanji,
                 position: ctx.currentCard.position,
                 recordedKanji: ctx.currentCard.recordedKanji || [],
+                failedCharacters: ctx.currentCard.failedCharacters || [],
 				delay: STAGED_CARD_SPACING_TURNS
 			});
 
@@ -564,18 +569,26 @@ export function createStudyFlow(ctx) {
 		resetExpiredSession();
 		const entry = state.vocabulary[ctx.currentCard.entry.word];
 		const t = now();
-		const resultLabel = RESULT_LABELS[result] || RESULT_LABELS[3];
 		const displayWord = ctx.currentCard.studyWord || entry.word;
+		// A Stage 5 failure can precede a skip, reload or manual grade.
+		// It remains part of this staged attempt even after retrying.
+		const interruptedFailure = ctx.currentCard.stage === REVIEW_STAGE_MAX &&
+			(ctx.currentCard.failedCharacters?.length || 0) > 0;
+		const effectiveResult = interruptedFailure ? 3 : result;
+		const resultLabel = RESULT_LABELS[effectiveResult] || RESULT_LABELS[3];
 		const attemptResult = combineAttemptResult(
 			ctx.currentCard.attemptResult,
-			result
+			effectiveResult
 		);
-		const forceSequential = !!ctx.currentCard.forceSequential || result === 3;
-		const sawAgain = !!ctx.currentCard.sawAgain || result === 3;
+		const forceSequential = !!ctx.currentCard.forceSequential || attemptResult === 3;
+		const sawAgain = !!ctx.currentCard.sawAgain || attemptResult === 3;
         // Word-level manual grading cannot fabricate handwriting evidence.
         // Manual grading a standalone kanji drill *is* an explicit character grade.
         const evidence = ctx.currentCard.deck === 'kanji' &&
-            !Array.isArray(characterGrades) ? [result] : characterGrades;
+            !Array.isArray(characterGrades) ? [effectiveResult]
+            : Array.isArray(characterGrades) ? characterGrades.map((grade, index) =>
+                ctx.currentCard.failedCharacters?.includes(index) ? 3 : grade)
+            : characterGrades;
         if (ctx.currentCard.stage === REVIEW_STAGE_MAX &&
             Array.isArray(evidence) &&
             evidence.length === ctx.currentCard.characters.length) {
@@ -589,7 +602,7 @@ export function createStudyFlow(ctx) {
         }
 		const nextStage = nextStageAfterResult(
 			ctx.currentCard.stage || 1,
-			result,
+			effectiveResult,
 			forceSequential,
 			REVIEW_STAGE_MAX
 		);
@@ -606,24 +619,26 @@ export function createStudyFlow(ctx) {
                 kanji: ctx.currentCard.kanji,
                 position: ctx.currentCard.position,
                 recordedKanji: ctx.currentCard.recordedKanji,
-				delay: stagedSpacingTurns(nextStage, result, STAGED_CARD_SPACING_TURNS)
+                // This belongs to the completed stage, not the guided recovery.
+                failedCharacters: [],
+				delay: stagedSpacingTurns(nextStage, effectiveResult, STAGED_CARD_SPACING_TURNS)
 			});
 			const movement =
-				result === 0
+				effectiveResult === 0
 					? `moves to Stage ${nextStage}`
-					: result === 1
+					: effectiveResult === 1
 						? `moves to Stage ${nextStage}`
-						: result === 2
+						: effectiveResult === 2
 							? `repeats Stage ${nextStage}`
 							: 'returns to Stage 1';
 			const attemptNote =
-				attemptResult > result
+				attemptResult > effectiveResult
 					? ` Attempt grade remains ${RESULT_LABELS[attemptResult]}.`
 					: '';
-			playResultSound(result);
+			playResultSound(effectiveResult);
 			setFeedbackMessage(
 				`${displayWord}: ${resultLabel}. ${movement}; mixed back into the queue for a later turn.${attemptNote}`,
-				result === 3 ? 'warning' : 'info'
+				effectiveResult === 3 ? 'warning' : 'info'
 			);
 			rememberShownWord(entry.word);
 			ctx.currentCard = null;
@@ -673,7 +688,7 @@ export function createStudyFlow(ctx) {
 			ts: t,
 			word: entry.word,
 			result: scheduledResult,
-			displayedResult: result,
+			displayedResult: effectiveResult,
 			deck: ctx.currentCard.deck,
 			stage: ctx.currentCard.stage || REVIEW_STAGE_MAX,
 			sawAgain,
@@ -691,7 +706,7 @@ export function createStudyFlow(ctx) {
 		clearCurrentStageCard();
 		saveState();
 		const schedulingNote =
-			scheduledResult !== result
+			scheduledResult !== effectiveResult
 				? ` Worst staged-review grade: ${scheduledLabel}.`
 				: '';
 		playResultSound(scheduledResult);
