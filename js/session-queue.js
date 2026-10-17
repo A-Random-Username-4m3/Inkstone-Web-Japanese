@@ -32,6 +32,10 @@ export function createSessionQueue(ctx) {
             position: card.deck === 'kanji' ? card.position : null,
             recordedKanji: Array.isArray(card.recordedKanji) ? card.recordedKanji.slice() : [],
             failedCharacters: Array.isArray(card.failedCharacters) ? card.failedCharacters.slice() : [],
+            fastTrackCandidates: card.fastTrackCandidates || [],
+            fastTrackReady: card.fastTrackReady || [],
+            fastTrackRejected: card.fastTrackRejected || [],
+            fastTrackFailures: card.fastTrackFailures || [],
 			delay: 0
 		};
 	}
@@ -56,6 +60,15 @@ export function createSessionQueue(ctx) {
                 !written.includes(item.kanji)) return null;
         }
         const practiced = deck === 'kanji' ? [item.kanji] : written;
+        const validPositions = (indices) => [...new Set((Array.isArray(indices)
+            ? indices : []).filter((index) => Number.isInteger(index) &&
+            index >= 0 && index < practiced.length))];
+        const candidates = deck === 'adds' ? validPositions(item.fastTrackCandidates)
+            .filter((index) => isTrackableKanji(practiced[index])) : [];
+        const rejected = validPositions(item.fastTrackRejected)
+            .filter((index) => candidates.includes(index));
+        const ready = validPositions(item.fastTrackReady)
+            .filter((index) => candidates.includes(index) && !rejected.includes(index));
 		return {
 			word: item.word,
 			deck,
@@ -68,12 +81,13 @@ export function createSessionQueue(ctx) {
             recordedKanji: Array.isArray(item.recordedKanji)
                 ? [...new Set(item.recordedKanji.filter((kanji) =>
                     isTrackableKanji(kanji) && practiced.includes(kanji)))] : [],
-            failedCharacters: stage === REVIEW_STAGE_MAX
-                ? [...new Set((Array.isArray(item.failedCharacters)
-                    ? item.failedCharacters : []).filter((index) =>
-                    Number.isInteger(index) && index >= 0 &&
-                    index < practiced.length))]
-                : [],
+            // Per-character Stage 5 failures can happen in earlier word stages.
+            failedCharacters: validPositions(item.failedCharacters),
+            fastTrackCandidates: candidates,
+            fastTrackReady: ready,
+            fastTrackRejected: rejected,
+            fastTrackFailures: validPositions(item.fastTrackFailures)
+                .filter((index) => candidates.includes(index)),
 			delay: Math.max(0, Math.floor(Number(item.delay) || 0))
 		};
 	}

@@ -1,7 +1,7 @@
 'use strict';
 
 import { RESULT_LABELS, REVIEW_STAGE_MAX } from './constants.js';
-import { gradeCharacterAttempt } from './learning-policy.js';
+import { gradeCharacterAttempt, characterPracticeStage } from './learning-policy.js';
 import { Matcher, distance, strokeLength } from './stroke-matcher.js';
 
 let environment = {
@@ -73,6 +73,14 @@ export class PracticeCanvas {
 		this.resetCardState();
 		this.bind();
 		this.startCharacter();
+	}
+	get stage() {
+		if (!this.card) return this.wordStage;
+		return characterPracticeStage(this.card, this.charIndex,
+			this.card.stage || this.wordStage);
+	}
+	set stage(value) {
+		this.wordStage = value;
 	}
 	bind() {
 		this.canvas.onpointerdown = (event) => this.pointerDown(event);
@@ -547,6 +555,23 @@ export class PracticeCanvas {
 					(this.card?.failedCharacters?.includes(this.charIndex) || false)
 			});
 			this.acceptedResults.push(resultGrade);
+			// A clean timed preview unlocks independent recall for previously
+			// tested kanji. Weak performance turns off the shortcut.
+			if (this.card.fastTrackCandidates?.includes(this.charIndex)) {
+				if (this.wordStage === 1 && this.stage === 2) {
+					const field = resultGrade <= 1
+						? 'fastTrackReady' : 'fastTrackRejected';
+					if (!this.card[field].includes(this.charIndex))
+						this.card[field].push(this.charIndex);
+				} else if (this.stage === REVIEW_STAGE_MAX && resultGrade >= 2) {
+					if (!this.card.fastTrackRejected.includes(this.charIndex))
+						this.card.fastTrackRejected.push(this.charIndex);
+					if (resultGrade === 3 &&
+						!this.card.fastTrackFailures.includes(this.charIndex))
+						this.card.fastTrackFailures.push(this.charIndex);
+				}
+				environment.saveAssessmentState?.();
+			}
 			this.card.revealedChars = Math.max(
 				this.card.revealedChars || 0,
 				this.charIndex + 1

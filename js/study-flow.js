@@ -13,7 +13,7 @@ import {
 	applyFsrsResult
 } from './fsrs.js';
 import { PracticeCanvas } from './practice-canvas.js';
-import { nextStageAfterResult, stagedSpacingTurns } from './learning-policy.js';
+import { nextStageAfterResult, stagedSpacingTurns, familiarCharacterIndices, characterPracticeStage, isKana } from './learning-policy.js';
 import { recordKanjiObservations } from './kanji-mastery.js';
 import { rowDefinition, rowPromptReading, rowWritten } from './word-data.js';
 
@@ -94,7 +94,11 @@ export function createStudyFlow(ctx) {
             item.kanji,
             item.position,
             item.recordedKanji,
-            item.failedCharacters
+            item.failedCharacters,
+            item.fastTrackCandidates,
+            item.fastTrackReady,
+            item.fastTrackRejected,
+            item.fastTrackFailures
 		);
 		return true;
 	}
@@ -188,7 +192,11 @@ export function createStudyFlow(ctx) {
         kanji = null,
         position = null,
         recordedKanji = [],
-        failedCharacters = []
+        failedCharacters = [],
+        fastTrackCandidates = null,
+        fastTrackReady = [],
+        fastTrackRejected = [],
+        fastTrackFailures = []
 	) {
 		const row = getEntryRow(entry.word);
 		const studyWord = rowWritten(row) || entry.word;
@@ -207,6 +215,13 @@ export function createStudyFlow(ctx) {
             wordLength: Array.from(studyWord).length,
             recordedKanji: Array.isArray(recordedKanji) ? recordedKanji.slice() : [],
             failedCharacters: Array.isArray(failedCharacters) ? failedCharacters.slice() : [],
+            fastTrackCandidates: Array.isArray(fastTrackCandidates)
+                ? fastTrackCandidates.slice()
+                : deck === 'adds' && stage == null && !entry.attempts
+                    ? familiarCharacterIndices(characters, state.kanjiMastery) : [],
+            fastTrackReady: Array.isArray(fastTrackReady) ? fastTrackReady.slice() : [],
+            fastTrackRejected: Array.isArray(fastTrackRejected) ? fastTrackRejected.slice() : [],
+            fastTrackFailures: Array.isArray(fastTrackFailures) ? fastTrackFailures.slice() : [],
 			stage: clamp(
 				Math.floor(stage || initialStageForEntry(entry, deck)),
 				1,
@@ -293,7 +308,11 @@ export function createStudyFlow(ctx) {
                 queued.kanji,
                 queued.position,
                 queued.recordedKanji,
-                queued.failedCharacters
+                queued.failedCharacters,
+                queued.fastTrackCandidates,
+                queued.fastTrackReady,
+                queued.fastTrackRejected,
+                queued.fastTrackFailures
 			);
 			ageQueuedStageCards();
 			syncStageQueueToSession();
@@ -376,6 +395,10 @@ export function createStudyFlow(ctx) {
                 position: ctx.currentCard.position,
                 recordedKanji: ctx.currentCard.recordedKanji || [],
                 failedCharacters: ctx.currentCard.failedCharacters || [],
+                fastTrackCandidates: ctx.currentCard.fastTrackCandidates || [],
+                fastTrackReady: ctx.currentCard.fastTrackReady || [],
+                fastTrackRejected: ctx.currentCard.fastTrackRejected || [],
+                fastTrackFailures: ctx.currentCard.fastTrackFailures || [],
 				delay: STAGED_CARD_SPACING_TURNS
 			});
 
@@ -532,7 +555,9 @@ export function createStudyFlow(ctx) {
 			clearStudyExamples();
 			return;
 		}
-		const stage = ctx.currentCard.stage || 1;
+		const stage = characterPracticeStage(ctx.currentCard, currentIndex);
+        $('#deckName').textContent =
+            `${deckLabel(ctx.currentCard.deck)} · ${stageLabel(stage)}`;
 		const shownThrough = Math.max(
 			revealedCount || 0,
 			ctx.currentCard.revealedChars || 0
@@ -549,12 +574,14 @@ export function createStudyFlow(ctx) {
 		ctx.currentCard.characters.forEach((ch, i) => {
 			const span = document.createElement('span');
 			const isPreviewed = i === previewIndex;
-			const isRevealed = stage === 1 || i < shownThrough || isPreviewed;
+			const isRevealed = isKana(ch.character) ||
+                characterPracticeStage(ctx.currentCard, i) === 1 ||
+                i < shownThrough || isPreviewed;
 			span.textContent = isRevealed ? ch.character : '?';
 			if (!isRevealed) span.classList.add('blank');
 			if (
-				(stage === 1 && i < currentIndex) ||
-				(stage > 1 && i < shownThrough)
+                (i < currentIndex && characterPracticeStage(ctx.currentCard, i) === 1) ||
+                (stage > 1 && i < shownThrough)
 			)
 				span.classList.add('done');
 			if (i === currentIndex) span.classList.add('current');
@@ -572,8 +599,16 @@ export function createStudyFlow(ctx) {
 		const displayWord = ctx.currentCard.studyWord || entry.word;
 		// A Stage 5 failure can precede a skip, reload or manual grade.
 		// It remains part of this staged attempt even after retrying.
-		const interruptedFailure = ctx.currentCard.stage === REVIEW_STAGE_MAX &&
-			(ctx.currentCard.failedCharacters?.length || 0) > 0;
+        // Kana and accelerated kanji can be tested at Stage 5 *before* the
+        // word reaches its final stage. Their failures still count.
+		const interruptedFailure = (ctx.currentCard.failedCharacters?.length || 0) > 0;
+        for (const index of ctx.currentCard.failedCharacters || []) {
+            if (!ctx.currentCard.fastTrackCandidates?.includes(index)) continue;
+            if (!ctx.currentCard.fastTrackRejected.includes(index))
+                ctx.currentCard.fastTrackRejected.push(index);
+            if (!ctx.currentCard.fastTrackFailures.includes(index))
+                ctx.currentCard.fastTrackFailures.push(index);
+        }
 		const effectiveResult = interruptedFailure ? 3 : result;
 		const resultLabel = RESULT_LABELS[effectiveResult] || RESULT_LABELS[3];
 		const attemptResult = combineAttemptResult(
@@ -587,7 +622,8 @@ export function createStudyFlow(ctx) {
         const evidence = ctx.currentCard.deck === 'kanji' &&
             !Array.isArray(characterGrades) ? [effectiveResult]
             : Array.isArray(characterGrades) ? characterGrades.map((grade, index) =>
-                ctx.currentCard.failedCharacters?.includes(index) ? 3 : grade)
+                ctx.currentCard.failedCharacters?.includes(index) ||
+                ctx.currentCard.fastTrackFailures?.includes(index) ? 3 : grade)
             : characterGrades;
         if (ctx.currentCard.stage === REVIEW_STAGE_MAX &&
             Array.isArray(evidence) &&
@@ -621,6 +657,10 @@ export function createStudyFlow(ctx) {
                 recordedKanji: ctx.currentCard.recordedKanji,
                 // This belongs to the completed stage, not the guided recovery.
                 failedCharacters: [],
+                fastTrackCandidates: ctx.currentCard.fastTrackCandidates,
+                fastTrackReady: ctx.currentCard.fastTrackReady,
+                fastTrackRejected: ctx.currentCard.fastTrackRejected,
+                fastTrackFailures: ctx.currentCard.fastTrackFailures,
 				delay: stagedSpacingTurns(nextStage, effectiveResult, STAGED_CARD_SPACING_TURNS)
 			});
 			const movement =

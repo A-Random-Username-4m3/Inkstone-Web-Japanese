@@ -26,3 +26,37 @@ export function nextStageAfterResult(stage, result, forceSequential = false, max
     if (!forceSequential && result === 0 && stage === 1) return Math.min(3, maxStage);
     return stage + 1;
 }
+
+// Kana require no teaching ladder. Keep this logic independent from KanjiVG
+// availability: we identify glyphs, not whether a stroke record is loaded.
+export function isKana(value) {
+    return typeof value === 'string' && Array.from(value).length === 1 &&
+        (/^[\p{Script=Hiragana}\p{Script=Katakana}\uFF66-\uFF9F]$/u.test(value) ||
+         value === '\u30FC' || value === '\uFF70');
+}
+
+// A *prior* successful unaided kanji observation can shorten the introduction
+// of that glyph in a newly added vocabulary word. Don't infer mastery from
+// vocabulary history, and don't infer it from the current word's first pass.
+export function familiarCharacterIndices(characters, mastery) {
+    return (characters || []).flatMap((item, index) => {
+        const entry = mastery?.[item?.character];
+        return typeof item?.character === 'string' &&
+            /^\p{Script=Han}$/u.test(item.character) &&
+            entry?.successes > 0 && entry.fsrs?.lastRating !== 'again'
+            ? [index] : [];
+    });
+}
+
+// Stage is per character *within* a word. Previously tested kanji use the
+// existing timed Stage 2 preview on the initial word pass; successful preview
+// unlocks Stage 5 on the remaining passes. Any failed shortcut falls back to
+// the normal stage ladder. Kana always use Stage 5.
+export function characterPracticeStage(card, index, wordStage = card?.stage || 1) {
+    if (isKana(card?.characters?.[index]?.character)) return 5;
+    if (!card?.fastTrackCandidates?.includes(index) ||
+        card?.fastTrackRejected?.includes(index)) return wordStage;
+    if (wordStage === 1) return 2;
+    if (card?.fastTrackReady?.includes(index)) return 5;
+    return wordStage;
+}

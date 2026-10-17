@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'inkstone-japanese-';
-const CACHE_NAME = `${CACHE_PREFIX}a0.13.0-learning2-kanji-final-audit-${dataRevision()}`;
+const CACHE_NAME = `${CACHE_PREFIX}a0.13.1-familiar-kanji-kana-${dataRevision()}`;
 const JMDICT_BASE_URL = './data/jmdict';
 const JMDICT_MANIFEST_URL = `${JMDICT_BASE_URL}/manifest.json`;
 const CORE_ASSETS = [
